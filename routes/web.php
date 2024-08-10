@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,12 +21,11 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
         'verify' => false, // Email Verification Routes...
     ]);
 
-    Route::get('/', [App\Http\Controllers\Front\HomeController::class, 'index'])->name('index');
-    Route::get('about', [App\Http\Controllers\Front\HomeController::class, 'about'])->name('about');
-    Route::get('services', [App\Http\Controllers\Front\HomeController::class, 'services'])->name('services');
-    Route::get('blogs', [App\Http\Controllers\Front\HomeController::class, 'blogs'])->name('blogs');
-    Route::get('blog/{slug}', [App\Http\Controllers\Front\HomeController::class, 'blogDetails'])->name('blog.details');
-    Route::get('contact', [App\Http\Controllers\Front\HomeController::class, 'contact'])->name('contact');
-    Route::post('contact/save_message', [App\Http\Controllers\Front\HomeController::class, 'saveContactMessage'])->name('contact.save_message');
-    Route::post('subscribe', [App\Http\Controllers\Front\HomeController::class, 'subscribe'])->name('subscribe');
+    Route::get('/', [HomeController::class, 'index'])->name('index');
+    Route::get('about', [HomeController::class, 'about'])->name('about');
+    Route::get('blogs', [HomeController::class, 'blogs'])->name('blogs');
+    Route::get('blog/{slug}', [HomeController::class, 'blogDetails'])->name('blog.details');
+    Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+    Route::post('contact/save_message', [HomeController::class, 'saveContactMessage'])->name('contact.save_message');
+    Route::post('subscribe', [HomeController::class, 'subscribe'])->name('subscribe');
 });

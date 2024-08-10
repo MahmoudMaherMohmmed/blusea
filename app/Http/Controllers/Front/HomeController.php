@@ -7,6 +7,7 @@ use App\Http\Requests\Front\StoreContactMessageRequest;
 use App\Http\Requests\Front\StoreSubscribeRequest;
 use App\Models\Blog;
 use App\Models\Contact;
+use App\Models\Partner;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Subscribe;
@@ -31,10 +32,11 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::active()->latest()->get();
-        $services = Service::active()->latest()->limit(8)->get();
-        $blogs = Blog::active()->latest()->limit(3)->get();
+        $blogs = Blog::active()->latest()->limit(9)->get();
+        $partners = Partner::active()->get();
+        $services = Service::active()->latest()->limit(4)->get();
 
-        return view('front.index', compact('sliders', 'services', 'blogs'));
+        return view('front.index', compact('sliders', 'blogs', 'partners', 'services'));
     }
 
     /**
@@ -45,18 +47,6 @@ class HomeController extends Controller
     public function about()
     {
         return view('front.about');
-    }
-
-    /**
-     * Show the application services page.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function services()
-    {
-        $services = Service::active()->latest()->limit(8)->get();
-
-        return view('front.services', compact('services'));
     }
 
     /**
