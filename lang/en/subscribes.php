@@ -19,10 +19,10 @@ return [
         'latest' => 'Latest subscribes',
     ],
     'messages' => [
-        'created' => 'The subscribe has been created successfully.',
-        'updated' => 'The subscribe has been updated successfully.',
-        'deleted' => 'The subscribe has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The subscribe has been created successfully',
+        'updated' => 'The subscribe has been updated successfully',
+        'deleted' => 'The subscribe has been deleted successfully',
+        'retrieved' => 'The subscribe has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

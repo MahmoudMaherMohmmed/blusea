@@ -18,10 +18,10 @@ return [
         'filter' => 'Filter',
     ],
     'messages' => [
-        'created' => 'The partner has been created successfully.',
-        'updated' => 'The partner has been updated successfully.',
-        'deleted' => 'The partner has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The partner has been created successfully',
+        'updated' => 'The partner has been updated successfully',
+        'deleted' => 'The partner has been deleted successfully',
+        'retrieved' => 'The partner has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

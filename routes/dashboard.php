@@ -1,5 +1,15 @@
 <?php
 
+use App\Http\Controllers\Dashboard\BlogController;
+use App\Http\Controllers\Dashboard\BranchController;
+use App\Http\Controllers\Dashboard\ContactController;
+use App\Http\Controllers\Dashboard\HomeController;
+use App\Http\Controllers\Dashboard\PartnerController;
+use App\Http\Controllers\Dashboard\ServiceController;
+use App\Http\Controllers\Dashboard\SettingController;
+use App\Http\Controllers\Dashboard\SliderController;
+use App\Http\Controllers\Dashboard\SubscribeController;
+use App\Http\Controllers\Dashboard\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,18 +23,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
+Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['auth', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath']], function () {
     Route::prefix('admin')->name('admin.')->group(function () {
-        Route::get('/home', [App\Http\Controllers\Dashboard\HomeController::class, 'home'])->name('home');
-        Route::resource('users', App\Http\Controllers\Dashboard\UserController::class);
-
-        Route::resource('services', App\Http\Controllers\Dashboard\ServiceController::class);
-        Route::resource('sliders', App\Http\Controllers\Dashboard\SliderController::class);
-        Route::resource('blogs', App\Http\Controllers\Dashboard\BlogController::class);
-        Route::resource('partners', App\Http\Controllers\Dashboard\PartnerController::class);
-        Route::resource('branches', App\Http\Controllers\Dashboard\BranchController::class);
-        Route::resource('settings', App\Http\Controllers\Dashboard\SettingController::class);
-        Route::resource('contacts', App\Http\Controllers\Dashboard\ContactController::class)->only(['index', 'show']);
-        Route::resource('subscribes', App\Http\Controllers\Dashboard\SubscribeController::class)->only(['index']);
+        Route::get('/home', [HomeController::class, 'home'])->name('home');
+        Route::resource('users', UserController::class);
+        Route::resource('sliders', SliderController::class);
+        Route::resource('blogs', BlogController::class);
+        Route::resource('partners', PartnerController::class);
+        Route::resource('services', ServiceController::class);
+        Route::resource('contacts', ContactController::class)->only(['index', 'show']);
+        Route::resource('subscribes', SubscribeController::class)->only(['index']);
+        Route::resource('branches', BranchController::class);
+        Route::resource('settings', SettingController::class);
     });
 });

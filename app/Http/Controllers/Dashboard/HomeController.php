@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Enums\ClientTypeEnum;
 use App\Http\Controllers\Controller;
 use App\Models\Branch;
-use App\Models\Client;
-use App\Models\ReportAccident;
 use App\Models\Service;
 use App\Models\User;
 
@@ -25,7 +22,7 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Contracts\Support\Renderable
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function index()
     {

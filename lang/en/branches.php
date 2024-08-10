@@ -18,10 +18,10 @@ return [
         'filter' => 'Filter',
     ],
     'messages' => [
-        'created' => 'The branch has been created successfully.',
-        'updated' => 'The branch has been updated successfully.',
-        'deleted' => 'The branch has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The branch has been created successfully',
+        'updated' => 'The branch has been updated successfully',
+        'deleted' => 'The branch has been deleted successfully',
+        'retrieved' => 'The branch has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

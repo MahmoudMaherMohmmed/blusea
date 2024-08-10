@@ -18,10 +18,10 @@ return [
         'filter' => 'Filter',
     ],
     'messages' => [
-        'created' => 'The service has been created successfully.',
-        'updated' => 'The service has been updated successfully.',
-        'deleted' => 'The service has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The service has been created successfully',
+        'updated' => 'The service has been updated successfully',
+        'deleted' => 'The service has been deleted successfully',
+        'retrieved' => 'The service has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

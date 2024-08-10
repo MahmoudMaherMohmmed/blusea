@@ -19,10 +19,10 @@ return [
         'latest' => 'Latest contacts',
     ],
     'messages' => [
-        'created' => 'The contact has been created successfully.',
-        'updated' => 'The contact has been updated successfully.',
-        'deleted' => 'The contact has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The contact has been created successfully',
+        'updated' => 'The contact has been updated successfully',
+        'deleted' => 'The contact has been deleted successfully',
+        'retrieved' => 'The contact has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

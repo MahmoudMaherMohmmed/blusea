@@ -34,7 +34,7 @@ class SliderController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\StoreSliderRequest  $request
+     * @param \App\Http\Requests\Dashboard\StoreSliderRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreSliderRequest $request)
@@ -51,7 +51,7 @@ class SliderController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Slider  $slider
+     * @param \App\Models\Slider $slider
      * @return \Illuminate\View\View
      */
     public function show(Slider $slider)
@@ -62,7 +62,7 @@ class SliderController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Slider  $slider
+     * @param \App\Models\Slider $slider
      * @return \Illuminate\View\View
      */
     public function edit(Slider $slider)
@@ -73,8 +73,8 @@ class SliderController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\UpdateSliderRequest  $request
-     * @param  \App\Models\Slider  $slider
+     * @param \App\Http\Requests\Dashboard\UpdateSliderRequest $request
+     * @param \App\Models\Slider $slider
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdateSliderRequest $request, Slider $slider)
@@ -93,13 +93,13 @@ class SliderController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Slider  $slider
+     * @param \App\Models\Slider $slider
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Slider $slider)
     {
         $slider->delete();
 
-        return redirect()->back()->with('success', trans('sliders.messages.deleted'));
+        return redirect()->route('admin.sliders.index')->with('success', trans('sliders.messages.deleted'));
     }
 }

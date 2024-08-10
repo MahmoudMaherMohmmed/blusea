@@ -35,7 +35,7 @@ class BlogController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\StoreBlogRequest  $request
+     * @param \App\Http\Requests\Dashboard\StoreBlogRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreBlogRequest $request)
@@ -52,7 +52,7 @@ class BlogController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param \App\Models\Blog $blog
      * @return \Illuminate\View\View
      */
     public function show(Blog $blog)
@@ -63,7 +63,7 @@ class BlogController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param \App\Models\Blog $blog
      * @return \Illuminate\View\View
      */
     public function edit(Blog $blog)
@@ -74,8 +74,8 @@ class BlogController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\UpdateBlogRequest  $request
-     * @param  \App\Models\Blog  $blog
+     * @param \App\Http\Requests\Dashboard\UpdateBlogRequest $request
+     * @param \App\Models\Blog $blog
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdateBlogRequest $request, Blog $blog)
@@ -94,13 +94,13 @@ class BlogController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Blog  $blog
+     * @param \App\Models\Blog $blog
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Blog $blog)
     {
         $blog->delete();
 
-        return redirect()->back()->with('success', trans('blogs.messages.deleted'));
+        return redirect()->route('admin.blogs.index')->with('success', trans('blogs.messages.deleted'));
     }
 }

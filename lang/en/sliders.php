@@ -18,10 +18,10 @@ return [
         'filter' => 'Filter',
     ],
     'messages' => [
-        'created' => 'The slider has been created successfully.',
-        'updated' => 'The slider has been updated successfully.',
-        'deleted' => 'The slider has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The slider has been created successfully',
+        'updated' => 'The slider has been updated successfully',
+        'deleted' => 'The slider has been deleted successfully',
+        'retrieved' => 'The slider has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

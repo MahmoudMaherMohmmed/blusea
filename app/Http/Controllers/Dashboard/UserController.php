@@ -34,7 +34,7 @@ class UserController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\StoreUserRequest  $request
+     * @param \App\Http\Requests\Dashboard\StoreUserRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreUserRequest $request)
@@ -51,7 +51,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param \App\Models\User $user
      * @return \Illuminate\View\View
      */
     public function show(User $user)
@@ -62,7 +62,7 @@ class UserController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param \App\Models\User $user
      * @return \Illuminate\View\View
      */
     public function edit(User $user)
@@ -73,8 +73,8 @@ class UserController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\UpdateUserRequest  $request
-     * @param  \App\Models\User  $user
+     * @param \App\Http\Requests\Dashboard\UpdateUserRequest $request
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdateUserRequest $request, User $user)
@@ -97,13 +97,13 @@ class UserController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param \App\Models\User $user
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(User $user)
     {
         $user->delete();
 
-        return redirect()->back()->with('success', trans('admins.messages.deleted'));
+        return redirect()->route('admin.users.index')->with('success', trans('admins.messages.deleted'));
     }
 }

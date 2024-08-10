@@ -34,7 +34,7 @@ class PartnerController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\StorePartnerRequest  $request
+     * @param \App\Http\Requests\Dashboard\StorePartnerRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StorePartnerRequest $request)
@@ -51,7 +51,7 @@ class PartnerController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Partner  $partner
+     * @param \App\Models\Partner $partner
      * @return \Illuminate\View\View
      */
     public function show(Partner $partner)
@@ -62,7 +62,7 @@ class PartnerController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Partner  $partner
+     * @param \App\Models\Partner $partner
      * @return \Illuminate\View\View
      */
     public function edit(Partner $partner)
@@ -73,8 +73,8 @@ class PartnerController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\UpdatePartnerRequest  $request
-     * @param  \App\Models\Partner  $partner
+     * @param \App\Http\Requests\Dashboard\UpdatePartnerRequest $request
+     * @param \App\Models\Partner $partner
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdatePartnerRequest $request, Partner $partner)
@@ -93,13 +93,13 @@ class PartnerController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Partner  $partner
+     * @param \App\Models\Partner $partner
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Partner $partner)
     {
         $partner->delete();
 
-        return redirect()->back()->with('success', trans('partners.messages.deleted'));
+        return redirect()->route('admin.partners.index')->with('success', trans('partners.messages.deleted'));
     }
 }

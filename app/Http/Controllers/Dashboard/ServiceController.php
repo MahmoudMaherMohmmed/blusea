@@ -34,7 +34,7 @@ class ServiceController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\StoreServiceRequest  $request
+     * @param \App\Http\Requests\Dashboard\StoreServiceRequest $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function store(StoreServiceRequest $request)
@@ -47,7 +47,7 @@ class ServiceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param \App\Models\Service $service
      * @return \Illuminate\View\View
      */
     public function show(Service $service)
@@ -58,7 +58,7 @@ class ServiceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Service  $service
+     * @param \App\Models\Service $service
      * @return \Illuminate\View\View
      */
     public function edit(Service $service)
@@ -69,8 +69,8 @@ class ServiceController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\Dashboard\UpdateServiceRequest  $request
-     * @param  \App\Models\Service  $service
+     * @param \App\Http\Requests\Dashboard\UpdateServiceRequest $request
+     * @param \App\Models\Service $service
      * @return \Illuminate\Http\RedirectResponse
      */
     public function update(UpdateServiceRequest $request, Service $service)
@@ -83,13 +83,13 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Service  $service
+     * @param \App\Models\Service $service
      * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy(Service $service)
     {
         $service->delete();
 
-        return redirect()->back()->with('success', trans('services.messages.deleted'));
+        return redirect()->route('admin.services.index')->with('success', trans('services.messages.deleted'));
     }
 }

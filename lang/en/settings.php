@@ -18,10 +18,10 @@ return [
         'filter' => 'Filter',
     ],
     'messages' => [
-        'created' => 'The setting has been created successfully.',
-        'updated' => 'The setting has been updated successfully.',
-        'deleted' => 'The setting has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The setting has been created successfully',
+        'updated' => 'The setting has been updated successfully',
+        'deleted' => 'The setting has been deleted successfully',
+        'retrieved' => 'The setting has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

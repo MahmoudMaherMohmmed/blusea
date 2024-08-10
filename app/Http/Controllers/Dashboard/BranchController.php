@@ -94,6 +94,6 @@ class BranchController extends Controller
     {
         $branch->delete();
 
-        return redirect()->back()->with('success', trans('branches.messages.deleted'));
+        return redirect()->route('admin.branches.index')->with('success', trans('branches.messages.deleted'));
     }
 }

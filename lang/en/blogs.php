@@ -18,10 +18,10 @@ return [
         'filter' => 'Filter',
     ],
     'messages' => [
-        'created' => 'The blog has been created successfully.',
-        'updated' => 'The blog has been updated successfully.',
-        'deleted' => 'The blog has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The blog has been created successfully',
+        'updated' => 'The blog has been updated successfully',
+        'deleted' => 'The blog has been deleted successfully',
+        'retrieved' => 'The blog has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

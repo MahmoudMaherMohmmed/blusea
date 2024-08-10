@@ -19,10 +19,10 @@ return [
         'latest' => 'Latest admins',
     ],
     'messages' => [
-        'created' => 'The admin has been created successfully.',
-        'updated' => 'The admin has been updated successfully.',
-        'deleted' => 'The admin has been deleted successfully.',
-        'retrieved' => 'Data has been retrieved successfully.',
+        'created' => 'The admin has been created successfully',
+        'updated' => 'The admin has been updated successfully',
+        'deleted' => 'The admin has been deleted successfully',
+        'retrieved' => 'The admin has been retrieved successfully',
     ],
     'attributes' => [
         'id' => 'ID',

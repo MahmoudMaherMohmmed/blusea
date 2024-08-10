@@ -103,6 +103,6 @@ class SettingController extends Controller
     {
         $setting->delete();
 
-        return redirect()->back()->with('success', trans('settings.messages.deleted'));
+        return redirect()->route('admin.settings.index')->with('success', trans('settings.messages.deleted'));
     }
 }
