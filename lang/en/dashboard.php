@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'enjazco' => 'Enjazco',
+    'blusea' => 'Blusea',
     'home' => 'Home',
     'users' => 'Users',
     'id' => 'ID',
