@@ -1,0 +1,1 @@
+<a href="{{ route('admin.partners.show', $partner) }}" class="btn btn-sm btn-primary"> <i class="las la-eye"></i> </a> 

@@ -1,0 +1,1 @@
+<a href="{{ route('admin.settings.show', $setting) }}" class="btn btn-sm btn-primary"> <i class="las la-eye"></i> </a> 
