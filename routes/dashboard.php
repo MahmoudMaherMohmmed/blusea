@@ -3,6 +3,7 @@
 use App\Http\Controllers\Dashboard\BlogController;
 use App\Http\Controllers\Dashboard\BranchController;
 use App\Http\Controllers\Dashboard\BrandController;
+use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\PartnerController;
@@ -29,6 +30,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['au
         Route::get('/home', [HomeController::class, 'home'])->name('home');
         Route::resource('users', UserController::class);
         Route::resource('brands', BrandController::class);
+        Route::resource('categories', CategoryController::class);
         Route::resource('sliders', SliderController::class);
         Route::resource('blogs', BlogController::class);
         Route::resource('partners', PartnerController::class);
