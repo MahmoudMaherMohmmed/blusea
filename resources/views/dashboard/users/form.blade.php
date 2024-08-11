@@ -78,7 +78,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.status') }} <span class="tx-danger">*</span></label>
-                                    <select class="form-control select2-no-search" name="status" require="">
+                                    <select class="form-control select2-no-search" name="status" required="">
                                         @foreach(App\Enums\UserStatusEnum::options() as $key=>$value)
                                             <option value="{{$key}}" {{$user!=null && $user->status->value==$key ? 'selected' : ''}}> {{ $value }} </option>
                                         @endforeach

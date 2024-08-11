@@ -93,7 +93,7 @@
                                     <div class="d-flex align-items-center">
                                         <div class="mt-0">
                                             <h5 class="mb-1 tx-15">{{$user->name}}</h5>
-                                            <p class="mb-0 tx-13 text-muted">{{ __('dashboard.id') }}: #{{$user->id}}</p>
+                                            <p class="mb-0 tx-13 text-muted">{{ __('admins.attributes.id') }}: #{{$user->id}}</p>
                                         </div>
                                     </div>
                                 </div>
