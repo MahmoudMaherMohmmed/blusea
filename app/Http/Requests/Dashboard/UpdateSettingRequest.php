@@ -37,4 +37,14 @@ class UpdateSettingRequest extends FormRequest
             'youtube_url' => 'nullable|url',
         ];
     }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return trans('settings.attributes');
+    }
 }

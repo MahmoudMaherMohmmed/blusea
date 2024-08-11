@@ -30,4 +30,14 @@ class StoreBlogRequest extends FormRequest
             'status' => 'required',
         ];
     }
+
+    /**
+     * Get custom attributes for validator errors.
+     *
+     * @return array
+     */
+    public function attributes()
+    {
+        return trans('blogs.attributes');
+    }
 }
