@@ -270,52 +270,28 @@
         </header>
         <!--//==Header End==//-->
         <!--//=======Main Slider=======//-->
+        @if($sliders->isNotEmpty())
         <div class="wa_main_bn_wrap">
             <div id="home1-main-slider" class="owl-carousel owl-theme">
+                @foreach($sliders as $slider)
                 <div class="item">
                     <figure>
-                        <img src="{{URL::asset('front/assets')}}/img/slider/1.jpg" class="hidden-xs hidden-sm " alt=""/>
-                        <img src="{{URL::asset('front/assets')}}/img/slider/1xs.jpg" class="hidden-lg hidden-md" alt=""/>
+                        <img src="{{$slider->getImage()}}" class="hidden-xs hidden-sm " alt="{{$slider->title}}"/>
+                        <img src="{{$slider->getImage()}}" class="hidden-lg hidden-md" alt="{{$slider->title}}"/>
                         <figcaption>
                             <div class="container">
-                                <h2><span>Luxury Faucets Collections</span></h2>
-                                <span>flat 60% off for first 30 Customer.</span>
-                                <p>Quis est tam dissimile homini. Quia dolori non voluptas.</p>
+                                <h2><span>{{$slider->title}}</span></h2>
+                                <span>{{$slider->subtitle}}</span>
+                                <p>{{$slider->description}}</p>
                                 <a href="collection-grid-sidebar.html" class="theme-button">Shop Now</a>
                             </div>
                         </figcaption>
                     </figure>
                 </div>
-                <div class="item">
-                    <figure>
-                        <img src="{{URL::asset('front/assets')}}/img/slider/2.jpg" class="hidden-xs hidden-sm " alt=""/>
-                        <img src="{{URL::asset('front/assets')}}/img/slider/2xs.jpg" class="hidden-lg hidden-md" alt=""/>
-                        <figcaption>
-                            <div class="container">
-                                <h2><span>Luxury Faucets Collections</span></h2>
-                                <span>flat 60% off for first 30 Customer.</span>
-                                <p>Quis est tam dissimile homini. Quia dolori non voluptas.</p>
-                                <a href="collection-grid-sidebar.html" class="theme-button">Shop Now</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="item">
-                    <figure>
-                        <img src="{{URL::asset('front/assets')}}/img/slider/3.jpg" class="hidden-xs hidden-sm" alt=""/>
-                        <img src="{{URL::asset('front/assets')}}/img/slider/3xs.jpg" class="hidden-lg hidden-md" alt=""/>
-                        <figcaption>
-                            <div class="container">
-                                <h2><span>Luxury Faucets Collections</span></h2>
-                                <span>flat 60% off for first 30 Customer.</span>
-                                <p>Quis est tam dissimile homini. Quia dolori non voluptas.</p>
-                                <a href="collection-grid-sidebar.html" class="theme-button">Shop Now</a>
-                            </div>
-                        </figcaption>
-                    </figure>
-                </div>
+                @endforeach
             </div>
         </div>
+        @endif
         <!--//=======Main Slider End=======//-->
         <!--//=======Collection Section Start=======//-->
         <section class="collection-section padT100">
