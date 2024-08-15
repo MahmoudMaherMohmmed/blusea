@@ -73,10 +73,15 @@
                         <div class="col-md-3 col-sm-5 col-xs-12">
                             <div class="row">
                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <select>
-                                        <option>ENG</option>
-                                        <option>DE</option>
-                                        <option>GER</option>
+                                    <select onchange="location = this.value;">
+                                        <option></option>
+                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                            @if(app()->getLocale() != $localeCode)
+                                                <option value="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                                    {{ $properties['native'] }}
+                                                </option>
+                                            @endif
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -1058,6 +1063,7 @@
         </div>
         <!--//=========Adverts Section End=========//-->
         <!--//=========Home Blogs Start=========//-->
+        @if($blogs->isNotEmpty())
         <section class="blogs_main padTB100 grey-bg">
             <div class="container">
                 <div class="row">
@@ -1074,134 +1080,33 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="owl-carousel owl-theme carousel-style-1" id="home-blog-carousel">
+                                @foreach($blogs as $blog)
                                 <div class="home-blog-item">
                                     <div class="col-md-12">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/all/wa-blog-8.jpg" alt="Thumbnail">
+                                                <img src="{{$blog->getImage()}}" alt="{{$blog->title}}">
                                                 <span class="hover-style"></span>
                                             </figure>
                                             <div class="block-caption">
-                                                <h4><a href="blog-single-sidebar.html">Mauris et pulvinar cidunt</a></h4>
-                                                <p>
-                                                    When an unknown printer took a galley type
-                                                    scrambled it to make type Nam and  sheets
-                                                    Mauris pulvinar tincidut lorem. It has only
-                                                    survived five centuries
-                                                </p>
-                                                <a href="blog-single-sidebar.html" class="read-more">read more</a>
+                                                <h4><a href="{{route('blog.details', $blog->slug)}}">{{$blog->title}}</a></h4>
+                                                <p>{{$blog->description}}</p>
+                                                <a href="{{route('blog.details', $blog->slug)}}" class="read-more">read more</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="home-blog-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/all/wa-blog-2.jpg" alt="Thumbnail">
-                                                <span class="hover-style"></span>
-                                            </figure>
-                                            <div class="block-caption">
-                                                <h4><a href="blog-single-sidebar.html">Mauris et pulvinar cidunt</a></h4>
-                                                <p>
-                                                    When an unknown printer took a galley type
-                                                    scrambled it to make type Nam and  sheets
-                                                    Mauris pulvinar tincidut lorem. It has only
-                                                    survived five centuries
-                                                </p>
-                                                <a href="blog-single-sidebar.html" class="read-more">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="home-blog-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/all/wa-blog-3.jpg" alt="Thumbnail">
-                                                <span class="hover-style"></span>
-                                            </figure>
-                                            <div class="block-caption">
-                                                <h4><a href="blog-single-sidebar.html">Mauris et pulvinar cidunt</a></h4>
-                                                <p>
-                                                    When an unknown printer took a galley type
-                                                    scrambled it to make type Nam and  sheets
-                                                    Mauris pulvinar tincidut lorem. It has only
-                                                    survived five centuries
-                                                </p>
-                                                <a href="blog-single-sidebar.html" class="read-more">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="home-blog-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/all/wa-blog-4.jpg" alt="Thumbnail">
-                                                <span class="hover-style"></span>
-                                            </figure>
-                                            <div class="block-caption">
-                                                <h4><a href="blog-single-sidebar.html">Mauris et pulvinar cidunt</a></h4>
-                                                <p>
-                                                    When an unknown printer took a galley type
-                                                    scrambled it to make type Nam and  sheets
-                                                    Mauris pulvinar tincidut lorem. It has only
-                                                    survived five centuries
-                                                </p>
-                                                <a href="blog-single-sidebar.html" class="read-more">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="home-blog-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/all/wa-blog-5.jpg" alt="Thumbnail">
-                                                <span class="hover-style"></span>
-                                            </figure>
-                                            <div class="block-caption">
-                                                <h4><a href="blog-single-sidebar.html">Mauris et pulvinar cidunt</a></h4>
-                                                <p>
-                                                    When an unknown printer took a galley type
-                                                    scrambled it to make type Nam and  sheets
-                                                    Mauris pulvinar tincidut lorem. It has only
-                                                    survived five centuries
-                                                </p>
-                                                <a href="blog-single-sidebar.html" class="read-more">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="home-blog-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/all/wa-blog-6.jpg" alt="Thumbnail">
-                                                <span class="hover-style"></span>
-                                            </figure>
-                                            <div class="block-caption">
-                                                <h4><a href="blog-single-sidebar.html">Mauris et pulvinar cidunt</a></h4>
-                                                <p>
-                                                    When an unknown printer took a galley type
-                                                    scrambled it to make type Nam and  sheets
-                                                    Mauris pulvinar tincidut lorem. It has only
-                                                    survived five centuries
-                                                </p>
-                                                <a href="blog-single-sidebar.html" class="read-more">read more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        @endif
         <!--//=========Home Blogs End=========//-->
         <!--//=========Partners Start=========//-->
+        @if($partners->isNotEmpty())
         <section class="wa-partners padT100 padB80">
             <div class="container">
                 <div class="row">
@@ -1218,84 +1123,24 @@
                     <div class="col-md-12">
                         <div class="row">
                             <div class="wa-partner-carousel owl-carousel-style1 text-center owl-carousel owl-theme">
+                                @foreach($partners as $partner)
                                 <div class="partener-item">
                                     <div class="col-md-12">
                                         <div class="wa-theme-design-block">
                                             <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/1.jpg" alt="Thumbnail">
+                                                <img src="{{$partner->getImage()}}" alt="{{$partner->title}}">
                                             </figure>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/2.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/3.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/4.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/5.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/6.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/7.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="partener-item">
-                                    <div class="col-md-12">
-                                        <div class="wa-theme-design-block">
-                                            <figure class="dark-theme">
-                                                <img src="{{URL::asset('front/assets')}}/img/partner/8.jpg" alt="Thumbnail">
-                                            </figure>
-                                        </div>
-                                    </div>
-                                </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        @endif
         <!--//=========Partners End=========//-->
         <!--//=============Newsletter Start============//-->
         <section class="newsletter padB80">
@@ -1324,64 +1169,32 @@
         </section>
         <!--//=============Newsletter End============//-->
         <!--//=============Services Start============//-->
+        @if($services->isNotEmpty())
         <section class="services text-center padB100">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 col-sm-12">
                         <div class="row">
                             <!--//==Services Item Start==//-->
+                            @foreach($services as $service)
                             <div class="col-md-3 col-sm-3">
                                 <div class="wa-box-style2">
                                     <div class="icon">
-                                        <i class="fa fa-balance-scale" aria-hidden="true"></i>
+                                        <i class="fa {{$service->icon}}" aria-hidden="true"></i>
                                     </div>
                                     <div class="text">
-                                        <h4>Free Shipping</h4>
+                                        <h4>{{$service->title}}</h4>
                                     </div>
                                 </div>
                             </div>
-                            <!--//==Services Item End==//-->
-                            <!--//==Services Item Start==//-->
-                            <div class="col-md-3 col-sm-3">
-                                <div class="wa-box-style2">
-                                    <div class="icon">
-                                        <i class="fa fa-anchor" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h4>24/7 Support</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--//==Services Item End==//-->
-                            <!--//==Services Item Start==//-->
-                            <div class="col-md-3 col-sm-3">
-                                <div class="wa-box-style2">
-                                    <div class="icon">
-                                        <i class="fa fa-car" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h4>Money back</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--//==Services Item End==//-->
-                            <!--//==Services Item Start==//-->
-                            <div class="col-md-3 col-sm-3">
-                                <div class="wa-box-style2">
-                                    <div class="icon">
-                                        <i class="fa fa-car" aria-hidden="true"></i>
-                                    </div>
-                                    <div class="text">
-                                        <h4>FREE GIFT COUPONS</h4>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                             <!--//==Services Item End==//-->
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        @endif
         <!--//=============Services End============//-->
         <!--//=========Footer Start=========//-->
         <footer id="main-footer" class="dark-footer footer-style1">
