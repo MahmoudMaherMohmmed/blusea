@@ -56,9 +56,10 @@ class HomeController extends Controller
      */
     public function blogs()
     {
-        $blogs = Blog::active()->latest()->get();
+        $blogs = Blog::active()->latest()->paginate(6);
+        $recent_blogs = Blog::active()->latest()->limit(3);
 
-        return view('front.blogs', compact('blogs'));
+        return view('front.blogs', compact('blogs', 'recent_blogs'));
     }
 
     /**
@@ -68,10 +69,10 @@ class HomeController extends Controller
      */
     public function blogDetails($slug)
     {
-        $blogs = Blog::active()->latest()->get();
         $blog = Blog::where('slug', $slug)->active()->first();
+        $recent_blogs = Blog::active()->latest()->limit(3);
 
-        return view('front.blog_details', compact('blogs', 'blog'));
+        return view('front.blog_details', compact('blog', 'recent_blogs'));
     }
 
     /**
