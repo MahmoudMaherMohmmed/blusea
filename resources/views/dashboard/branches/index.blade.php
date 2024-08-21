@@ -53,8 +53,8 @@
                                 @foreach($branches as $branch)
                                     <tr>
                                         <td>{{$branch->id}}</td>
-                                        <td>{{$branch->getTranslation('title', app()->getLocale())}}</td>
-                                        <td>{{$branch->getTranslation('address', app()->getLocale())}}</td>
+                                        <td>{{$branch->title}}</td>
+                                        <td>{{$branch->address}}</td>
                                         <td>
                                             <span class="badge {{$branch->status->color()}}">{{$branch->status->trans()}}</span>
                                         </td>

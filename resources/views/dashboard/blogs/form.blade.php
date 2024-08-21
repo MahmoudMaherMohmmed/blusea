@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.blogs.index') }}">{{ __('blogs.plural') }}</a></span>
                 @if($blog!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$blog->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$blog->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $blog!=null ? __('blogs.actions.edit') : __('blogs.actions.create') }}</span>
             </div>

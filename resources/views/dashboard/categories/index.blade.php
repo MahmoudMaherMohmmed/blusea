@@ -51,13 +51,13 @@
                                 @foreach($categories as $category)
                                     <tr>
                                         <td>{{$category->id}}</td>
-                                        <td>{{$category->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$category->title}}</td>
                                         <td>
                                             <span class="badge {{$category->type->color()}}">{{$category->type->trans()}}</span>
                                         </td>
                                         <td>
                                             @if($category->type==App\Enums\CategoryTypeEnum::SUB_CATEGORY)
-                                                {{$category->parent->getTranslation('title', app()->getLocale())}}
+                                                {{$category->parent->title}}
                                             @else
                                                 ---
                                             @endif

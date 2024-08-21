@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.products') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.categories.index') }}">{{ __('categories.plural') }}</a></span>
                 @if($category!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$category->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$category->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $category!=null ? __('categories.actions.edit') : __('categories.actions.create') }}</span>
             </div>

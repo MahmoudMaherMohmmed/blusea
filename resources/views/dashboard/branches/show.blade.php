@@ -11,7 +11,7 @@
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.branches.index') }}">{{ __('branches.plural') }}</a></span>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $branch->getTranslation('title', app()->getLocale()) }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $branch->title }}</span>
             </div>
         </div>
     </div>
@@ -34,11 +34,11 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('branches.attributes.title') }}</th>
-                                    <td>{{$branch->getTranslation('title', app()->getLocale())}}</td>
+                                    <td>{{$branch->title}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('branches.attributes.address') }}</th>
-                                    <td>{{$branch->getTranslation('address', app()->getLocale())}}</td>
+                                    <td>{{$branch->address}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('branches.attributes.google_map') }}</th>

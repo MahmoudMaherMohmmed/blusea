@@ -11,7 +11,7 @@
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.sliders.index') }}">{{ __('sliders.plural') }}</a></span>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $slider->getTranslation('title', app()->getLocale()) }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $slider->title }}</span>
             </div>
         </div>
     </div>
@@ -34,15 +34,15 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('sliders.attributes.title') }}</th>
-                                    <td>{{$slider->getTranslation('title', app()->getLocale())}}</td>
+                                    <td>{{$slider->title}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('sliders.attributes.subtitle') }}</th>
-                                    <td>{{$slider->getTranslation('subtitle', app()->getLocale())}}</td>
+                                    <td>{{$slider->subtitle}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('sliders.attributes.description') }}</th>
-                                    <td>{{$slider->getTranslation('description', app()->getLocale())}}</td>
+                                    <td>{{$slider->description}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('sliders.attributes.status') }}</th>

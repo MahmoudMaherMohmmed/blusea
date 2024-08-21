@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.settings.index') }}">{{ __('settings.plural') }}</a></span>
                 @if($setting!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$setting->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$setting->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $setting!=null ? __('settings.actions.edit') : __('settings.actions.create') }}</span>
             </div>

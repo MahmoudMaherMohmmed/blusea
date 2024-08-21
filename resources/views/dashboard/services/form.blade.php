@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.services.index') }}">{{ __('services.plural') }}</a></span>
                 @if($service!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$service->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$service->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $service!=null ? __('services.actions.edit') : __('services.actions.create') }}</span>
             </div>

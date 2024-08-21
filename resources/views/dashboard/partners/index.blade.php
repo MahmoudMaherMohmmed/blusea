@@ -51,7 +51,7 @@
                                 @foreach($partners as $partner)
                                     <tr>
                                         <td>{{$partner->id}}</td>
-                                        <td>{{$partner->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$partner->title}}</td>
                                         <td>{{$partner->url}}</td>
                                         <td>
                                             <span class="badge {{$partner->status->color()}}">{{$partner->status->trans()}}</span>

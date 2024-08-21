@@ -50,7 +50,7 @@
                                 @foreach($blogs as $blog)
                                     <tr>
                                         <td>{{$blog->id}}</td>
-                                        <td>{{$blog->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$blog->title}}</td>
                                         <td>
                                             <span class="badge {{$blog->status->color()}}">{{$blog->status->trans()}}</span>
                                         </td>

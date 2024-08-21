@@ -11,7 +11,7 @@
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.blogs.index') }}">{{ __('blogs.plural') }}</a></span>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $blog->getTranslation('title', app()->getLocale()) }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $blog->title }}</span>
             </div>
         </div>
     </div>
@@ -34,11 +34,11 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('blogs.attributes.title') }}</th>
-                                    <td>{{$blog->getTranslation('title', app()->getLocale())}}</td>
+                                    <td>{{$blog->title}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('blogs.attributes.description') }}</th>
-                                    <td>{!! $blog->getTranslation('description', app()->getLocale()) !!}</td>
+                                    <td>{!! $blog->description !!}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('blogs.attributes.status') }}</th>

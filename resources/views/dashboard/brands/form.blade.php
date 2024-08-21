@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.products') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.brands.index') }}">{{ __('brands.plural') }}</a></span>
                 @if($brand!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$brand->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$brand->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $brand!=null ? __('brands.actions.edit') : __('brands.actions.create') }}</span>
             </div>

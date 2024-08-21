@@ -50,7 +50,7 @@
                                 @foreach($sliders as $slider)
                                     <tr>
                                         <td>{{$slider->id}}</td>
-                                        <td>{{$slider->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$slider->title}}</td>
                                         <td>
                                             <span class="badge {{$slider->status->color()}}">{{$slider->status->trans()}}</span>
                                         </td>

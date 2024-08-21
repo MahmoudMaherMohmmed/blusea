@@ -21,7 +21,7 @@
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.sliders.index') }}">{{ __('sliders.plural') }}</a></span>
                 @if($slider!=null)
-                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$slider->getTranslation('title', app()->getLocale())}}</span>
+                    <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{$slider->title}}</span>
                 @endif
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $slider!=null ? __('sliders.actions.edit') : __('sliders.actions.create') }}</span>
             </div>

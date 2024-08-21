@@ -50,7 +50,7 @@
                                 @foreach($brands as $brand)
                                     <tr>
                                         <td>{{$brand->id}}</td>
-                                        <td>{{$brand->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$brand->title}}</td>
                                         <td>
                                             <span class="badge {{$brand->status->color()}}">{{$brand->status->trans()}}</span>
                                         </td>

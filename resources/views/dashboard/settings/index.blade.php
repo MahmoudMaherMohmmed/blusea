@@ -49,7 +49,7 @@
                             <tbody>
                                 @foreach($settings as $setting)
                                     <tr>
-                                        <td>{{$setting->getTranslation('title', app()->getLocale())}}</td>
+                                        <td>{{$setting->title}}</td>
                                         <td>{{$setting->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.settings.partials.actions.show')

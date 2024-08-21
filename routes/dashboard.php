@@ -12,7 +12,6 @@ use App\Http\Controllers\Dashboard\SettingController;
 use App\Http\Controllers\Dashboard\SliderController;
 use App\Http\Controllers\Dashboard\SubscribeController;
 use App\Http\Controllers\Dashboard\UserController;
-use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------

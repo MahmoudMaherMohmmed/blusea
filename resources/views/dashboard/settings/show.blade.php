@@ -11,7 +11,7 @@
             <div class="d-flex">
                 <h4 class="content-title mb-0 my-auto">{{ __('dashboard.application') }}</h4>
                 <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ <a href="{{ route('admin.settings.index') }}">{{ __('settings.plural') }}</a></span>
-                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $setting->getTranslation('title', app()->getLocale()) }}</span>
+                <span class="text-muted mt-1 tx-13 mr-2 mb-0">/ {{ $setting->title }}</span>
             </div>
         </div>
     </div>
@@ -34,15 +34,15 @@
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.title') }}</th>
-                                    <td>{{$setting->getTranslation('title', app()->getLocale())}}</td>
+                                    <td>{{$setting->title}}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.short_description') }}</th>
-                                    <td>{!! $setting->getTranslation('short_description', app()->getLocale()) !!}</td>
+                                    <td>{!! $setting->short_description !!}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.description') }}</th>
-                                    <td>{!! $setting->getTranslation('description', app()->getLocale()) !!}</td>
+                                    <td>{!! $setting->description !!}</td>
                                 </tr>
                                 <tr>
                                     <th scope="row">{{ __('settings.attributes.facebook_url') }}</th>
