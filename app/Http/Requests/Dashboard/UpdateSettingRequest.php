@@ -28,6 +28,7 @@ class UpdateSettingRequest extends FormRequest
             'short_description.*' => 'required|string',
             'description' => 'required|array',
             'description.*' => 'required|string',
+            'product_price_status' => 'required',
             'facebook_url' => 'nullable|url',
             'whatsapp_url' => 'nullable|url',
             'telegram_url' => 'nullable|url',

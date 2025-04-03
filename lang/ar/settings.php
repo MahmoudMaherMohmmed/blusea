@@ -28,6 +28,7 @@ return [
         'title' => 'الاسم',
         'short_description' => 'وصف قصير',
         'description' => 'الوصف',
+        'product_price_status' => 'حالة سعر المنتج',
         'facebook_url' => 'رابط حساب او صفحة الفيس بوك',
         'whatsapp_url' => 'رابط حساب او قناة الواتس اب',
         'telegram_url' => 'رابط حساب او قناة التليجرام',

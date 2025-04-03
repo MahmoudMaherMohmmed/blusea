@@ -28,6 +28,7 @@ return [
         'title' => 'Title',
         'short_description' => 'Short description',
         'description' => 'Description',
+        'product_price_status' => 'Product price status',
         'facebook_url' => 'Facebook URL',
         'whatsapp_url' => 'Whatsapp URL',
         'telegram_url' => 'Telegram URL',

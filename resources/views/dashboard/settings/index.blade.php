@@ -42,6 +42,7 @@
                             <thead>
                                 <tr>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.title') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('settings.attributes.product_price_status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.created_at') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.actions.actions') }}</th>
                                 </tr>
@@ -50,6 +51,9 @@
                                 @foreach($settings as $setting)
                                     <tr>
                                         <td>{{$setting->title}}</td>
+                                        <td>
+                                            <span class="badge {{$setting->product_price_status->color()}}">{{$setting->product_price_status->trans()}}</span>
+                                        </td>
                                         <td>{{$setting->created_at->diffForHumans()}}</td>
                                         <td>
                                             @include('dashboard.settings.partials.actions.show')

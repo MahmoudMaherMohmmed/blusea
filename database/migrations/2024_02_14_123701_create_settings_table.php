@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\ProductPriceStatusEnum;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,6 +16,7 @@ return new class extends Migration {
             $table->text('title');
             $table->text('short_description')->nullable();
             $table->text('description')->nullable();
+            $table->boolean('product_price_status')->default(ProductPriceStatusEnum::INACTIVE->value);
             $table->text('facebook_url')->nullable();
             $table->text('whatsapp_url')->nullable();
             $table->text('telegram_url')->nullable();

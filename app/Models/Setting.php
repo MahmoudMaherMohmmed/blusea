@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\ProductPriceStatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
@@ -18,6 +19,7 @@ class Setting extends Model implements HasMedia
         'title',
         'short_description',
         'description',
+        'product_price_status',
         'facebook_url',
         'whatsapp_url',
         'telegram_url',
@@ -29,6 +31,14 @@ class Setting extends Model implements HasMedia
 
     public $translatable = ['title', 'short_description', 'description'];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
+    protected $casts = [
+        'product_price_status' => ProductPriceStatusEnum::class,
+    ];
 
     public const MEDIA_COLLECTION_NAME = 'settings_image';
     public const MEDIA_COLLECTION_URL = 'dashboard/images/settings.png';

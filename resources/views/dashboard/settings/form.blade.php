@@ -129,7 +129,16 @@
                                     </div>
                                 </div>
                             </div>
-
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.product_price_status') }} <span class="tx-danger">*</span></label>
+                                    <select class="form-control select2-no-search" name="product_price_status" required="">
+                                        @foreach(App\Enums\ProductPriceStatusEnum::options() as $key=>$value)
+                                            <option value="{{$key}}" {{$setting!=null && $setting->product_price_status->value==$key ? 'selected' : ''}}> {{ $value }} </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.facebook_url') }} <span class="tx-danger">*</span></label>

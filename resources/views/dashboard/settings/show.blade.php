@@ -45,6 +45,12 @@
                                     <td>{!! $setting->description !!}</td>
                                 </tr>
                                 <tr>
+                                    <th scope="row">{{ __('settings.attributes.product_price_status') }}</th>
+                                    <td>
+                                        <span class="badge {{$setting->product_price_status->color()}}">{{$setting->product_price_status->trans()}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <th scope="row">{{ __('settings.attributes.facebook_url') }}</th>
                                     <td>{{$setting->facebook_url}}</td>
                                 </tr>

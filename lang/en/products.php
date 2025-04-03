@@ -58,5 +58,9 @@ return [
     'status' => [
         'ACTIVE' => 'Active',
         'INACTIVE' => 'In active',
-    ]
+    ],
+    'price_status' => [
+        'ACTIVE' => 'Active',
+        'INACTIVE' => 'In active',
+    ],
 ];

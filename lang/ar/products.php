@@ -58,5 +58,9 @@ return [
     'status' => [
         'ACTIVE' => 'مفعل',
         'INACTIVE' => 'غير مفعل',
-    ]
+    ],
+    'price_status' => [
+        'ACTIVE' => 'مفعل',
+        'INACTIVE' => 'غير مفعل',
+    ],
 ];
