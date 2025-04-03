@@ -41,16 +41,6 @@
                                     <td>{!! $category->description !!}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('categories.attributes.type') }}</th>
-                                    <td> <span class="badge {{$category->type->color()}}">{{$category->type->trans()}}</span> </td>
-                                </tr>
-                                @if($category->type==App\Enums\CategoryTypeEnum::SUB_CATEGORY)
-                                <tr>
-                                    <th scope="row">{{ __('categories.attributes.parent_id') }}</th>
-                                    <td>{{$category->parent->title}}</td>
-                                </tr>
-                                @endif
-                                <tr>
                                     <th scope="row">{{ __('categories.attributes.status') }}</th>
                                     <td> <span class="badge {{$category->status->color()}}">{{$category->status->trans()}}</span> </td>
                                 </tr>

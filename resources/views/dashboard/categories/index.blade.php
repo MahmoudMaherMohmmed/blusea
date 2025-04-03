@@ -41,8 +41,6 @@
                                 <tr>
                                     <th class="wd-10p border-bottom-0">{{ __('categories.attributes.id') }}</th>
                                     <th class="wd-30p border-bottom-0">{{ __('categories.attributes.title') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('categories.attributes.type') }}</th>
-                                    <th class="wd-20p border-bottom-0">{{ __('categories.attributes.parent_id') }}</th>
                                     <th class="wd-10p border-bottom-0">{{ __('categories.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('categories.actions.actions') }}</th>
                                 </tr>
@@ -52,16 +50,6 @@
                                     <tr>
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->title}}</td>
-                                        <td>
-                                            <span class="badge {{$category->type->color()}}">{{$category->type->trans()}}</span>
-                                        </td>
-                                        <td>
-                                            @if($category->type==App\Enums\CategoryTypeEnum::SUB_CATEGORY)
-                                                {{$category->parent->title}}
-                                            @else
-                                                ---
-                                            @endif
-                                        </td>
                                         <td>
                                             <span class="badge {{$category->status->color()}}">{{$category->status->trans()}}</span>
                                         </td>

@@ -28,8 +28,6 @@ return [
         'title' => 'Title',
         'description' => 'Description',
         'image' => 'Image',
-        'type' => 'Type',
-        'parent_id' => 'Parent category',
         'status' => 'Status',
         'created_at' => 'Created at',
     ],
@@ -40,10 +38,6 @@ return [
             'confirm' => 'Delete',
             'cancel' => 'Cancel',
         ]
-    ],
-    'type' => [
-        'SUB_CATEGORY' => 'Subcategory',
-        'MAIN_CATEGORY' => 'Main category',
     ],
     'status' => [
         'ACTIVE' => 'Active',

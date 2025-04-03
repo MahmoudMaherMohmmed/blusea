@@ -102,28 +102,6 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('categories.attributes.type') }} <span class="tx-danger">*</span></label>
-                                    <select class="form-control select2-no-search" name="type" id="type" required="">
-                                        @foreach(App\Enums\CategoryTypeEnum::options() as $key=>$value)
-                                            <option value="{{$key}}" {{$category!=null && $category->type->value==$key ? 'selected' : ''}}> {{ $value }} </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-12" id="sub_categories">
-                                <div class="form-group">
-                                    <label class="form-label">{{ __('categories.singular') }} <span class="tx-danger">*</span></label>
-                                    <select class="form-control" name="parent_id">
-                                        @foreach(App\Models\Category::where('type', App\Enums\CategoryTypeEnum::MAIN_CATEGORY)->get() as $category)
-                                            <option value="{{$category->id}}" {{$category!=null && $category->parent_id==$category->id ? 'selected' : ''}}> {{ $category->title }} </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <div class="form-group">
                                     <label class="form-label">{{ __('categories.attributes.image') }} <span class="tx-danger">*</span></label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$category!=null ? $category->getImage() : ''}}" data-height="200" />
                                 </div>
@@ -168,31 +146,4 @@
     <script src="{{URL::asset('dashboard/assets/plugins/fancyuploder/fancy-uploader.js')}}"></script>
     <!-- Internal Input tags js-->
     <script src="{{URL::asset('dashboard/assets/plugins/inputtags/inputtags.js')}}"></script>
-    <script>
-        $(document).ready(function() {
-            @if(old('type') != null)
-                @if(old('type')==App\Enums\CategoryTypeEnum::MAIN_CATEGORY->value)
-                    $("#sub_categories").hide();
-                @else
-                    $("#sub_categories").show();
-                @endif
-            @elseif($category != null)
-                @if($category->type==App\Enums\CategoryTypeEnum::MAIN_CATEGORY)
-                    $("#sub_categories").hide();
-                @else
-                    $("#sub_categories").show();
-               @endif
-            @else
-               $("#sub_categories").hide();
-            @endif
-        });
-
-        $('#type').on('change', function() {
-            if ( this.value == {{App\Enums\CategoryTypeEnum::SUB_CATEGORY->value}}){
-                $("#sub_categories").show();
-            } else {
-                $("#sub_categories").hide();
-            }
-        });
-    </script>
 @endsection

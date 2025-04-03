@@ -28,8 +28,6 @@ return [
         'title' => 'الاسم',
         'description' => 'الوصف',
         'image' => 'الصورة',
-        'type' => 'النوع',
-        'parent_id' => 'القسم رئيسي',
         'status' => 'الحالة',
         'created_at' => 'تاريخ الإضافة',
     ],
@@ -40,10 +38,6 @@ return [
             'confirm' => 'حذف',
             'cancel' => 'إلغاء',
         ]
-    ],
-    'type' => [
-        'SUB_CATEGORY' => 'قسم فرعي',
-        'MAIN_CATEGORY' => 'قسم رئيسي',
     ],
     'status' => [
         'ACTIVE' => 'مفعل',

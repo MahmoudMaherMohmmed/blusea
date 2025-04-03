@@ -1,7 +1,6 @@
 <?php
 
 use App\Enums\CategoryStatusEnum;
-use App\Enums\CategoryTypeEnum;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,8 +16,6 @@ return new class extends Migration {
             $table->string('slug');
             $table->text('title');
             $table->text('description')->nullable();
-            $table->boolean('type')->default(CategoryTypeEnum::SUB_CATEGORY->value);
-            $table->foreignId('parent_id')->nullable()->constrained('categories')->cascadeOnDelete()->cascadeOnUpdate();
             $table->boolean('status')->default(CategoryStatusEnum::ACTIVE->value);
             $table->timestamps();
             $table->softDeletes();

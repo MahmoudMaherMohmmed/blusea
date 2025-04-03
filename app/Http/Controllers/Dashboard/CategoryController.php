@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Dashboard;
 
-use App\Enums\CategoryTypeEnum;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreCategoryRequest;
 use App\Http\Requests\Dashboard\UpdateCategoryRequest;
@@ -41,12 +40,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        if ($request->type == CategoryTypeEnum::MAIN_CATEGORY) {
-            $category = Category::create(array_merge($request->validated(), ['slug' => Str::slug($request->title['en']), 'parent_id' => null]));
-        } else {
-            $category = Category::create(array_merge($request->validated(), ['slug' => Str::slug($request->title['en']), 'parent_id' => $request->parent_id]));
-        }
-
+        $category = Category::create(array_merge($request->validated(), ['slug' => Str::slug($request->title['en'])]));
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $category->addMediaFromRequest('image')
                 ->toMediaCollection(Category::MEDIA_COLLECTION_NAME);
@@ -86,12 +80,7 @@ class CategoryController extends Controller
      */
     public function update(UpdateCategoryRequest $request, Category $category)
     {
-        if ($request->type == CategoryTypeEnum::MAIN_CATEGORY) {
-            $category->update(array_merge($request->validated(), ['slug' => Str::slug($request->title['en']), 'parent_id' => null]));
-        } else {
-            $category->update(array_merge($request->validated(), ['slug' => Str::slug($request->title['en']), 'parent_id' => $request->parent_id]));
-        }
-
+        $category->update(array_merge($request->validated(), ['slug' => Str::slug($request->title['en'])]));
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $category->clearMediaCollection(Category::MEDIA_COLLECTION_NAME);
             $category->addMediaFromRequest('image')

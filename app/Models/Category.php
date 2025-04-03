@@ -3,12 +3,9 @@
 namespace App\Models;
 
 use App\Enums\CategoryStatusEnum;
-use App\Enums\CategoryTypeEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -25,8 +22,6 @@ class Category extends Model implements HasMedia
         'slug',
         'title',
         'description',
-        'type',
-        'parent_id',
         'status',
     ];
 
@@ -38,7 +33,6 @@ class Category extends Model implements HasMedia
      * @var array<string, string>
      */
     protected $casts = [
-        'type' => CategoryTypeEnum::class,
         'status' => CategoryStatusEnum::class,
     ];
 
@@ -55,22 +49,6 @@ class Category extends Model implements HasMedia
     public function getImage()
     {
         return $this->getFirstMediaUrl(self::MEDIA_COLLECTION_NAME);
-    }
-
-    /**
-     * @return BelongsTo
-     */
-    public function parent(): BelongsTo
-    {
-        return $this->belongsTo(Category::class, 'parent_id')->withTrashed();
-    }
-
-    /**
-     * @return HasMany
-     */
-    public function children(): HasMany
-    {
-        return $this->hasMany(Category::class, 'parent_id');
     }
 
     /**
