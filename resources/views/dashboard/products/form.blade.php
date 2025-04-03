@@ -11,6 +11,19 @@
     <link href="{{URL::asset('dashboard/assets/plugins/fileuploads/css/fileupload.css')}}" rel="stylesheet" type="text/css"/>
     <!---Internal Fancy uploader css-->
     <link href="{{URL::asset('dashboard/assets/plugins/fancyuploder/fancy_fileupload.css')}}" rel="stylesheet" />
+    <style>
+        .remove {
+            position: relative;
+            float: left;
+            top: 40px;
+            left: 13px;
+            border: 1px solid;
+            font-size: 25px;
+            border-radius: 50%;
+            background-color: #f44336;
+            color: #fff !important;
+        }
+    </style>
 @endsection
 
 @section('page-header')
@@ -257,6 +270,26 @@
                                 <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.image') }} <span class="tx-danger">*</span></label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$product!=null ? $product->getMainImage() : ''}}" data-height="200" />
+                                </div>
+                            </div>
+
+                            @if($product && $product->getImages()!=null)
+                                <div class="row">
+                                    @foreach($product->getImages() as $image)
+                                        <div class="col-lg-3">
+                                            <a href="{{route('admin.products.images.destroy', $image->id)}}"
+                                               class="icon icon-close remove cursor-pointer">
+                                            </a>
+                                            <img src="{{$image->getFullUrl()}}" class="dashboard-img"
+                                                 width="100%">
+                                        </div>
+                                    @endforeach
+                                </div>
+                            @endif
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('products.attributes.images') }} <span class="tx-danger">*</span></label>
+                                    <input type="file" name="images[]" class="dropify" data-height="200"  multiple/>
                                 </div>
                             </div>
 

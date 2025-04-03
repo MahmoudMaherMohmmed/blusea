@@ -38,6 +38,8 @@ class UpdateProductRequest extends FormRequest
             'tags.*' => 'nullable|array',
             'tags.*.*' => 'nullable|string',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
+            'images' => 'nullable|array',
+            'images.*' => 'nullable|mimes:jpeg,png,jpg,svg,webp',
             'status' => 'required',
         ];
     }

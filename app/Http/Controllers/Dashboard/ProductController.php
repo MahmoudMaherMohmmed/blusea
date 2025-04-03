@@ -7,6 +7,7 @@ use App\Http\Requests\Dashboard\StoreProductRequest;
 use App\Http\Requests\Dashboard\UpdateProductRequest;
 use App\Models\Product;
 use Illuminate\Support\Str;
+use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class ProductController extends Controller
 {
@@ -56,6 +57,12 @@ class ProductController extends Controller
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $product->addMediaFromRequest('image')
                 ->toMediaCollection(Product::MAIN_MEDIA_COLLECTION_NAME);
+        }
+        if ($request->has('images') && count($request->images) > 0) {
+            $product->addMultipleMediaFromRequest(['images'])
+                ->each(function ($images) {
+                    $images->toMediaCollection(Product::MEDIA_COLLECTION_NAME);
+                });
         }
 
         return redirect()->route('admin.products.show', $product)->with('success', trans('products.messages.created'));
@@ -111,6 +118,12 @@ class ProductController extends Controller
             $product->addMediaFromRequest('image')
                 ->toMediaCollection(Product::MAIN_MEDIA_COLLECTION_NAME);
         }
+        if ($request->has('images') && count($request->images) > 0) {
+            $product->addMultipleMediaFromRequest(['images'])
+                ->each(function ($images) {
+                    $images->toMediaCollection(Product::MEDIA_COLLECTION_NAME);
+                });
+        }
 
         return redirect()->route('admin.products.show', $product)->with('success', trans('products.messages.updated'));
     }
@@ -126,5 +139,15 @@ class ProductController extends Controller
         $product->delete();
 
         return redirect()->route('admin.products.index')->with('success', trans('products.messages.deleted'));
+    }
+
+    /**
+     * Remove image of specified resource from storage.
+     */
+    public function destroyImage($image_id)
+    {
+        Media::find($image_id)->delete();
+
+        return back()->with('success', ' تم حذف الصورة بنجاح');
     }
 }

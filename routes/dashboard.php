@@ -32,6 +32,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['au
         Route::resource('brands', BrandController::class);
         Route::resource('categories', CategoryController::class);
         Route::resource('products', ProductController::class);
+        Route::get('products/images/{image_id}/destroy', [ProductController::class, 'destroyImage'])->name('products.images.destroy');
         Route::resource('sliders', SliderController::class);
         Route::resource('blogs', BlogController::class);
         Route::resource('partners', PartnerController::class);

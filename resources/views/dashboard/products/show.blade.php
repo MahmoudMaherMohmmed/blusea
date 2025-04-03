@@ -78,6 +78,14 @@
                                 </td>
                             </tr>
                             <tr>
+                                <th scope="row">{{ __('tags.plural') }}</th>
+                                <td>
+                                    @foreach($product->tags as $tag)
+                                        <span class="badge badge-secondary">{{$tag->title}}</span>
+                                    @endforeach
+                                </td>
+                            </tr>
+                            <tr>
                                 <th scope="row">{{ __('products.attributes.status') }}</th>
                                 <td>
                                     <span
@@ -95,6 +103,20 @@
                                          src="{{$product->getMainImage()}}">
                                 </td>
                             </tr>
+                            @if($product->getImages())
+                                <tr>
+                                    <th scope="row">{{ __('products.attributes.images') }}</th>
+                                    <td>
+                                        <div class="row">
+                                            @foreach($product->getImages() as $image)
+                                                <div class="col-lg-3">
+                                                    <img src="{{$image->getFullUrl()}}" width="100%">
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endif
                             <tr>
                                 <th scope="row">{{ __('products.actions.actions') }}</th>
                                 <td>

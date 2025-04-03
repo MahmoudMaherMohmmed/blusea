@@ -38,6 +38,8 @@ class StoreProductRequest extends FormRequest
             'tags.*' => 'nullable|array',
             'tags.*.*' => 'nullable|string',
             'image' => 'required|mimes:jpeg,png,jpg,svg',
+            'images' => 'required|array',
+            'images.*' => 'required|mimes:jpeg,png,jpg,svg,webp',
             'status' => 'required',
         ];
     }
