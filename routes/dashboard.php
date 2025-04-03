@@ -7,6 +7,7 @@ use App\Http\Controllers\Dashboard\CategoryController;
 use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\PartnerController;
+use App\Http\Controllers\Dashboard\ProductController;
 use App\Http\Controllers\Dashboard\ServiceController;
 use App\Http\Controllers\Dashboard\SettingController;
 use App\Http\Controllers\Dashboard\SliderController;
@@ -30,6 +31,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['au
         Route::resource('users', UserController::class);
         Route::resource('brands', BrandController::class);
         Route::resource('categories', CategoryController::class);
+        Route::resource('products', ProductController::class);
         Route::resource('sliders', SliderController::class);
         Route::resource('blogs', BlogController::class);
         Route::resource('partners', PartnerController::class);

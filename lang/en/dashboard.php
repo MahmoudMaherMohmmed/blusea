@@ -6,4 +6,5 @@ return [
     'users' => 'Users',
     'products' => 'Products',
     'application' => 'Website Settings',
+    'sar' => 'SAR',
 ];

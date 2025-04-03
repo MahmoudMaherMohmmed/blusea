@@ -72,7 +72,7 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('brands.attributes.description') }} <span class="tx-danger">*</span></label>
+                                    <label class="form-label">{{ __('brands.attributes.description') }}</label>
                                     <div class="example">
 										<div class="panel panel-primary tabs-style-1">
                                             <div class=" tab-menu-heading">

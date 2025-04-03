@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\BrandStatusEnum;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
@@ -48,6 +49,14 @@ class Brand extends Model implements HasMedia
     public function getImage()
     {
         return $this->getFirstMediaUrl(self::MEDIA_COLLECTION_NAME);
+    }
+
+    /**
+     * @return BelongsToMany
+     */
+    public function products(): BelongsToMany
+    {
+        return $this->belongsToMany(Product::class)->withTimestamps();
     }
 
     public function scopeActive($query)
