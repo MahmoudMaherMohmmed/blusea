@@ -43,6 +43,16 @@ class ProductController extends Controller
         $product = Product::create(array_merge($request->validated(), ['slug' => Str::slug($request->title['en'])]));
         $product->categories()->attach($request->category_id);
         $product->brands()->attach($request->brand_id);
+        if (count($request->tags) > 0) {
+            foreach ($request->tags['ar'] as $index => $tag) {
+                $product->tags()->create([
+                    'title' => [
+                        'ar' => $tag,
+                        'en' => $request->tags['en'][$index] ?? null,
+                    ]
+                ]);
+            }
+        }
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $product->addMediaFromRequest('image')
                 ->toMediaCollection(Product::MAIN_MEDIA_COLLECTION_NAME);
@@ -85,6 +95,17 @@ class ProductController extends Controller
         $product->update(array_merge($request->validated(), ['slug' => Str::slug($request->title['en'])]));
         $product->categories()->sync($request->category_id);
         $product->brands()->sync($request->brand_id);
+        if (count($request->tags) > 0) {
+            $product->tags()->delete();
+            foreach ($request->tags['ar'] as $index => $tag) {
+                $product->tags()->create([
+                    'title' => [
+                        'ar' => $tag,
+                        'en' => $request->tags['en'][$index] ?? null,
+                    ]
+                ]);
+            }
+        }
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
             $product->clearMediaCollection(Product::MAIN_MEDIA_COLLECTION_NAME);
             $product->addMediaFromRequest('image')

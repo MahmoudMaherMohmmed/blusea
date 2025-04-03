@@ -34,8 +34,11 @@ class StoreProductRequest extends FormRequest
             'price_after_discount' => 'nullable|numeric',
             'special' => 'required',
             'best_seller' => 'required',
-            'status' => 'required',
+            'tags' => 'nullable|array',
+            'tags.*' => 'nullable|array',
+            'tags.*.*' => 'nullable|string',
             'image' => 'required|mimes:jpeg,png,jpg,svg',
+            'status' => 'required',
         ];
     }
 

@@ -192,6 +192,69 @@
 
                             <div class="col-12">
                                 <div class="form-group">
+                                    <label class="form-label">{{ __('tags.plural') }} <span class="tx-danger">*</span></label>
+                                    <div class="example">
+                                        <div class="panel panel-primary tabs-style-1">
+                                            @if($product!=null && $product->tags()->count()>0)
+                                                @foreach($product->tags as $tag)
+                                                    <div class="row" id="tag">
+                                                        <div class="col-5">
+                                                            <div class="form-group">
+                                                                <label class="form-label">{{ __('tags.attributes.title_ar') }} <span class="tx-danger">*</span></label>
+                                                                <input class="form-control" name="tags[ar][]" placeholder="{{ __('tags.attributes.title_ar') }}" value="{{$tag->getTranslation('title', 'ar')}}" type="text" required="">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-5">
+                                                            <div class="form-group">
+                                                                <label class="form-label">{{ __('tags.attributes.title_en') }} <span class="tx-danger">*</span></label>
+                                                                <input class="form-control" name="tags[en][]" placeholder="{{ __('tags.attributes.title_en') }}" value="{{$tag->getTranslation('title', 'en')}}" type="text" required="">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-2" id="tag_action" style="margin-top: 1.70rem">
+                                                            @if($loop->last)
+                                                                <a href="javascript:void(0)" id="add_new_tag" class="btn btn-primary">
+                                                                    <i class="mdi mdi-plus"></i>
+                                                                </a>
+                                                            @else
+                                                                <a href="javascript:void(0)" onclick="remove_tag(this)" class="btn btn-danger">
+                                                                    <i class="mdi mdi-delete"></i>
+                                                                </a>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            @else
+                                                <div class="row" id="tag">
+                                                    <div class="col-5">
+                                                        <div class="form-group">
+                                                            <label class="form-label">{{ __('tags.attributes.title_ar') }} <span class="tx-danger">*</span></label>
+                                                            <input class="form-control" name="tags[ar][]" placeholder="{{ __('tags.attributes.title_ar') }}" type="text" required="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-5">
+                                                        <div class="form-group">
+                                                            <label class="form-label">{{ __('tags.attributes.title_en') }} <span class="tx-danger">*</span></label>
+                                                            <input class="form-control" name="tags[en][]" placeholder="{{ __('tags.attributes.title_en') }}" type="text" required="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-1" id="tag_action" style="margin-top: 1.70rem">
+                                                        <a href="javascript:void(0)" id="add_new_tag" class="btn btn-primary">
+                                                            <i class="mdi mdi-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.image') }} <span class="tx-danger">*</span></label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$product!=null ? $product->getMainImage() : ''}}" data-height="200" />
                                 </div>
@@ -236,4 +299,22 @@
     <script src="{{URL::asset('dashboard/assets/plugins/fancyuploder/fancy-uploader.js')}}"></script>
     <!-- Internal Input tags js-->
     <script src="{{URL::asset('dashboard/assets/plugins/inputtags/inputtags.js')}}"></script>
+    <script>
+        $(function(){
+            $("#add_new_tag").on('click', function(){
+                var ele = $(this).closest('#tag').clone(true).find("input").val("").end();
+                $(this).closest('#tag').after(ele);
+
+                //add new delete button
+                $(this).closest('#tag').find('#tag_action').append('<a href="javascript:void(0)" onclick="remove_tag(this)" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>');
+
+                //remove the add new button
+                $(this).closest('#add_new_tag').remove();
+            });
+        });
+
+        function remove_tag(ele){
+            $(ele).parent().parent().remove();
+        }
+    </script>
 @endsection
