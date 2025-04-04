@@ -59,9 +59,10 @@ class HomeController extends Controller
      */
     public function products()
     {
-        $products = Product::active()->latest()->get();
+        $products = Product::active()->latest()->paginate(12);
+        $latest_products = Product::active()->latest()->limit(4)->get();
 
-        return view('front.products', compact('products'));
+        return view('front.products', compact('products', 'latest_products'));
     }
 
     /**
