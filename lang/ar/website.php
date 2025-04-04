@@ -37,4 +37,5 @@ return [
     'news_blog' => 'المقالات والأخبار',
     'powerful_features_of' => 'الميزات القوية ل',
     'logistics' => 'للخدمات اللوجستية',
+    'currency' => '$',
 ];

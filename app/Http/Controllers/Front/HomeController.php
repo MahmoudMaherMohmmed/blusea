@@ -8,6 +8,7 @@ use App\Http\Requests\Front\StoreSubscribeRequest;
 use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Partner;
+use App\Models\Product;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Subscribe;
@@ -32,11 +33,13 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::active()->latest()->get();
+        $special_products = Product::active()->special()->latest()->limit(8)->get();
+        $best_seller_products = Product::active()->bestSeller()->latest()->get();
         $blogs = Blog::active()->latest()->limit(9)->get();
         $partners = Partner::active()->get();
         $services = Service::active()->latest()->limit(4)->get();
 
-        return view('front.index', compact('sliders', 'blogs', 'partners', 'services'));
+        return view('front.index', compact('sliders', 'special_products', 'best_seller_products', 'blogs', 'partners', 'services'));
     }
 
     /**
@@ -47,6 +50,30 @@ class HomeController extends Controller
     public function about()
     {
         return view('front.about');
+    }
+
+    /**
+     * Show the application products page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function products()
+    {
+        $products = Product::active()->latest()->get();
+
+        return view('front.products', compact('products'));
+    }
+
+    /**
+     * Show the application product details page.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function productDetails($slug)
+    {
+        $product = Product::where('slug', $slug)->active()->firstOrFail();
+
+        return view('front.product_details', compact('product'));
     }
 
     /**

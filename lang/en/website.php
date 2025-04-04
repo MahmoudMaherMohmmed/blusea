@@ -37,4 +37,5 @@ return [
     'news_blog' => 'News & Blog',
     'powerful_features_of' => 'Powerful Features of',
     'logistics' => 'Logistics',
+    'currency' => '$',
 ];

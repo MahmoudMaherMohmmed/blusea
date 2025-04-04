@@ -22,6 +22,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['lo
 
     Route::get('/', [HomeController::class, 'index'])->name('index');
     Route::get('about', [HomeController::class, 'about'])->name('about');
+    Route::get('products', [HomeController::class, 'products'])->name('products');
+    Route::get('product/{slug}', [HomeController::class, 'productDetails'])->name('product.details');
     Route::get('blogs', [HomeController::class, 'blogs'])->name('blogs');
     Route::get('blog/{slug}', [HomeController::class, 'blogDetails'])->name('blog.details');
     Route::get('contact', [HomeController::class, 'contact'])->name('contact');
