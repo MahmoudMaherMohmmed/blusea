@@ -3,6 +3,8 @@
 namespace App\Providers;
 
 use App\Models\Branch;
+use App\Models\Brand;
+use App\Models\Category;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -26,7 +28,9 @@ class AppServiceProvider extends ServiceProvider
         if (Schema::hasTable('settings') && Schema::hasTable('branches')) {
             View::share([
                 'settings' => Setting::first(),
-                'main_branch' => Branch::first()
+                'main_branch' => Branch::first(),
+                'categories' => Category::active()->get(),
+                'brands' => Brand::active()->get(),
             ]);
         }
     }

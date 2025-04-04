@@ -4,10 +4,11 @@ return [
     //Menu
     'home' => 'Home',
     'about_us' => 'About us',
-    'services' => 'Services',
+    'products' => 'Products',
+    'categories' => 'Categories',
+    'brands' => 'Brands',
     'blogs' => 'Blogs',
     'contact' => 'Contact us',
-    'language' => 'Language',
     //Footer
     'useful_links' => 'Useful Links',
     'newsletter' => 'Newsletter',
