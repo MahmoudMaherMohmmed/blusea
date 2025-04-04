@@ -1,6 +1,8 @@
 @extends('front.layouts.master')
 
-@section('title') {{__('website.contact')}} @endsection
+@section('title')
+    {{__('website.contact')}}
+@endsection
 
 @section('content')
     <!--//==Page Header Start==//-->
@@ -8,7 +10,7 @@
         <div class="container breadcrumb-section">
             <div class="row pad-s15">
                 <div class="col-md-12">
-                    <h2>Contact us</h2>
+                    <h2>{{__('website.contact')}}</h2>
                     <div class="clear"></div>
                     <div class="breadcrumb-box">
                         <ul class="breadcrumb">
@@ -31,7 +33,7 @@
                 <!--//==Section Heading Start==//-->
                 <div class="col-md-12">
                     <div class="centered-title">
-                        <h2>Get In Touch <span class="heading-border"></span></h2>
+                        <h2>{{__('website.get_in_touch')}} <span class="heading-border"></span></h2>
                         <div class="clear"></div>
                         <em>Nam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem. Maecenas<br>
                             tristique sit amet odio sit amet aliquet.</em>
@@ -49,7 +51,8 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group {{$errors->has('name') ? 'has-error' : ''}}">
-                                    <label>{{__('website.contact_your_name')}}<span class="required red-text">*</span></label>
+                                    <label>{{__('website.contact_your_name')}}<span
+                                            class="required red-text">*</span></label>
                                     <input type="text" name="name" value="{{old('name')}}" class="form-control">
                                     @if ($errors->has('name'))
                                         <span class="help-block">
@@ -71,7 +74,8 @@
                             </div>
                             <div class="col-sm-12">
                                 <div class="form-group {{$errors->has('subject') ? 'has-error' : ''}}">
-                                    <label>{{__('website.contact_subject')}}<span class="required red-text">*</span></label>
+                                    <label>{{__('website.contact_subject')}}<span
+                                            class="required red-text">*</span></label>
                                     <input type="text" name="subject" value="{{old('subject')}}" class="form-control">
                                     @if ($errors->has('subject'))
                                         <span class="help-block">
@@ -83,8 +87,10 @@
                             <div class="clear"></div>
                             <div class="col-sm-12">
                                 <div class="form-group {{$errors->has('message') ? 'has-error' : ''}}">
-                                    <label>{{__('website.contact_message')}}<span class="required red-text">*</span></label>
-                                    <textarea name="message" class="form-control textarea-message" rows="5">{{old('message')}}</textarea>
+                                    <label>{{__('website.contact_message')}}<span
+                                            class="required red-text">*</span></label>
+                                    <textarea name="message" class="form-control textarea-message"
+                                              rows="5">{{old('message')}}</textarea>
                                     @if ($errors->has('message'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('message') }}</strong>
@@ -93,7 +99,8 @@
                                 </div>
                             </div>
                             <div class="col-sm-12 form-group">
-                                <input type="submit" class="theme-button" value="{{__('website.contact_send_message')}}">
+                                <input type="submit" class="theme-button"
+                                       value="{{__('website.contact_send_message')}}">
                                 <div class="fashion_infotext"></div>
                             </div>
                         </div>
@@ -108,7 +115,8 @@
             <div class="row">
                 <div class="map-area">
                     <div class="maps">
-                        <iframe src="{{$main_branch->google_map}}" style="height:100%;border:0;" allowfullscreen></iframe>
+                        <iframe src="{{$main_branch->google_map}}" style="height:100%;border:0;"
+                                allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

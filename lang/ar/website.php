@@ -9,6 +9,10 @@ return [
     'brands' => 'العلامات التجارية',
     'blogs' => 'الأخبار',
     'contact' => 'تواصل معنا',
+    //Products
+    'product_description' => 'وصف المنتج',
+    'availability' => 'التوافر',
+    'in_stock' => 'متوفر',
     //Footer
     'useful_links' => 'روابط مفيدة',
     'newsletter' => 'النشرة الإخبارية',
@@ -17,12 +21,11 @@ return [
     'your_email' => 'بريدك الإلكتروني :',
     'subscribe' => 'اشترك',
     //Contact
+    'get_in_touch' => 'ابقي على تواصل',
     'phone' => 'رقم الهاتف',
     'email' => 'البريد الإلكتروني',
     'location' => 'العنوان',
-    'start_working_with_enjazco_that_can_provide_everything' => 'ابدأ العمل مع انجازكو التي يمكنها تقديم كل شيء',
     'view_on_google_map' => 'عرض على خريطة جوجل',
-    'get_in_touch' => 'ابقي على تواصل !',
     'contact_your_name' => 'الاسم',
     'contact_name' => 'الاسم',
     'contact_your_email' => 'بريدك الإلكتروني',

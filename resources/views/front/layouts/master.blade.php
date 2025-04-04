@@ -12,7 +12,7 @@
           content="Aashi Fauctes - Html5 Template For Fauctes, Sanitary, Bathroom, Kitchen and Multipurpose E-commerce Store"/>
     <meta name="author" content="webaashi.com"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>{{$settings->title}}</title>
+    <title>{{$settings->title}} | @yield('title')</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="{{URL::asset('front/assets')}}/img/favicon.ico" type="image/x-icon">
@@ -138,7 +138,7 @@
                                                 <!-- Home Mage Menu grids Begins -->
                                                 <div class="row">
                                                     <!-- Home Categories -->
-                                                    <div class="col-sm-3">
+                                                    <div class="col-sm-6">
                                                         <!-- Title -->
                                                         <h6 class="title">{{ __('website.categories') }}</h6>
                                                         <!-- Links -->
@@ -152,7 +152,7 @@
                                                     </div>
                                                     <!-- Home Categories -->
                                                     <!-- Home Brands -->
-                                                    <div class="col-sm-3">
+                                                    <div class="col-sm-6">
                                                         <!-- Title -->
                                                         <h6 class="title">{{ __('website.brands') }}</h6>
                                                         <!-- Links -->
@@ -205,11 +205,19 @@
                     <div class="widget">
                         <h4>{{ __('website.useful_links') }}</h4>
                         <ul>
-                            <li><a href="{{route('index')}}"><i class="fa fa-angle-double-right wv_circle"></i> {{__('website.home')}}</a></li>
-                            <li><a href="{{route('about')}}"><i class="fa fa-angle-double-right wv_circle"></i>{{__('website.about_us')}}</a></li>
-                            <li><a href="{{route('products')}}"><i class="fa fa-angle-double-right wv_circle"></i> {{__('website.products')}}</a></li>
-                            <li><a href="{{route('blogs')}}"><i class="fa fa-angle-double-right wv_circle"></i> {{__('website.blogs')}}</a></li>
-                            <li><a href="{{route('contact')}}"><i class="fa fa-angle-double-right wv_circle"></i> {{__('website.contact')}}</a></li>
+                            <li><a href="{{route('index')}}"><i
+                                        class="fa fa-angle-double-right wv_circle"></i> {{__('website.home')}}</a></li>
+                            <li><a href="{{route('about')}}"><i
+                                        class="fa fa-angle-double-right wv_circle"></i>{{__('website.about_us')}}</a>
+                            </li>
+                            <li><a href="{{route('products')}}"><i
+                                        class="fa fa-angle-double-right wv_circle"></i> {{__('website.products')}}</a>
+                            </li>
+                            <li><a href="{{route('blogs')}}"><i
+                                        class="fa fa-angle-double-right wv_circle"></i> {{__('website.blogs')}}</a></li>
+                            <li><a href="{{route('contact')}}"><i
+                                        class="fa fa-angle-double-right wv_circle"></i> {{__('website.contact')}}</a>
+                            </li>
                         </ul>
                     </div>
                 </div>

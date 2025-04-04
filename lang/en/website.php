@@ -9,6 +9,10 @@ return [
     'brands' => 'Brands',
     'blogs' => 'Blogs',
     'contact' => 'Contact us',
+    //Products
+    'product_description' => 'Product description',
+    'availability' => 'Availability',
+    'in_stock' => 'In stock',
     //Footer
     'useful_links' => 'Useful Links',
     'newsletter' => 'Newsletter',
@@ -17,12 +21,11 @@ return [
     'your_email' => 'Your email : ',
     'subscribe' => 'Subscribe',
     //Contact
+    'get_in_touch' => 'Get In Touch',
     'phone' => 'Phone',
     'email' => 'Email',
     'location' => 'Location',
-    'start_working_with_enjazco_that_can_provide_everything' => 'Start working with enjazco that can provide everything',
     'view_on_google_map' => 'View on Google map',
-    'get_in_touch' => 'Get In Touch !',
     'contact_your_name' => 'Your Name',
     'contact_name' => 'Name',
     'contact_your_email' => 'Your Email',
