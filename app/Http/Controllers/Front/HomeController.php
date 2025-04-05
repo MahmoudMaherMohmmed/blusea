@@ -32,7 +32,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $sliders = Slider::active()->latest()->get();
+        $sliders = Slider::active()->get();
         $special_products = Product::active()->special()->latest()->limit(8)->get();
         $best_seller_products = Product::active()->bestSeller()->latest()->get();
         $blogs = Blog::active()->latest()->limit(9)->get();
