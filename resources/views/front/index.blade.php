@@ -39,9 +39,10 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[0]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[0]->title}}" height="375px"/>
+                                         alt="{{$collections[0]->title}}" height="375px" width="100%"/>
                                     <img src="{{$collections[0]->getImage()}}"
-                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[0]->title}}"/>
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[0]->title}}"
+                                         height="375px" width="100%"/>
                                     <div class="caption">
                                         <div class="caption-text">
                                             <div class="clear"></div>
@@ -64,9 +65,10 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[1]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[1]->title}}" height="375px"/>
+                                         alt="{{$collections[1]->title}}" height="375px" width="100%"/>
                                     <img src="{{$collections[1]->getImage()}}"
-                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[1]->title}}"/>
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[1]->title}}"
+                                         height="375px" width="100%"/>
                                     <div class="caption">
                                         <div class="caption-text">
                                             <div class="clear"></div>
@@ -90,9 +92,9 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[2]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[2]->title}}" height="375px"/>
+                                         alt="{{$collections[2]->title}}" height="375px" width="100%"/>
                                     <img src="{{$collections[2]->getImage()}}" class="hidden-sm hidden-lg hidden-md"
-                                         alt="{{$collections[2]->title}}"/>
+                                         alt="{{$collections[2]->title}}" height="375px" width="100%"/>
                                     <div class="caption">
                                         <div class="caption-text">
                                             <div class="clear"></div>
@@ -115,9 +117,10 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[3]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[3]->title}}" height="375px"/>
+                                         alt="{{$collections[3]->title}}" height="375px" width="100%"/>
                                     <img src="{{$collections[3]->getImage()}}"
-                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[3]->title}}"/>
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[3]->title}}"
+                                         height="375px" width="100%"/>
                                     <div class="caption">
                                         <div class="caption-text">
                                             <div class="clear"></div>
@@ -140,9 +143,10 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[4]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[4]->title}}" height="375px"/>
+                                         alt="{{$collections[4]->title}}" height="375px" width="100%"/>
                                     <img src="{{$collections[4]->getImage()}}"
-                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[4]->title}}"/>
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[4]->title}}"
+                                         height="375px" width="100%"/>
                                     <div class="caption">
                                         <div class="caption-text">
                                             <div class="clear"></div>
@@ -295,7 +299,8 @@
                             <div class="col-md-12">
                                 <div class="wa-products">
                                     <div class="wa-products-thumbnail wa-item">
-                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
+                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}"
+                                             height="350px">
                                     </div>
                                     <div class="wa-products-caption">
                                         <h2>
