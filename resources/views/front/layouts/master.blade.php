@@ -299,6 +299,8 @@
 <script type="text/javascript"
         src="{{URL::asset('front/assets')}}/plugins/menu/js/jquery.hover-dropdown-menu-addon.js"></script>
 <script src="{{URL::asset('front/assets')}}/plugins/owl-carousel/js/owl.carousel.js"></script>
+<script src="{{URL::asset('front/assets')}}/plugins/fancymedia/js/jquery.fancybox.pack.js"></script>
+<script src="{{URL::asset('front/assets')}}/plugins/fancymedia/js/jquery.fancybox-media.js"></script>
 <script type="text/javascript" src="{{URL::asset('front/assets')}}/plugins/switcher/switcher.js"></script>
 <script src="{{URL::asset('front/assets')}}/js/main.js"></script>
 </body>
