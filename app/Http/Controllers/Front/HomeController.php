@@ -35,7 +35,7 @@ class HomeController extends Controller
         $sliders = Slider::active()->get();
         $special_products = Product::active()->special()->latest()->limit(8)->get();
         $best_seller_products = Product::active()->bestSeller()->latest()->get();
-        $blogs = Blog::active()->latest()->limit(9)->get();
+        $blogs = Blog::active()->latest()->limit(3)->get();
         $partners = Partner::active()->get();
         $services = Service::active()->latest()->limit(4)->get();
 
