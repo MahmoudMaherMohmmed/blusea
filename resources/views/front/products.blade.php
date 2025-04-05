@@ -36,7 +36,7 @@
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="wa-products">
                                     <div class="wa-products-thumbnail wa-item">
-                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}">
+                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
                                     </div>
                                     <div class="wa-products-caption">
                                         <h2>
