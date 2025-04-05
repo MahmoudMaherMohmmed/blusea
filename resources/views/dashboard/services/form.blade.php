@@ -72,7 +72,7 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('services.attributes.description') }} <span class="tx-danger">*</span></label>
+                                    <label class="form-label">{{ __('services.attributes.description') }}</label>
                                     <div class="example">
 										<div class="panel panel-primary tabs-style-1">
                                             <div class=" tab-menu-heading">
@@ -104,7 +104,7 @@
                                 <div class="form-group">
                                     <label class="form-label">{{ __('services.attributes.icon') }} <span class="tx-danger">*</span> <br></label>
                                     <input class="form-control" name="icon" placeholder="{{ __('services.attributes.icon') }}" value="{{$service!=null ? $service->icon : old('icon')}}" required="" type="text">
-                                    <span>You Can Get Icon Options By <a href="https://iconscout.com/unicons/free-line-icons" target="_blank">Click here</a></span>
+                                    <span>You Can Get Icon Options By <a href="https://fontawesome.com/v4/icons" target="_blank">Click here</a></span>
                                 </div>
                             </div>
 
