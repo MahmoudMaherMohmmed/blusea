@@ -33,122 +33,132 @@
     <section class="collection-section padT100">
         <div class="container">
             <div class="row">
-                <div class="col-md-8 col-sm-8">
-                    <div class="latest-collection-item">
-                        <div class="wa-collection">
-                            <div class="wa-collection-thumbnail item our-collection-item wa-item">
-                                <img src="{{URL::asset('front/assets')}}/img/collection/1.jpg" class="hidden-xs"
-                                     alt=""/>
-                                <img src="{{URL::asset('front/assets')}}/img/collection/1-xs.jpg"
-                                     class="hidden-sm hidden-lg hidden-md" alt=""/>
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <div class="clear"></div>
-                                        <div class="wa-collection-caption">
-                                            <h2>Bathroom Sink Faucets</h2>
+                @if($collections[0])
+                    <div class="col-md-8 col-sm-8">
+                        <div class="latest-collection-item">
+                            <div class="wa-collection">
+                                <div class="wa-collection-thumbnail item our-collection-item wa-item">
+                                    <img src="{{$collections[0]->getImage()}}" class="hidden-xs"
+                                         alt="{{$collections[0]->title}}"/>
+                                    <img src="{{$collections[0]->getImage()}}"
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[0]->title}}"/>
+                                    <div class="caption">
+                                        <div class="caption-text">
                                             <div class="clear"></div>
-                                            <a href="collection-grid-sidebar.html" class="theme-button marT10">view
-                                                detail</a>
+                                            <div class="wa-collection-caption">
+                                                <h2>{{$collections[0]->title}}</h2>
+                                                <div class="clear"></div>
+                                                <a href="{{route('products', ['collection' => $collections[0]->slug])}}"
+                                                   class="theme-button marT10">view detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="latest-collection-item">
-                        <div class="wa-collection">
-                            <div class="wa-collection-thumbnail item our-collection-item wa-item">
-                                <img src="{{URL::asset('front/assets')}}/img/collection/2.jpg" class="hidden-xs"
-                                     alt=""/>
-                                <img src="{{URL::asset('front/assets')}}/img/collection/2-xs.jpg"
-                                     class="hidden-sm hidden-lg hidden-md" alt=""/>
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <div class="clear"></div>
-                                        <div class="wa-collection-caption">
-                                            <h2>Mordern Faucets</h2>
+                @endif
+                @if($collections[1])
+                    <div class="col-md-4 col-sm-4">
+                        <div class="latest-collection-item">
+                            <div class="wa-collection">
+                                <div class="wa-collection-thumbnail item our-collection-item wa-item">
+                                    <img src="{{$collections[1]->getImage()}}" class="hidden-xs"
+                                         alt="{{$collections[1]->title}}"/>
+                                    <img src="{{$collections[1]->getImage()}}"
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[1]->title}}"/>
+                                    <div class="caption">
+                                        <div class="caption-text">
                                             <div class="clear"></div>
-                                            <a href="collection-grid-sidebar.html" class="theme-button marT10">view
-                                                detail</a>
+                                            <div class="wa-collection-caption">
+                                                <h2>{{$collections[1]->title}}</h2>
+                                                <div class="clear"></div>
+                                                <a href="{{route('products', ['collection' => $collections[1]->slug])}}"
+                                                   class="theme-button marT10">view detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="clear"></div>
-                <div class="col-md-4 col-sm-4">
-                    <div class="latest-collection-item">
-                        <div class="wa-collection">
-                            <div class="wa-collection-thumbnail item our-collection-item wa-item">
-                                <img src="{{URL::asset('front/assets')}}/img/collection/3.jpg" class="hidden-xs"
-                                     alt=""/>
-                                <img src="{{URL::asset('front/assets')}}/img/collection/3-xs.jpg"
-                                     class="hidden-sm hidden-lg hidden-md" alt=""/>
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <div class="clear"></div>
-                                        <div class="wa-collection-caption">
-                                            <h2>New Brand</h2>
+                @endif
+                @if($collections[2])
+                    <div class="clear"></div>
+                    <div class="col-md-4 col-sm-4">
+                        <div class="latest-collection-item">
+                            <div class="wa-collection">
+                                <div class="wa-collection-thumbnail item our-collection-item wa-item">
+                                    <img src="{{$collections[2]->getImage()}}" class="hidden-xs"
+                                         alt="{{$collections[2]->title}}"/>
+                                    <img src="{{$collections[2]->getImage()}}" class="hidden-sm hidden-lg hidden-md"
+                                         alt="{{$collections[2]->title}}"/>
+                                    <div class="caption">
+                                        <div class="caption-text">
                                             <div class="clear"></div>
-                                            <a href="collection-grid-sidebar.html" class="theme-button marT10">view
-                                                detail</a>
+                                            <div class="wa-collection-caption">
+                                                <h2>{{$collections[2]->title}}</h2>
+                                                <div class="clear"></div>
+                                                <a href="{{route('products', ['collection' => $collections[2]->slug])}}"
+                                                   class="theme-button marT10">view detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-5 col-sm-4">
-                    <div class="latest-collection-item">
-                        <div class="wa-collection">
-                            <div class="wa-collection-thumbnail item our-collection-item wa-item">
-                                <img src="{{URL::asset('front/assets')}}/img/collection/4.jpg" class="hidden-xs"
-                                     alt=""/>
-                                <img src="{{URL::asset('front/assets')}}/img/collection/4-xs.jpg"
-                                     class="hidden-sm hidden-lg hidden-md" alt=""/>
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <div class="clear"></div>
-                                        <div class="wa-collection-caption">
-                                            <h2>Designer Faucets</h2>
+                @endif
+                @if($collections[3])
+                    <div class="col-md-5 col-sm-4">
+                        <div class="latest-collection-item">
+                            <div class="wa-collection">
+                                <div class="wa-collection-thumbnail item our-collection-item wa-item">
+                                    <img src="{{$collections[3]->getImage()}}" class="hidden-xs"
+                                         alt="{{$collections[3]->title}}"/>
+                                    <img src="{{$collections[3]->getImage()}}"
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[3]->title}}"/>
+                                    <div class="caption">
+                                        <div class="caption-text">
                                             <div class="clear"></div>
-                                            <a href="collection-grid-sidebar.html" class="theme-button marT10">view
-                                                detail</a>
+                                            <div class="wa-collection-caption">
+                                                <h2>{{$collections[3]->title}}</h2>
+                                                <div class="clear"></div>
+                                                <a href="{{route('products', ['collection' => $collections[3]->slug])}}"
+                                                   class="theme-button marT10">view detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-4">
-                    <div class="latest-collection-item">
-                        <div class="wa-collection">
-                            <div class="wa-collection-thumbnail item our-collection-item wa-item">
-                                <img src="{{URL::asset('front/assets')}}/img/collection/5.jpg" class="hidden-xs"
-                                     alt=""/>
-                                <img src="{{URL::asset('front/assets')}}/img/collection/5-xs.jpg"
-                                     class="hidden-sm hidden-lg hidden-md" alt=""/>
-                                <div class="caption">
-                                    <div class="caption-text">
-                                        <div class="clear"></div>
-                                        <div class="wa-collection-caption">
-                                            <h2>Kitchen Faucets</h2>
+                @endif
+                @if($collections[4])
+                    <div class="col-md-3 col-sm-4">
+                        <div class="latest-collection-item">
+                            <div class="wa-collection">
+                                <div class="wa-collection-thumbnail item our-collection-item wa-item">
+                                    <img src="{{$collections[4]->getImage()}}" class="hidden-xs"
+                                         alt="{{$collections[4]->title}}"/>
+                                    <img src="{{$collections[4]->getImage()}}"
+                                         class="hidden-sm hidden-lg hidden-md" alt="{{$collections[4]->title}}"/>
+                                    <div class="caption">
+                                        <div class="caption-text">
                                             <div class="clear"></div>
-                                            <a href="collection-grid-sidebar.html" class="theme-button marT10">view
-                                                detail</a>
+                                            <div class="wa-collection-caption">
+                                                <h2>{{$collections[4]->title}}</h2>
+                                                <div class="clear"></div>
+                                                <a href="{{route('products', ['collection' => $collections[4]->slug])}}"
+                                                   class="theme-button marT10">view detail</a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endif
             </div>
         </div>
     </section>
@@ -208,25 +218,27 @@
     @endif
     <!--//=============product End============//-->
     <!--//=======Banner Section Start=======//-->
-    <section class="banners-section">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="latest-banners-item">
-                            <div class="wa-banners">
-                                <div class="wa-banners-thumbnail item our-banners-item wa-item">
-                                    <img src="{{URL::asset('front/assets')}}/img/banners/1.jpg" alt="">
-                                    <div class="caption">
-                                        <div class="caption-text">
-                                            <div class="clear"></div>
-                                            <div class="wa-banners-caption text-left">
-                                                <h2>Latest Collection</h2>
+    @if($collections[5] && $collections[6])
+        <section class="banners-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="latest-banners-item">
+                                <div class="wa-banners">
+                                    <div class="wa-banners-thumbnail item our-banners-item wa-item">
+                                        <img src="{{$collections[5]->getImage()}}" alt="{{$collections[5]->title}}">
+                                        <div class="caption">
+                                            <div class="caption-text">
                                                 <div class="clear"></div>
-                                                <h3>SAVE UP TO 60% OFF</h3>
-                                                <div class="clear"></div>
-                                                <a href="collection-grid-fullwidth.html" class="theme-button marT10">view
-                                                    detail</a>
+                                                <div class="wa-banners-caption text-left">
+                                                    <h2>{{$collections[5]->title}}</h2>
+                                                    <div class="clear"></div>
+                                                    <h3>{{$collections[5]->description}}</h3>
+                                                    <div class="clear"></div>
+                                                    <a href="{{route('products', ['collection' => $collections[5]->slug])}}"
+                                                       class="theme-button marT10">view detail</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -234,23 +246,23 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="latest-banners-item">
-                            <div class="wa-banners">
-                                <div class="wa-banners-thumbnail item our-banners-item wa-item">
-                                    <img src="{{URL::asset('front/assets')}}/img/banners/2.jpg" alt="">
-                                    <div class="caption">
-                                        <div class="caption-text">
-                                            <div class="clear"></div>
-                                            <div class="wa-banners-caption text-right">
-                                                <h2>Latest Collection</h2>
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="latest-banners-item">
+                                <div class="wa-banners">
+                                    <div class="wa-banners-thumbnail item our-banners-item wa-item">
+                                        <img src="{{$collections[6]->getImage()}}" alt="{{$collections[6]->title}}">
+                                        <div class="caption">
+                                            <div class="caption-text">
                                                 <div class="clear"></div>
-                                                <h3>SAVE UP TO 60% OFF</h3>
-                                                <div class="clear"></div>
-                                                <a href="collection-grid-fullwidth.html" class="theme-button marT10">view
-                                                    detail</a>
+                                                <div class="wa-banners-caption text-right">
+                                                    <h2>{{$collections[6]->title}}</h2>
+                                                    <div class="clear"></div>
+                                                    <h3>{{$collections[6]->description}}</h3>
+                                                    <div class="clear"></div>
+                                                    <a href="{{route('products', ['collection' => $collections[6]->slug])}}"
+                                                       class="theme-button marT10">view detail</a>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -260,8 +272,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    @endif
     <!--//=======Banner Section End=======//-->
     <!--//=============Best Seller Section Start============//-->
     @if($best_seller_products->isNotEmpty())
@@ -320,18 +332,21 @@
     @endif
     <!--//=============Best Seller Section End============//-->
     <!--//=========Adverts Section Start=========//-->
-    <div class="page_single banner-ads marB100">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <figure class="banners-border">
-                        <a href="collection-grid-fullwidth.html"><img
-                                src="{{URL::asset('front/assets')}}/img/banners/3.jpg" alt="Thumbnail"></a>
-                    </figure>
+    @if($collections[7])
+        <div class="page_single banner-ads marB100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <figure class="banners-border">
+                            <a href="{{route('products', ['collection' => $collections[7]->slug])}}">
+                                <img src="{{$collections[7]->getImage()}}" alt="{{$collections[7]->title}}">
+                            </a>
+                        </figure>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    @endif
     <!--//=========Adverts Section End=========//-->
     <!--//=========Home Blogs Start=========//-->
     @if($blogs->isNotEmpty())

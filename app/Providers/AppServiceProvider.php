@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Models\Branch;
 use App\Models\Brand;
 use App\Models\Category;
+use App\Models\Collection;
 use App\Models\Setting;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\View;
@@ -31,6 +32,7 @@ class AppServiceProvider extends ServiceProvider
                 'main_branch' => Branch::first(),
                 'categories' => Category::active()->get(),
                 'brands' => Brand::active()->get(),
+                'collections' => Collection::active()->get(),
             ]);
         }
     }
