@@ -33,10 +33,9 @@
                 <!--//==Section Heading Start==//-->
                 <div class="col-md-12">
                     <div class="centered-title">
-                        <h2>{{__('website.get_in_touch')}} <span class="heading-border"></span></h2>
+                        <h2>{{__('website.contact_title')}} <span class="heading-border"></span></h2>
                         <div class="clear"></div>
-                        <em>Nam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem. Maecenas<br>
-                            tristique sit amet odio sit amet aliquet.</em>
+                        <em>{{__('website.contact_subtitle')}}</em>
                         <div class="clear"></div>
                     </div>
                 </div>

@@ -59,7 +59,25 @@ class HomeController extends Controller
      */
     public function products()
     {
-        $products = Product::active()->latest()->paginate(12);
+        $products = Product::query()
+            ->when(request('search'), function ($query) {
+                $query->where('name', 'like', '%' . request('search') . '%');
+            })
+            ->when(request('category'), function ($query) {
+                $query->whereHas('categories', function ($q) {
+                    $q->where('slug', request('category'));
+                });
+            })
+            ->when(request('brand'), function ($query) {
+                $query->whereHas('brands', function ($q) {
+                    $q->where('slug', request('brand'));
+                });
+            })
+            ->when(request('collection'), function ($query) {
+                $query->whereHas('collections', function ($q) {
+                    $q->where('slug', request('collection'));
+                });
+            })->active()->latest()->paginate(12);
         $latest_products = Product::active()->latest()->limit(4)->get();
 
         return view('front.products', compact('products', 'latest_products'));

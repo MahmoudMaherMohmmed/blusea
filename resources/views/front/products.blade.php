@@ -1,7 +1,7 @@
 @extends('front.layouts.master')
 
 @section('title')
-    {{__('website.about_us')}}
+    {{__('website.products')}}
 @endsection
 
 @section('content')
@@ -81,10 +81,12 @@
                             <div class="col-md-12">
                                 <!--widget-->
                                 <div class="widget">
-                                    <h4>search</h4>
-                                    <form method="post" action="#">
+                                    <h4>{{__('website.search')}}</h4>
+                                    <form method="get" action="{{route('products')}}">
                                         <div class="form-group clearfix">
-                                            <input type="search" name="search" value="" placeholder="Search Here">
+                                            <input type="text" name="search"
+                                                   value="{{old('search', request()->search)}}"
+                                                   placeholder="{{__('website.search_products')}}">
                                         </div>
                                     </form>
                                 </div>
@@ -126,7 +128,7 @@
                                 </div>
                                 <!--widget-->
                                 <div class="widget">
-                                    <h4>latest Faucets</h4>
+                                    <h4>{{__('website.latest_products')}}</h4>
                                     <div class="row text-center">
                                         <!--//==Item Start==//-->
                                         @foreach($latest_products as $product)

@@ -171,10 +171,9 @@
                     <!--//==Section Heading Start==//-->
                     <div class="col-md-12">
                         <div class="centered-title">
-                            <h2>Special product <span class="heading-border"></span></h2>
+                            <h2>{{__('website.special_products')}} <span class="heading-border"></span></h2>
                             <div class="clear"></div>
-                            <em>dNam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem. Maecenas<br>
-                                tristique sit amet odio sit amet aliquet.</em>
+                            <em>{{__('website.special_products_subtitle')}}</em>
                         </div>
                     </div>
                     <!--//==Section Heading End==//-->
@@ -283,10 +282,9 @@
                     <!--//==Section Heading Start==//-->
                     <div class="col-md-12">
                         <div class="centered-title">
-                            <h2>Best Seller <span class="heading-border"></span></h2>
+                            <h2>{{__('website.best_sellers')}} <span class="heading-border"></span></h2>
                             <div class="clear"></div>
-                            <em>dNam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem. Maecenas<br>
-                                tristique sit amet odio sit amet aliquet.</em>
+                            <em>{{__('website.best_sellers_subtitle')}}</em>
                         </div>
                     </div>
                     <!--//==Section Heading End==//-->
@@ -356,10 +354,9 @@
                     <!--//==Section Heading Start==//-->
                     <div class="col-md-12">
                         <div class="centered-title">
-                            <h2>Our Blog <span class="heading-border"></span></h2>
+                            <h2>{{__('website.our_blogs')}} <span class="heading-border"></span></h2>
                             <div class="clear"></div>
-                            <em>dNam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem. Maecenas<br>
-                                tristique sit amet odio sit amet aliquet.</em>
+                            <em>{{__('website.our_blogs_subtitle')}}</em>
                         </div>
                     </div>
                     <!--//==Section Heading End==//-->
@@ -379,8 +376,9 @@
                                                         <a href="{{route('blog.details', $blog->slug)}}">{{$blog->title}}</a>
                                                     </h4>
                                                     <p>{{$blog->description}}</p>
-                                                    <a href="{{route('blog.details', $blog->slug)}}" class="read-more">read
-                                                        more</a>
+                                                    <a href="{{route('blog.details', $blog->slug)}}" class="read-more">
+                                                        {{__('website.read_more')}}
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -402,10 +400,9 @@
                     <!--//==Section Heading Start==//-->
                     <div class="col-md-12">
                         <div class="centered-title">
-                            <h2>Partners With Us<span class="heading-border"></span></h2>
+                            <h2>{{__('website.partners')}}<span class="heading-border"></span></h2>
                             <div class="clear"></div>
-                            <em>dNam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem. Maecenas<br>
-                                tristique sit amet odio sit amet aliquet.</em>
+                            <em>{{__('website.partners_subtitle')}}</em>
                         </div>
                     </div>
                     <!--//==Section Heading End==//-->
@@ -442,18 +439,23 @@
                 <!--//==Section Heading Start==//-->
                 <div class="col-md-7 col-sm-7 col-xs-12">
                     <div class="news-letter-title">
-                        <h3>Sign Up For Newsletter</h3>
+                        <h3>{{__('website.subscribe')}}</h3>
                         <div class="clear"></div>
-                        <em>dNam ac egestas est. Mauris et pulvinar risus, at tincidunt lorem.</em>
+                        <em>{{__('website.subscribe_subtitle')}}</em>
                     </div>
                 </div>
                 <!--//==Section Heading End==//-->
                 <div class="col-md-5 col-sm-5 col-xs-12">
-                    <form class="wa-news-letter marT10 marB10">
-                        <input type="text" name="search" placeholder="Search..">
-                        <button type="submit" class="default-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i>
+                    <form method="post" action="{{route('subscribe')}}" class="wa-news-letter marT10 marB10">
+                        @csrf
+                        <input type="email" name="email" placeholder="{{__('website.write_your_email')}}">
+                        <button type="submit" class="default-btn">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i>
                         </button>
                     </form>
+                    <div class="mt-3">
+                        @include('front.layouts.partials.messages')
+                    </div>
                 </div>
             </div>
         </div>

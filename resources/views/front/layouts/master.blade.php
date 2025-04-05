@@ -68,8 +68,8 @@
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-4 col-xs-12">
-                    <form class="wa-search-bar">
-                        <input type="text" name="search" placeholder="Search..">
+                    <form method="get" action="{{route('products')}}" class="wa-search-bar">
+                        <input type="text" name="search" placeholder="{{__('website.search_products')}}">
                         <button type="submit" class="default-btn"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                         </button>
                     </form>
@@ -254,11 +254,10 @@
                 <!--Widget Block-->
                 <div class="col-md-3 col-sm-6">
                     <div class="widget contact-widget">
-                        <h4>Contact</h4>
+                        <h4>{{__('website.contact')}}</h4>
+                        <p>{{__('website.contact_subtitle')}}</p>
                         <p>
-                            At vero eos et accusamus et iusto lits agnissmos ducimus.
-                        </p>
-                        <p><span class="rounded-icon"><i class="fa fa-map-marker"></i></span>{{$main_branch->address}}
+                            <span class="rounded-icon"><i class="fa fa-map-marker"></i></span>{{$main_branch->address}}
                         </p>
                         <p><span class="rounded-icon"><i class="fa fa-phone"></i></span>
                             {{$main_branch->phone_number_1}}

@@ -9,19 +9,36 @@ return [
     'brands' => 'Brands',
     'blogs' => 'Blogs',
     'contact' => 'Contact us',
+
+    //Home
+    'special_products' => 'Special Products',
+    'special_products_subtitle' => 'Our exclusive collection: where innovation meets elegance.',
+    'best_sellers' => 'Best Sellers',
+    'best_sellers_subtitle' => 'Top-rated, top-loved, and just for you. Shop our best sellers today.',
+    'our_blogs' => 'Our Blogs',
+    'our_blogs_subtitle' => 'From our thoughts to you—discover, learn, and grow.',
+    'partners' => 'Partners with us',
+    'partners_subtitle' => 'Building success together—meet our trusted partners.',
+    'subscribe' => 'Sign Up For Newsletter',
+    'subscribe_subtitle' => 'Don’t miss a thing—subscribe for updates that matter.',
+    'write_your_email' => 'Write your email...',
+
     //Products
+    'latest_products' => 'Latest Products',
     'product_description' => 'Product description',
     'availability' => 'Availability',
     'in_stock' => 'In stock',
-    //Footer
-    'useful_links' => 'Useful Links',
-    'newsletter' => 'Newsletter',
-    'signup_and_receive_the_latest_tips_via_email' => 'Sign up and receive the latest tips via email.',
-    'write_your_email' => 'Write your email',
-    'your_email' => 'Your email : ',
-    'subscribe' => 'Subscribe',
+    'search' => 'Search',
+    'search_products' => 'Search Products...',
+
+    //Blog
+    'recent_post' => 'Recent Post',
+    'product_categories' => 'Product Categories',
+    'read_more' => 'Read More',
+
     //Contact
-    'get_in_touch' => 'Get In Touch',
+    'contact_title' => 'Get In Touch',
+    'contact_subtitle' => 'Whether it\'s feedback, inquiries, or a friendly hello, we’re always ready to connect. Reach out now and let\'s start a conversation.',
     'phone' => 'Phone',
     'email' => 'Email',
     'location' => 'Location',
@@ -33,13 +50,16 @@ return [
     'contact_subject' => 'Subject',
     'contact_message' => 'Message',
     'contact_send_message' => 'Send Message',
-    'read_more' => 'Read More',
     'see_more' => 'See More',
-    'recent_post' => 'Recent Post',
     'what_we_do' => 'What we do ?',
     'reads_our_latest' => 'Reads Our Latest',
     'news_blog' => 'News & Blog',
     'powerful_features_of' => 'Powerful Features of',
     'logistics' => 'Logistics',
+
+    //Footer
+    'useful_links' => 'Useful Links',
+
+    //Currency
     'currency' => '$',
 ];
