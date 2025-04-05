@@ -31,6 +31,7 @@
                     @include('dashboard.brands.partials.actions.sidebar')
                     @include('dashboard.categories.partials.actions.sidebar')
                     @include('dashboard.products.partials.actions.sidebar')
+                    @include('dashboard.collections.partials.actions.sidebar')
 
 					<li class="side-item side-item-category">{{ __('dashboard.application') }}</li>
 					@include('dashboard.sliders.partials.actions.sidebar')

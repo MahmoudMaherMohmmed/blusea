@@ -4,6 +4,7 @@ use App\Http\Controllers\Dashboard\BlogController;
 use App\Http\Controllers\Dashboard\BranchController;
 use App\Http\Controllers\Dashboard\BrandController;
 use App\Http\Controllers\Dashboard\CategoryController;
+use App\Http\Controllers\Dashboard\CollectionController;
 use App\Http\Controllers\Dashboard\ContactController;
 use App\Http\Controllers\Dashboard\HomeController;
 use App\Http\Controllers\Dashboard\PartnerController;
@@ -33,6 +34,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['au
         Route::resource('categories', CategoryController::class);
         Route::resource('products', ProductController::class);
         Route::get('products/images/{image_id}/destroy', [ProductController::class, 'destroyImage'])->name('products.images.destroy');
+        Route::resource('collections', CollectionController::class);
         Route::resource('sliders', SliderController::class);
         Route::resource('blogs', BlogController::class);
         Route::resource('partners', PartnerController::class);

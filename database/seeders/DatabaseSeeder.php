@@ -15,5 +15,8 @@ class DatabaseSeeder extends Seeder
         $this->command->call('media-library:clean');
 
         $this->call(UserSeeder::class);
+        $this->call(SettingSeeder::class);
+        $this->call(BranchSeeder::class);
+        $this->call(CollectionSeeder::class);
     }
 }

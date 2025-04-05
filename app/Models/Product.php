@@ -89,6 +89,14 @@ class Product extends Model implements HasMedia
     }
 
     /**
+     * @return BelongsToMany
+     */
+    public function collections(): BelongsToMany
+    {
+        return $this->belongsToMany(Collection::class)->withTimestamps();
+    }
+
+    /**
      * @return MorphMany
      */
     public function tags(): MorphMany
