@@ -11,19 +11,19 @@
 		<title> @yield('title') </title>
 
 		<!-- Favicon -->
-		<link rel="icon" href="{{URL::asset('dashboard/assets/img/brand/favicon.png')}}" type="image/x-icon"/>
-		
+		<link rel="icon" href="{{URL::asset('front/assets/img/favicon.ico')}}" type="image/x-icon"/>
+
 		@include('dashboard.layouts.head-styles')
 	</head>
-	
+
 	<body class="main-body bg-primary-transparent">
 		<!-- Loader -->
 		<div id="global-loader">
 			<img src="{{URL::asset('dashboard/assets/img/loader.svg')}}" class="loader-img" alt="Loader">
 		</div>
 		<!-- /Loader -->
-		@yield('content')	
+		@yield('content')
 
-		@include('dashboard.layouts.footer-scripts')	
+		@include('dashboard.layouts.footer-scripts')
 	</body>
 </html>
