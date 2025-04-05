@@ -184,7 +184,7 @@
                             class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 mix">
                             <div class="wa-products">
                                 <div class="wa-products-thumbnail wa-item">
-                                    <img src="{{$product->getMainImage()}}" alt="{{$product->title}}">
+                                    <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
                                 </div>
                                 <div class="wa-products-caption">
                                     <h2><a href="{{route('product.details', $product->slug)}}">{{$product->title}}</a>
@@ -295,7 +295,7 @@
                             <div class="col-md-12">
                                 <div class="wa-products">
                                     <div class="wa-products-thumbnail wa-item">
-                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}">
+                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
                                     </div>
                                     <div class="wa-products-caption">
                                         <h2>
