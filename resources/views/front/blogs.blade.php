@@ -48,13 +48,17 @@
                                         <h4><a href="{{route('blog.details', $blog->slug)}}">{{$blog->title}}</a></h4>
                                         <div class="meta-block">
                                             <ul class="inline">
-                                                <li><a href="javascript:void(0);"><i class="fa fa-calendar"
-                                                                                     aria-hidden="true"></i> {{$blog->created_at->format('d M Y')}}
-                                                    </a></li>
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-calendar"
+                                                           aria-hidden="true"></i> {{$blog->created_at->format('d M Y')}}
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </div>
-                                        <p>{{$blog->description}}</p>
-                                        <a href="{{route('blog.details', $blog->slug)}}" class="read-more">read more</a>
+                                        <p>{!! \Illuminate\Support\Str::words($blog->description, 20 ) !!}</p>
+                                        <a href="{{route('blog.details', $blog->slug)}}"
+                                           class="read-more">{{__('website.read_more')}}</a>
                                     </div>
                                 </div>
                             </div>
@@ -88,7 +92,7 @@
                                                                      alt="{{$recent_blog->title}}">{{$recent_blog->title}}
                                                             </span>
                                                             </a>
-                                                            <p>{!! \Illuminate\Support\Str::words($blog->description, 30 ) !!}</p>
+                                                            <p>{!! \Illuminate\Support\Str::words($blog->description, 10 ) !!}</p>
                                                         </div>
                                                     </div>
                                                 </li>
