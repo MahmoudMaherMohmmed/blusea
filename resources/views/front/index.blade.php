@@ -39,7 +39,7 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[0]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[0]->title}}"/>
+                                         alt="{{$collections[0]->title}}" height="375px"/>
                                     <img src="{{$collections[0]->getImage()}}"
                                          class="hidden-sm hidden-lg hidden-md" alt="{{$collections[0]->title}}"/>
                                     <div class="caption">
@@ -64,7 +64,7 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[1]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[1]->title}}"/>
+                                         alt="{{$collections[1]->title}}" height="375px"/>
                                     <img src="{{$collections[1]->getImage()}}"
                                          class="hidden-sm hidden-lg hidden-md" alt="{{$collections[1]->title}}"/>
                                     <div class="caption">
@@ -90,7 +90,7 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[2]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[2]->title}}"/>
+                                         alt="{{$collections[2]->title}}" height="375px"/>
                                     <img src="{{$collections[2]->getImage()}}" class="hidden-sm hidden-lg hidden-md"
                                          alt="{{$collections[2]->title}}"/>
                                     <div class="caption">
@@ -115,7 +115,7 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[3]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[3]->title}}"/>
+                                         alt="{{$collections[3]->title}}" height="375px"/>
                                     <img src="{{$collections[3]->getImage()}}"
                                          class="hidden-sm hidden-lg hidden-md" alt="{{$collections[3]->title}}"/>
                                     <div class="caption">
@@ -140,7 +140,7 @@
                             <div class="wa-collection">
                                 <div class="wa-collection-thumbnail item our-collection-item wa-item">
                                     <img src="{{$collections[4]->getImage()}}" class="hidden-xs"
-                                         alt="{{$collections[4]->title}}"/>
+                                         alt="{{$collections[4]->title}}" height="375px"/>
                                     <img src="{{$collections[4]->getImage()}}"
                                          class="hidden-sm hidden-lg hidden-md" alt="{{$collections[4]->title}}"/>
                                     <div class="caption">
