@@ -380,7 +380,7 @@
                                                     <h4>
                                                         <a href="{{route('blog.details', $blog->slug)}}">{{$blog->title}}</a>
                                                     </h4>
-                                                    <p>{!! \Illuminate\Support\Str::words($blog->description, 50 ) !!}</p>
+                                                    <p>{!! \Illuminate\Support\Str::words($blog->description, 30 ) !!}</p>
                                                     <a href="{{route('blog.details', $blog->slug)}}" class="read-more">
                                                         {{__('website.read_more')}}
                                                     </a>

@@ -88,7 +88,7 @@
                                                                      alt="{{$recent_blog->title}}">{{$recent_blog->title}}
                                                             </span>
                                                             </a>
-                                                            <p>{!! \Illuminate\Support\Str::words($blog->description, 50 ) !!}</p>
+                                                            <p>{!! \Illuminate\Support\Str::words($blog->description, 30 ) !!}</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -118,7 +118,7 @@
                                                 <div class="wa-theme-design-block strict-no-border">
                                                     <figure class="dark-theme">
                                                         <a href="{{route('product.details', $product->slug)}}">
-                                                            <img src="{{$product->getImage()}}"
+                                                            <img src="{{$product->getMainImage()}}"
                                                                  alt="{{$product->title}}">
                                                         </a>
                                                     </figure>
