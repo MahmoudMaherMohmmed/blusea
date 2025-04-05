@@ -88,7 +88,7 @@
                                                                      alt="{{$recent_blog->title}}">{{$recent_blog->title}}
                                                             </span>
                                                             </a>
-                                                            <p>{{$blog->description}}</p>
+                                                            <p>{!! \Illuminate\Support\Str::words($blog->description, 50 ) !!}</p>
                                                         </div>
                                                     </div>
                                                 </li>
@@ -113,7 +113,7 @@
                                 <div class="widget">
                                     <h4>{{__('website.latest_products')}}</h4>
                                     <div class="row text-center">
-                                        @foreach(App\Models\Product::latest()->take(6)->get() as $product)
+                                        @foreach(App\Models\Product::latest()->limit(6)->get() as $product)
                                             <div class="sidebar-post">
                                                 <div class="wa-theme-design-block strict-no-border">
                                                     <figure class="dark-theme">
