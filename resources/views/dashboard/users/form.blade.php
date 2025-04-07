@@ -41,19 +41,19 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.name') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="name" placeholder="{{ __('admins.attributes.name') }}" value="{{$user!=null ? $user->name : old('name')}}" required="" type="text">
+                                    <input class="form-control" name="name" placeholder="{{ __('admins.attributes.name') }}" value="{{old('name', $user?->name)}}" required="" type="text">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.email') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="email" placeholder="{{ __('admins.attributes.email') }}" value="{{$user!=null ? $user->email : old('email')}}" required="" type="email">
+                                    <input class="form-control" name="email" placeholder="{{ __('admins.attributes.email') }}" value="{{old('email', $user?->email)}}" required="" type="email">
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('admins.attributes.phone') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="phone" placeholder="{{ __('admins.attributes.phone') }}" value="{{$user!=null ? $user->phone : old('phone')}}" required="" type="text">
+                                    <input class="form-control" name="phone" placeholder="{{ __('admins.attributes.phone') }}" value="{{old('phone', $user?->phone)}}" required="" type="text">
                                 </div>
                             </div>
                             <div class="col-12">
@@ -70,8 +70,8 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('admins.attributes.avatar') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$user!=null ? $user->getAvatar() : ''}}" data-height="200" />
+                                    <label class="form-label">{{ __('admins.attributes.avatar') }} @if($user==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$user!=null ? $user->getAvatar() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp"  {{$user== null ? 'required' : ''}}/>
                                 </div>
                             </div>
 
