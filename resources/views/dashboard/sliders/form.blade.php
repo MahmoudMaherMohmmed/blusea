@@ -72,7 +72,7 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('sliders.attributes.subtitle') }} <span class="tx-danger">*</span></label>
+                                    <label class="form-label">{{ __('sliders.attributes.subtitle') }}<span class="tx-danger">*</span></label>
                                     <div class="example">
                                         <div class="panel panel-primary tabs-style-1">
                                             <div class=" tab-menu-heading">
@@ -101,7 +101,7 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('sliders.attributes.description') }} <span class="tx-danger">*</span></label>
+                                    <label class="form-label">{{ __('sliders.attributes.description') }}</label>
                                     <div class="example">
 										<div class="panel panel-primary tabs-style-1">
                                             <div class=" tab-menu-heading">
@@ -131,8 +131,9 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('sliders.attributes.image') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$slider!=null ? $slider->getImage() : ''}}" data-height="200" />
+                                    <label class="form-label">{{ __('sliders.attributes.image') }} @if($slider==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$slider!=null ? $slider->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$slider== null ? 'required' : ''}} />
+                                    <div class="text-danger" style="font-size: 11px;">{{ __('sliders.messages.image_dimensions') }}</div>
                                 </div>
                             </div>
 

@@ -22,6 +22,7 @@ return [
         'updated' => 'The blog has been updated successfully',
         'deleted' => 'The blog has been deleted successfully',
         'retrieved' => 'The blog has been retrieved successfully',
+        'image_dimensions' => '* Image dimensions must be 900 x 625 pixels',
     ],
     'attributes' => [
         'id' => 'ID',

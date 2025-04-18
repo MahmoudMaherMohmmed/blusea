@@ -110,7 +110,7 @@
                                                 <div class="wa-theme-design-block strict-no-border">
                                                     <figure class="dark-theme">
                                                         <a href="{{route('product.details', $product->slug)}}">
-                                                            <img src="{{$product->getImage()}}"
+                                                            <img src="{{$product->getMainImage()}}"
                                                                  alt="{{$product->title}}">
                                                         </a>
                                                     </figure>

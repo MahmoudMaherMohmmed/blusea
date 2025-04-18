@@ -90,7 +90,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" id="textarea" name="description[{{ $localeCode }}]" placeholder="{{ __('blogs.attributes.description') }}"
-                                                            rows="5">{{$blog!=null ? $blog->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="5" required>{{$blog!=null ? $blog->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -102,8 +102,9 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('blogs.attributes.image') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$blog!=null ? $blog->getImage() : ''}}" data-height="200" />
+                                    <label class="form-label">{{ __('blogs.attributes.image') }} @if($blog==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$blog!=null ? $blog->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$blog== null ? 'required' : ''}}  />
+                                    <div class="text-danger" style="font-size: 11px;">{{ __('blogs.messages.image_dimensions') }}</div>
                                 </div>
                             </div>
 
