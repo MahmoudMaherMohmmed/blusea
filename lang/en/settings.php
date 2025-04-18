@@ -22,6 +22,7 @@ return [
         'updated' => 'The setting has been updated successfully',
         'deleted' => 'The setting has been deleted successfully',
         'retrieved' => 'The setting has been retrieved successfully',
+        'image_dimensions' => '* Image dimensions must be 221x59 pixels',
     ],
     'attributes' => [
         'id' => 'ID',

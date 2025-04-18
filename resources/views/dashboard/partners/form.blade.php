@@ -60,7 +60,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('partners.attributes.title') }}" value="{{$partner!=null ? $partner->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('partners.attributes.title') }}" value="{{old('title.' . $localeCode, $partner?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -90,7 +90,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" name="description[{{ $localeCode }}]" placeholder="{{ __('partners.attributes.description') }}"
-                                                            rows="5">{{$partner!=null ? $partner->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="5">{{old('description.' . $localeCode, $partner?->getTranslation('description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -103,14 +103,14 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('partners.attributes.url') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="url" placeholder="{{ __('partners.attributes.url') }}" value="{{$partner!=null ? $partner->url : old('url')}}" required="" type="url">
+                                    <input class="form-control" name="url" placeholder="{{ __('partners.attributes.url') }}" value="{{old('url', $partner?->url)}}" required="" type="url">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('partners.attributes.image') }} @if($partner==null)<span class="tx-danger">*</span>@endif</label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$partner!=null ? $partner->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$partner== null ? 'required' : ''}} />
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$partner?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$partner== null ? 'required' : ''}} />
                                     <span class="text-danger" style="font-size: 11px;">{{ __('partners.messages.image_dimensions') }}</span>
                                 </div>
                             </div>

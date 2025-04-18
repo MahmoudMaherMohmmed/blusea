@@ -60,7 +60,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('branches.attributes.title') }}" value="{{$branch!=null ? $branch->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('branches.attributes.title') }}" value="{{old('title.' . $localeCode, $branch?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -90,7 +90,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-address-{{ $localeCode }}">
                                                             <textarea class="form-control" name="address[{{ $localeCode }}]" placeholder="{{ __('branches.attributes.address') }}"
-                                                            rows="5" required>{{$branch!=null ? $branch->getTranslation('address', $localeCode) : old('address[$localeCode]')}}</textarea>
+                                                            rows="5" required>{{old('address.' . $localeCode, $branch?->getTranslation('address', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -104,40 +104,40 @@
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.google_map') }} <span class="tx-danger">*</span></label>
                                     <textarea class="form-control" name="google_map" placeholder="{{ __('branches.attributes.google_map') }}"
-                                              rows="3">{{$branch!=null ? $branch->google_map : old('google_map')}}</textarea>
+                                              rows="3" required>{{old('google_map', $branch?->google_map)}}</textarea>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.phone_number_1') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="phone_number_1" placeholder="{{ __('branches.attributes.phone_number_1') }}" value="{{$branch!=null ? $branch->phone_number_1 : old('phone_number_1')}}" type="text" required>
+                                    <input class="form-control" name="phone_number_1" placeholder="{{ __('branches.attributes.phone_number_1') }}" value="{{old('phone_number_1', $branch?->phone_number_1)}}" type="text" required>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.phone_number_2') }}</label>
-                                    <input class="form-control" name="phone_number_2" placeholder="{{ __('branches.attributes.phone_number_2') }}" value="{{$branch!=null ? $branch->phone_number_2 : old('phone_number_2')}}" type="text">
+                                    <input class="form-control" name="phone_number_2" placeholder="{{ __('branches.attributes.phone_number_2') }}" value="{{old('phone_number_2', $branch?->phone_number_2)}}" type="text">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.telephone_number') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="telephone_number" placeholder="{{ __('branches.attributes.telephone_number') }}" value="{{$branch!=null ? $branch->telephone_number : old('telephone_number')}}" type="text" required>
+                                    <input class="form-control" name="telephone_number" placeholder="{{ __('branches.attributes.telephone_number') }}" value="{{old('telephone_number', $branch?->telephone_number)}}" type="text" required>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.email_1') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="email_1" placeholder="{{ __('branches.attributes.email_1') }}" value="{{$branch!=null ? $branch->email_1 : old('email_1')}}" type="email" required>
+                                    <input class="form-control" name="email_1" placeholder="{{ __('branches.attributes.email_1') }}" value="{{old('email_1', $branch?->email_1)}}" type="email" required>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('branches.attributes.email_2') }}</label>
-                                    <input class="form-control" name="email_2" placeholder="{{ __('branches.attributes.email_2') }}" value="{{$branch!=null ? $branch->email_2 : old('email_2')}}" type="email">
+                                    <input class="form-control" name="email_2" placeholder="{{ __('branches.attributes.email_2') }}" value="{{old('email_2', $branch?->email_2)}}" type="email">
                                 </div>
                             </div>
 

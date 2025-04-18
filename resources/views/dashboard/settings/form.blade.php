@@ -60,7 +60,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.title') }}" value="{{$setting!=null ? $setting->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.title') }}" value="{{old('title.' . $localeCode, $setting?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -90,7 +90,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-short_description-{{ $localeCode }}">
                                                             <textarea class="form-control" id="textarea" name="short_description[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.short_description') }}"
-                                                                      rows="5">{{$setting!=null ? $setting->getTranslation('short_description', $localeCode) : old('short_description[$localeCode]')}}</textarea>
+                                                                      rows="5" required>{{old('short_description.' . $localeCode, $setting?->getTranslation('short_description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -102,7 +102,7 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.description') }}</label>
+                                    <label class="form-label">{{ __('settings.attributes.description') }} <span class="tx-danger">*</span></label>
                                     <div class="example">
 										<div class="panel panel-primary tabs-style-1">
                                             <div class=" tab-menu-heading">
@@ -120,7 +120,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" id="textarea" name="description[{{ $localeCode }}]" placeholder="{{ __('settings.attributes.description') }}"
-                                                            rows="5">{{$setting!=null ? $setting->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="5" required>{{old('description.' . $localeCode, $setting?->getTranslation('description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -141,51 +141,52 @@
                             </div>
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.facebook_url') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="facebook_url" placeholder="{{ __('settings.attributes.facebook_url') }}" value="{{$setting!=null ? $setting->facebook_url : old('facebook_url')}}" type="url">
+                                    <label class="form-label">{{ __('settings.attributes.facebook_url') }}</label>
+                                    <input class="form-control" name="facebook_url" placeholder="{{ __('settings.attributes.facebook_url') }}" value="{{old('facebook_url', $setting?->facebook_url)}}" type="url">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.whatsapp_url') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="whatsapp_url" placeholder="{{ __('settings.attributes.whatsapp_url') }}" value="{{$setting!=null ? $setting->whatsapp_url : old('whatsapp_url')}}" type="url">
+                                    <label class="form-label">{{ __('settings.attributes.whatsapp_url') }}</label>
+                                    <input class="form-control" name="whatsapp_url" placeholder="{{ __('settings.attributes.whatsapp_url') }}" value="{{old('whatsapp_url', $setting?->whatsapp_url)}}" type="url">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.telegram_url') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="telegram_url" placeholder="{{ __('settings.attributes.telegram_url') }}" value="{{$setting!=null ? $setting->telegram_url : old('telegram_url')}}" type="url">
+                                    <label class="form-label">{{ __('settings.attributes.telegram_url') }}</label>
+                                    <input class="form-control" name="telegram_url" placeholder="{{ __('settings.attributes.telegram_url') }}" value="{{old('telegram_url', $setting?->telegram_url)}}" type="url">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.instagram_url') }}</label>
-                                    <input class="form-control" name="instagram_url" placeholder="{{ __('settings.attributes.instagram_url') }}" value="{{$setting!=null ? $setting->instagram_url : old('instagram_url')}}" type="url">
+                                    <input class="form-control" name="instagram_url" placeholder="{{ __('settings.attributes.instagram_url') }}" value="{{old('instagram_url', $setting?->instagram_url)}}" type="url">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.twitter_url') }}</label>
-                                    <input class="form-control" name="twitter_url" placeholder="{{ __('settings.attributes.twitter_url') }}" value="{{$setting!=null ? $setting->twitter_url : old('twitter_url')}}" type="url">
+                                    <input class="form-control" name="twitter_url" placeholder="{{ __('settings.attributes.twitter_url') }}" value="{{old('twitter_url', $setting?->twitter_url)}}" type="url">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.linkedin_url') }}</label>
-                                    <input class="form-control" name="linkedin_url" placeholder="{{ __('settings.attributes.linkedin_url') }}" value="{{$setting!=null ? $setting->linkedin_url : old('linkedin_url')}}" type="url">
+                                    <input class="form-control" name="linkedin_url" placeholder="{{ __('settings.attributes.linkedin_url') }}" value="{{old('linkedin_url', $setting?->linkedin_url)}}" type="url">
                                 </div>
                             </div>
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.youtube_url') }}</label>
-                                    <input class="form-control" name="youtube_url" placeholder="{{ __('settings.attributes.youtube_url') }}" value="{{$setting!=null ? $setting->youtube_url : old('youtube_url')}}" type="url">
+                                    <input class="form-control" name="youtube_url" placeholder="{{ __('settings.attributes.youtube_url') }}" value="{{old('youtube_url', $setting?->youtube_url)}}" type="url">
                                 </div>
                             </div>
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('settings.attributes.image') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$setting!=null ? $setting->getImage() : ''}}" data-height="200" />
+                                    <label class="form-label">{{ __('settings.attributes.image') }} @if($setting==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$setting?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$setting== null ? 'required' : ''}}/>
+                                    <span class="text-danger" style="font-size: 11px;">{{ __('settings.messages.image_dimensions') }}</span>
                                 </div>
                             </div>
 

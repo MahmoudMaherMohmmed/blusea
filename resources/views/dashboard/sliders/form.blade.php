@@ -60,7 +60,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('sliders.attributes.title') }}" value="{{$slider!=null ? $slider->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('sliders.attributes.title') }}" value="{{old('title.' . $localeCode, $slider?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -89,7 +89,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-subtitle-{{ $localeCode }}">
-                                                            <input class="form-control" name="subtitle[{{ $localeCode }}]" placeholder="{{ __('sliders.attributes.subtitle') }}" value="{{$slider!=null ? $slider->getTranslation('subtitle', $localeCode) : old('subtitle[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="subtitle[{{ $localeCode }}]" placeholder="{{ __('sliders.attributes.subtitle') }}" value="{{old('subtitle.' . $localeCode, $slider?->getTranslation('subtitle', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -119,7 +119,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" name="description[{{ $localeCode }}]" placeholder="{{ __('sliders.attributes.description') }}"
-                                                            rows="5">{{$slider!=null ? $slider->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="5">{{old('description.' . $localeCode, $slider?->getTranslation('description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -132,7 +132,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('sliders.attributes.image') }} @if($slider==null)<span class="tx-danger">*</span>@endif</label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$slider!=null ? $slider->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$slider== null ? 'required' : ''}} />
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$slider?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$slider== null ? 'required' : ''}} />
                                     <span class="text-danger" style="font-size: 11px;">{{ __('sliders.messages.image_dimensions') }}</span>
                                 </div>
                             </div>

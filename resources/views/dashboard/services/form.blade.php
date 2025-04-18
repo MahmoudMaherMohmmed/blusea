@@ -60,7 +60,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('services.attributes.title') }}" value="{{$service!=null ? $service->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('services.attributes.title') }}" value="{{old('title.' . $localeCode, $service?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -90,7 +90,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" id="textarea" name="description[{{ $localeCode }}]" placeholder="{{ __('services.attributes.description') }}"
-                                                            rows="5">{{$service!=null ? $service->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="5">{{old('description.' . $localeCode, $service?->getTranslation('description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -103,7 +103,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('services.attributes.icon') }} <span class="tx-danger">*</span> <br></label>
-                                    <input class="form-control" name="icon" placeholder="{{ __('services.attributes.icon') }}" value="{{$service!=null ? $service->icon : old('icon')}}" required="" type="text">
+                                    <input class="form-control" name="icon" placeholder="{{ __('services.attributes.icon') }}" value="{{old('icon', $service?->icon)}}" required="" type="text">
                                     <span>You Can Get Icon Options By <a href="https://fontawesome.com/v4/icons" target="_blank">Click here</a></span>
                                 </div>
                             </div>
