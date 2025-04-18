@@ -60,7 +60,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('categories.attributes.title') }}" value="{{$category!=null ? $category->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('categories.attributes.title') }}" value="{{old('title.' . $localeCode, $category?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -90,7 +90,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" name="description[{{ $localeCode }}]" placeholder="{{ __('categories.attributes.description') }}"
-                                                            rows="5">{{$category!=null ? $category->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="5">{{old('description.' . $localeCode, $category?->getTranslation('description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -103,7 +103,7 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('categories.attributes.image') }} @if($category==null)<span class="tx-danger">*</span>@endif</label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$category!=null ? $category->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$category== null ? 'required' : ''}} />
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$category?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$category== null ? 'required' : ''}} />
                                 </div>
                             </div>
 
