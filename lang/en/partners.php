@@ -22,10 +22,11 @@ return [
         'updated' => 'The partner has been updated successfully',
         'deleted' => 'The partner has been deleted successfully',
         'retrieved' => 'The partner has been retrieved successfully',
+        'image_dimensions' => '* Image dimensions must be 270 x 154 pixels',
     ],
     'attributes' => [
         'id' => 'ID',
-        'title' => 'Title',
+        'title' => 'Partner',
         'description' => 'Description',
         'url' => 'URL',
         'image' => 'Image',

@@ -133,7 +133,7 @@
                                 <div class="form-group">
                                     <label class="form-label">{{ __('sliders.attributes.image') }} @if($slider==null)<span class="tx-danger">*</span>@endif</label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$slider!=null ? $slider->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$slider== null ? 'required' : ''}} />
-                                    <div class="text-danger" style="font-size: 11px;">{{ __('sliders.messages.image_dimensions') }}</div>
+                                    <span class="text-danger" style="font-size: 11px;">{{ __('sliders.messages.image_dimensions') }}</span>
                                 </div>
                             </div>
 

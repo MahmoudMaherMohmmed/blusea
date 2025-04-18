@@ -27,7 +27,7 @@ class StorePartnerRequest extends FormRequest
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'url' => 'required|url',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=270,height=154',
             'status' => 'required',
         ];
     }
