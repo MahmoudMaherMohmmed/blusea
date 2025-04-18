@@ -13,7 +13,7 @@ return new class extends Migration {
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('slug');
+            $table->text('slug');
             $table->text('title');
             $table->text('description')->nullable();
             $table->boolean('status')->default(CategoryStatusEnum::ACTIVE->value);

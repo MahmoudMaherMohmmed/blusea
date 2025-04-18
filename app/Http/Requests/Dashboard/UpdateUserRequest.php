@@ -28,7 +28,7 @@ class UpdateUserRequest extends FormRequest
             'email' => 'required|min:3|max:255|email|unique:users,email,' . $this->user->id,
             'phone' => 'required|min:3|max:255|unique:users,phone,' . $this->user->id,
             'password' => 'nullable|min:8|max:255|confirmed',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp',
             'status' => 'required',
         ];
     }

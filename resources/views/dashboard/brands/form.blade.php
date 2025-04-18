@@ -102,8 +102,8 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('brands.attributes.image') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$brand!=null ? $brand->getImage() : ''}}" data-height="200" />
+                                    <label class="form-label">{{ __('brands.attributes.image') }} @if($brand==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$brand!=null ? $brand->getImage() : ''}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$brand== null ? 'required' : ''}} />
                                 </div>
                             </div>
 

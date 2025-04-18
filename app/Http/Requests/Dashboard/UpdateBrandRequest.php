@@ -26,7 +26,7 @@ class UpdateBrandRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp',
             'status' => 'required',
         ];
     }

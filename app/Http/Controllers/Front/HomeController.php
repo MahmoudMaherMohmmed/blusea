@@ -141,7 +141,7 @@ class HomeController extends Controller
     {
         Contact::create($request->validated());
 
-        return back()->with('success', trans('contacts.messages.created'));
+        return back()->with('done', trans('contacts.messages.created'));
     }
 
     /**
@@ -154,6 +154,6 @@ class HomeController extends Controller
     {
         Subscribe::create($request->validated());
 
-        return back()->with('success', trans('subscribes.messages.created'));
+        return back()->with('done', trans('subscribes.messages.created'));
     }
 }

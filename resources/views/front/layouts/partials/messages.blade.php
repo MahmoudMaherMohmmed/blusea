@@ -6,8 +6,8 @@
             @endforeach
         </ul>
     </div>
-@elseif(Session::has('success'))
+@elseif(Session::has('done'))
     <div class="alert alert-success">
-        {{ Session::get('success') }}
+        {{ Session::get('done') }}
     </div>
 @endif
