@@ -26,7 +26,7 @@ class UpdateCategoryRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=64,height=64',
             'status' => 'required',
         ];
     }

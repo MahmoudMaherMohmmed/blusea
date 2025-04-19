@@ -28,7 +28,7 @@ class StoreCollectionRequest extends FormRequest
             'description.*' => 'nullable|string',
             'products_ids' => 'required|array',
             'products_ids.*' => 'required|exists:products,id',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp',
+            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=64,height=64',
             'status' => 'required',
         ];
     }

@@ -104,6 +104,7 @@
                                 <div class="form-group">
                                     <label class="form-label">{{ __('brands.attributes.image') }} @if($brand==null)<span class="tx-danger">*</span>@endif</label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$brand?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$brand== null ? 'required' : ''}} />
+                                    <span class="text-danger" style="font-size: 11px;">{{ __('brands.messages.image_dimensions') }}</span>
                                 </div>
                             </div>
 

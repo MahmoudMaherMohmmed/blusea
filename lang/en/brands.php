@@ -22,6 +22,7 @@ return [
         'updated' => 'The brand has been updated successfully',
         'deleted' => 'The brand has been deleted successfully',
         'retrieved' => 'The brand has been retrieved successfully',
+        'image_dimensions' => '* Image dimensions must be 64x64 pixels',
     ],
     'attributes' => [
         'id' => 'ID',
