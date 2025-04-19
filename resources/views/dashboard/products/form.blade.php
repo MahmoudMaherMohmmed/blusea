@@ -73,7 +73,7 @@
                                                 <div class="tab-content">
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-title-{{ $localeCode }}">
-                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('products.attributes.title') }}" value="{{$product!=null ? $product->getTranslation('title', $localeCode) : old('title[$localeCode]')}}" type="text" required>
+                                                            <input class="form-control" name="title[{{ $localeCode }}]" placeholder="{{ __('products.attributes.title') }}" value="{{old('title.' . $localeCode, $product?->getTranslation('title', $localeCode))}}" type="text" required>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -103,7 +103,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-short-description-{{ $localeCode }}">
                                                             <textarea class="form-control" name="short_description[{{ $localeCode }}]" placeholder="{{ __('products.attributes.short_description') }}"
-                                                                      rows="4">{{$product!=null ? $product->getTranslation('short_description', $localeCode) : old('short_description[$localeCode]')}}</textarea>
+                                                                      rows="4" required>{{old('short_description.' . $localeCode, $product?->getTranslation('short_description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -133,7 +133,7 @@
                                                     @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                                         <div class="tab-pane {{$loop->first ? 'active' : ''}}" id="tab-description-{{ $localeCode }}">
                                                             <textarea class="form-control" name="description[{{ $localeCode }}]" placeholder="{{ __('products.attributes.description') }}"
-                                                            rows="7">{{$product!=null ? $product->getTranslation('description', $localeCode) : old('description[$localeCode]')}}</textarea>
+                                                            rows="7" required>{{old('description.' . $localeCode, $product?->getTranslation('description', $localeCode))}}</textarea>
                                                         </div>
                                                     @endforeach
                                                 </div>
@@ -170,14 +170,14 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.price') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="price" placeholder="{{ __('products.attributes.price') }}" value="{{$product!=null ? $product->price : old('price')}}" required="" type="number">
+                                    <input class="form-control" name="price" placeholder="{{ __('products.attributes.price') }}" value="{{old('price', $product?->price)}}" required="" type="number">
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.price_after_discount') }}</label>
-                                    <input class="form-control" name="price_after_discount" placeholder="{{ __('products.attributes.price_after_discount') }}" value="{{$product!=null ? $product->price_after_discount : old('price_after_discount')}}" type="number">
+                                    <input class="form-control" name="price_after_discount" placeholder="{{ __('products.attributes.price_after_discount') }}" value="{{old('price_after_discount', $product?->price_after_discount)}}" type="number">
                                 </div>
                             </div>
 
@@ -268,8 +268,9 @@
 
                             <div class="col-12">
                                 <div class="form-group">
-                                    <label class="form-label">{{ __('products.attributes.image') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="image" class="dropify" data-default-file="{{$product!=null ? $product->getMainImage() : ''}}" data-height="200" />
+                                    <label class="form-label">{{ __('products.attributes.image') }} @if($product==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$product?->getMainImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$product== null ? 'required' : ''}} />
+                                    <span class="text-danger" style="font-size: 11px;">{{ __('products.messages.image_dimensions') }}</span>
                                 </div>
                             </div>
 
@@ -280,8 +281,7 @@
                                             <a href="{{route('admin.products.images.destroy', $image->id)}}"
                                                class="icon icon-close remove cursor-pointer">
                                             </a>
-                                            <img src="{{$image->getFullUrl()}}" class="dashboard-img"
-                                                 width="100%">
+                                            <img src="{{$image->getFullUrl()}}" class="dashboard-img" width="100%">
                                         </div>
                                     @endforeach
                                 </div>
@@ -289,7 +289,8 @@
                             <div class="col-12">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.images') }} <span class="tx-danger">*</span></label>
-                                    <input type="file" name="images[]" class="dropify" data-height="200"  multiple/>
+                                    <input type="file" name="images[]" class="dropify" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$product== null ? 'required' : ''}} multiple/>
+                                    <span class="text-danger" style="font-size: 11px;">{{ __('products.messages.image_dimensions') }}</span>
                                 </div>
                             </div>
 

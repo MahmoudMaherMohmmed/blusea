@@ -34,12 +34,12 @@ class UpdateProductRequest extends FormRequest
             'price_after_discount' => 'nullable|numeric',
             'special' => 'required',
             'best_seller' => 'required',
-            'tags' => 'nullable|array',
-            'tags.*' => 'nullable|array',
-            'tags.*.*' => 'nullable|string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg',
+            'tags' => 'required|array',
+            'tags.*' => 'required|array',
+            'tags.*.*' => 'required|string',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg|dimensions:width=585,height=565',
             'images' => 'nullable|array',
-            'images.*' => 'nullable|mimes:jpeg,png,jpg,svg,webp',
+            'images.*' => 'nullable|mimes:jpeg,png,jpg,svg,webp|dimensions:width=585,height=565',
             'status' => 'required',
         ];
     }
