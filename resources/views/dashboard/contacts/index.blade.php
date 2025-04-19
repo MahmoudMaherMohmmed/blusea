@@ -45,7 +45,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.subject') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.created_at') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('contacts.attributes.read_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('contacts.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('contacts.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

@@ -118,7 +118,7 @@
                                 </tr>
                             @endif
                             <tr>
-                                <th scope="row">{{ __('products.actions.actions') }}</th>
+                                <th scope="row">{{ __('products.actions.plural') }}</th>
                                 <td>
                                     @include('dashboard.products.partials.actions.edit')
                                     @include('dashboard.products.partials.actions.delete')

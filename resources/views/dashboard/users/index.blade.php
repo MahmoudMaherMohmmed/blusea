@@ -45,7 +45,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('admins.attributes.email') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('admins.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('admins.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('admins.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('admins.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

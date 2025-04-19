@@ -49,7 +49,7 @@
                                 <th class="wd-10p border-bottom-0">{{ __('collections.attributes.id') }}</th>
                                 <th class="wd-30p border-bottom-0">{{ __('collections.attributes.title') }}</th>
                                 <th class="wd-10p border-bottom-0">{{ __('collections.attributes.status') }}</th>
-                                <th class="wd-15p border-bottom-0">{{ __('collections.actions.actions') }}</th>
+                                <th class="wd-15p border-bottom-0">{{ __('collections.actions.plural') }}</th>
                             </tr>
                             </thead>
                             <tbody>

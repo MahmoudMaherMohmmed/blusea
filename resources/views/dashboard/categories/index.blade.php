@@ -42,7 +42,7 @@
                                     <th class="wd-10p border-bottom-0">{{ __('categories.attributes.id') }}</th>
                                     <th class="wd-30p border-bottom-0">{{ __('categories.attributes.title') }}</th>
                                     <th class="wd-10p border-bottom-0">{{ __('categories.attributes.status') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('categories.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('categories.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

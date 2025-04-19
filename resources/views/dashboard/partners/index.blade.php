@@ -44,7 +44,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('partners.attributes.url') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('partners.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('partners.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('partners.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('partners.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

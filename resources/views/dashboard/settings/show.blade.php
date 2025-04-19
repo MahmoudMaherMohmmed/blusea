@@ -87,7 +87,7 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$setting->getImage()}}"> </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('settings.actions.actions') }}</th>
+                                    <th scope="row">{{ __('settings.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.settings.partials.actions.edit')
                                         @if($setting->id != 1)

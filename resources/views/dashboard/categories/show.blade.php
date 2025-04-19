@@ -53,7 +53,7 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$category->getImage()}}"> </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('categories.actions.actions') }}</th>
+                                    <th scope="row">{{ __('categories.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.categories.partials.actions.edit')
                                         @include('dashboard.categories.partials.actions.delete')

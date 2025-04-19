@@ -57,7 +57,7 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$slider->getImage()}}"> </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('sliders.actions.actions') }}</th>
+                                    <th scope="row">{{ __('sliders.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.sliders.partials.actions.edit')
                                         @include('dashboard.sliders.partials.actions.delete')

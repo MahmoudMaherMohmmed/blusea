@@ -47,7 +47,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('products.attributes.best_seller') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('products.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('products.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('products.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('products.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

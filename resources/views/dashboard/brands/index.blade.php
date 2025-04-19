@@ -43,7 +43,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('brands.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('brands.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('brands.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('brands.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('brands.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

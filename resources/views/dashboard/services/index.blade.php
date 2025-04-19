@@ -43,7 +43,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('services.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('services.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('services.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('services.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('services.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

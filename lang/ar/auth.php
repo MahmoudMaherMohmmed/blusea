@@ -28,6 +28,6 @@ return [
         'emailPlaceholder' => 'أدخل بريدك الإلكتروني',
         'passwordPlaceholder' => 'أدخل كلمة المرور',
         'phone_number' => 'رقم الهاتف',
-        'email' => 'البريد الالكتروني',
+        'email' => 'البريد الإلكتروني',
     ]
 ];

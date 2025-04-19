@@ -57,7 +57,7 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$user->getAvatar()}}"> </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('admins.actions.actions') }}</th>
+                                    <th scope="row">{{ __('admins.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.users.partials.actions.edit')
                                         @if($user->id != 1)

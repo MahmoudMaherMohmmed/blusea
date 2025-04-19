@@ -53,7 +53,7 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$blog->getImage()}}"> </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('blogs.actions.actions') }}</th>
+                                    <th scope="row">{{ __('blogs.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.blogs.partials.actions.edit')
                                         @include('dashboard.blogs.partials.actions.delete')

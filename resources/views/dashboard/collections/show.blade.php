@@ -69,7 +69,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">{{ __('collections.actions.actions') }}</th>
+                                <th scope="row">{{ __('collections.actions.plural') }}</th>
                                 <td>
                                     @include('dashboard.collections.partials.actions.edit')
                                     {{--@include('dashboard.collections.partials.actions.delete')--}}

@@ -43,7 +43,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('sliders.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('sliders.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('sliders.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

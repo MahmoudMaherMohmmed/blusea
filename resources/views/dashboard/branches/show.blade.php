@@ -73,7 +73,7 @@
                                     <td>{{$branch->created_at->diffForHumans()}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('branches.actions.actions') }}</th>
+                                    <th scope="row">{{ __('branches.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.branches.partials.actions.edit')
                                         @include('dashboard.branches.partials.actions.delete')

@@ -43,7 +43,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('blogs.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('blogs.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('blogs.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

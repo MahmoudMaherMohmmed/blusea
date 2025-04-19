@@ -57,7 +57,7 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$partner->getImage()}}"> </td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('partners.actions.actions') }}</th>
+                                    <th scope="row">{{ __('partners.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.partners.partials.actions.edit')
                                         @include('dashboard.partners.partials.actions.delete')

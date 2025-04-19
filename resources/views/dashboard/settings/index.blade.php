@@ -44,7 +44,7 @@
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.title') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.product_price_status') }}</th>
                                     <th class="wd-15p border-bottom-0">{{ __('settings.attributes.created_at') }}</th>
-                                    <th class="wd-15p border-bottom-0">{{ __('settings.actions.actions') }}</th>
+                                    <th class="wd-15p border-bottom-0">{{ __('settings.actions.plural') }}</th>
                                 </tr>
                             </thead>
                             <tbody>

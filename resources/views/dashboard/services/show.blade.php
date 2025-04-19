@@ -53,7 +53,7 @@
                                     <td>{{$service->created_at->diffForHumans()}}</td>
                                 </tr>
                                 <tr>
-                                    <th scope="row">{{ __('services.actions.actions') }}</th>
+                                    <th scope="row">{{ __('services.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.services.partials.actions.edit')
                                         @include('dashboard.services.partials.actions.delete')
