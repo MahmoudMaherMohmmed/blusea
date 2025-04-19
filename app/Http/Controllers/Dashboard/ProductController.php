@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Dashboard\StoreProductRequest;
 use App\Http\Requests\Dashboard\UpdateProductRequest;
 use App\Models\Product;
+use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
@@ -144,10 +145,10 @@ class ProductController extends Controller
     /**
      * Remove image of specified resource from storage.
      */
-    public function destroyImage($image_id)
+    public function destroyImage(Request $request)
     {
-        Media::find($image_id)->delete();
+        Media::find($request->id)->delete();
 
-        return back()->with('success', ' تم حذف الصورة بنجاح');
+        return response()->json(['status' => true]);
     }
 }

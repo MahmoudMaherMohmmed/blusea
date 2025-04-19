@@ -277,8 +277,8 @@
                             @if($product && $product->getImages()!=null)
                                 <div class="row">
                                     @foreach($product->getImages() as $image)
-                                        <div class="col-lg-3">
-                                            <a href="{{route('admin.products.images.destroy', $image->id)}}"
+                                        <div class="col-lg-3" id="image_{{$image->id}}">
+                                            <a href="javascript:void(0);" onclick="removeImage('{{$image->id}}')"
                                                class="icon icon-close remove cursor-pointer">
                                             </a>
                                             <img src="{{$image->getFullUrl()}}" class="dashboard-img" width="100%">
@@ -349,6 +349,22 @@
 
         function remove_tag(ele){
             $(ele).parent().parent().remove();
+        }
+
+        function removeImage(id) {
+            $.ajax({
+                type: 'POST',
+                url: "{{ route('admin.products.images.destroy') }}",
+                data: {
+                    id: id,
+                    _token: '{{ csrf_token() }}'
+                },
+                success: function (response) {
+                    if (response.status === true) {
+                        $('#image_' + id).remove();
+                    }
+                }
+            });
         }
     </script>
 @endsection
