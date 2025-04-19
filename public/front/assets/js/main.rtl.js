@@ -241,8 +241,6 @@ function checkoutPageEffect() {
 //****************************************
 
 function initMap() {
-
-
     if ($('#gmap_canvas').length) {
         var myOptions = {
             zoom: 10,
@@ -265,7 +263,6 @@ function initMap() {
 
         infowindow.open(map, marker);
     }
-
 }
 
 //***************************************
@@ -273,9 +270,6 @@ function initMap() {
 //****************************************
 
 function owlCarouselInit() {
-
-
-
     if ($('#home1-main-slider').length) {
         $('#home1-main-slider').owlCarousel({
             rtl: true,
@@ -284,7 +278,6 @@ function owlCarouselInit() {
             singleItem: true,
             navigation: true,
             pagination: true,
-
         });
     }
 
@@ -297,7 +290,6 @@ function owlCarouselInit() {
             pagination: false,
             itemsDesktop: [1199, 4],
             itemsDesktopSmall: [979, 3]
-
         });
     }
 
@@ -310,7 +302,6 @@ function owlCarouselInit() {
             pagination: false,
             itemsDesktop: [1199, 3],
             itemsDesktopSmall: [979, 3]
-
         });
     }
 
@@ -324,7 +315,6 @@ function owlCarouselInit() {
             margin: 5,
             navigation: false,
             pagination: false
-
         });
     }
 
@@ -341,5 +331,4 @@ function owlCarouselInit() {
             pagination: false
         });
     }
-
 }
