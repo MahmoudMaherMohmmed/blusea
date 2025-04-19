@@ -46,10 +46,6 @@ body {
     overflow-x: hidden;
 }
 
-.owl-carousel {
-    direction: rtl !important;
-}
-
 a {
     text-decoration: none;
     cursor: pointer;

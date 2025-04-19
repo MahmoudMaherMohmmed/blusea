@@ -27,10 +27,6 @@ body {
     overflow-x: hidden
 }
 
-.owl-carousel {
-    direction: ltr !important;
-}
-
 a {
     text-decoration: none;
     cursor: pointer;
@@ -4169,10 +4165,10 @@ iframe {
     width: 100%
 }
 
-.red-text {
+.red-text{
     color: #a94442;
 }
 
-.help-block {
+.help-block{
     font-size: 12px;
 }
