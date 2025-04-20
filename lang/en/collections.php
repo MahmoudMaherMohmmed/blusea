@@ -22,7 +22,7 @@ return [
         'updated' => 'The collection has been updated successfully',
         'deleted' => 'The collection has been deleted successfully',
         'retrieved' => 'The collection has been retrieved successfully',
-        'image_dimensions' => '* Image dimensions must be 64x64 pixels',
+        'dimensions' => '* Image dimensions must be :dimensions pixels',
     ],
     'attributes' => [
         'id' => 'ID',

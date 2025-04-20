@@ -30,6 +30,56 @@ return [
             'text' => '585x565',
             'message' => 'products.messages.dimensions',
         ],
+        'collection' => [
+            1 => [
+                'width' => 1920,
+                'height' => 954,
+                'text' => '1920x954',
+                'message' => 'collections.messages.dimensions',
+            ],
+            2 => [
+                'width' => 489,
+                'height' => 507,
+                'text' => '489x507',
+                'message' => 'collections.messages.dimensions',
+            ],
+            3 => [
+                'width' => 395,
+                'height' => 563,
+                'text' => '395x563',
+                'message' => 'collections.messages.dimensions',
+            ],
+            4 => [
+                'width' => 485,
+                'height' => 396,
+                'text' => '485x396',
+                'message' => 'collections.messages.dimensions',
+            ],
+            5 => [
+                'width' => 489,
+                'height' => 507,
+                'text' => '489x507',
+                'message' => 'collections.messages.dimensions',
+            ],
+            6 => [
+                'width' => 1800,
+                'height' => 801,
+                'text' => '1800x801',
+                'message' => 'collections.messages.dimensions',
+            ],
+            7 => [
+                'width' => 1800,
+                'height' => 801,
+                'text' => '1800x801',
+                'message' => 'collections.messages.dimensions',
+            ],
+            8 => [
+                'width' => 1170,
+                'height' => 239,
+                'text' => '1170x239',
+                'message' => 'collections.messages.dimensions',
+            ],
+        ],
         'slider' => [
             'width' => 1920,
             'height' => 846,
