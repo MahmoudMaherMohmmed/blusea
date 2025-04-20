@@ -26,7 +26,7 @@ class StoreBlogRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'required|array',
             'description.*' => 'string',
-            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=900,height=625',
+            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.blog.width') . ',height=' . config('media.dimensions.blog.height'),
             'status' => 'required',
         ];
     }

@@ -27,7 +27,7 @@ class UpdatePartnerRequest extends FormRequest
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'url' => 'required|url',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=270,height=154',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.partner.width') . ',height=' . config('media.dimensions.partner.height'),
             'status' => 'required',
         ];
     }

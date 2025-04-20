@@ -36,5 +36,17 @@ return [
             'text' => '1920x846',
             'message' => 'sliders.messages.dimensions',
         ],
+        'blog' => [
+            'width' => 900,
+            'height' => 625,
+            'text' => '900x625',
+            'message' => 'blogs.messages.dimensions',
+        ],
+        'partner' => [
+            'width' => 270,
+            'height' => 154,
+            'text' => '270x154',
+            'message' => 'partners.messages.dimensions',
+        ],
     ],
 ];

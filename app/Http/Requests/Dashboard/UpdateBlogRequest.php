@@ -26,7 +26,7 @@ class UpdateBlogRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'required|array',
             'description.*' => 'string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=900,height=625',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.blog.width') . ',height=' . config('media.dimensions.blog.height'),
             'status' => 'required',
         ];
     }

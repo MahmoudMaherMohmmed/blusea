@@ -22,7 +22,7 @@ return [
         'updated' => 'The partner has been updated successfully',
         'deleted' => 'The partner has been deleted successfully',
         'retrieved' => 'The partner has been retrieved successfully',
-        'image_dimensions' => '* Image dimensions must be 270 x 154 pixels',
+        'dimensions' => '* Image dimensions must be :dimensions pixels',
     ],
     'attributes' => [
         'id' => 'ID',
