@@ -28,7 +28,7 @@ class UpdateCollectionRequest extends FormRequest
             'description.*' => 'nullable|string',
             'products_ids' => 'required|array',
             'products_ids.*' => 'required|exists:products,id',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config("media.dimensions.collection.$this->collection->id.width") . ',height=' . config("media.dimensions.collection.$this->collection->id.height"),
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.collection.' . $this->collection->id . '.width') . ',height=' . config('media.dimensions.collection.' . $this->collection->id . '.height'),
             'status' => 'required',
         ];
     }
