@@ -37,9 +37,9 @@ class StoreProductRequest extends FormRequest
             'tags' => 'required|array',
             'tags.*' => 'required|array',
             'tags.*.*' => 'required|string',
-            'image' => 'required|mimes:jpeg,png,jpg,svg|dimensions:width=585,height=565',
+            'image' => 'required|mimes:jpeg,png,jpg,svg|dimensions:width=' . config('dimensions.products.width') . ',height=' . config('dimensions.products.height'),
             'images' => 'required|array',
-            'images.*' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=585,height=565',
+            'images.*' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('dimensions.products.width') . ',height=' . config('dimensions.products.height'),
             'status' => 'required',
         ];
     }

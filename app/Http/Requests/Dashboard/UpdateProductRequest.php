@@ -37,9 +37,9 @@ class UpdateProductRequest extends FormRequest
             'tags' => 'required|array',
             'tags.*' => 'required|array',
             'tags.*.*' => 'required|string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg|dimensions:width=585,height=565',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg|dimensions:width=' . config('dimensions.products.width') . ',height=' . config('dimensions.products.height'),
             'images' => 'nullable|array',
-            'images.*' => 'nullable|mimes:jpeg,png,jpg,svg,webp|dimensions:width=585,height=565',
+            'images.*' => 'nullable|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('dimensions.products.width') . ',height=' . config('dimensions.products.height'),
             'status' => 'required',
         ];
     }

@@ -22,7 +22,7 @@ return [
         'updated' => 'The product has been updated successfully',
         'deleted' => 'The product has been deleted successfully',
         'retrieved' => 'The product has been retrieved successfully',
-        'image_dimensions' => 'The image dimensions should be 585x565 pixels',
+        'dimensions' => '* Image dimensions must be :dimensions pixels',
     ],
     'attributes' => [
         'id' => 'ID',

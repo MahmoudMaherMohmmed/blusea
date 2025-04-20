@@ -22,7 +22,7 @@ return [
         'updated' => 'The category has been updated successfully',
         'deleted' => 'The category has been deleted successfully',
         'retrieved' => 'The category has been retrieved successfully',
-        'image_dimensions' => '* Image dimensions must be 64x64 pixels',
+        'dimensions' => '* Image dimensions must be :dimensions pixels',
     ],
     'attributes' => [
         'id' => 'ID',
