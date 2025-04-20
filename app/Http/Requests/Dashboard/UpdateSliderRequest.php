@@ -28,7 +28,7 @@ class UpdateSliderRequest extends FormRequest
             'subtitle.*' => 'string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=1920,height=846',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.slider.width') . ',height=' . config('media.dimensions.slider.height'),
             'status' => 'required',
         ];
     }

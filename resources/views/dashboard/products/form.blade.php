@@ -271,7 +271,7 @@
                                     <label class="form-label">{{ __('products.attributes.image') }} @if($product==null)<span class="tx-danger">*</span>@endif</label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$product?->getMainImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$product== null ? 'required' : ''}} />
                                     <span class="text-danger" style="font-size: 11px;">
-                                        {{trans(config('dimensions.products.message'), ['dimensions' => config('dimensions.products.dimensions')])}}
+                                        {{trans(config('media.dimensions.product.message'), ['dimensions' => config('media.dimensions.product.text')])}}
                                     </span>
                                 </div>
                             </div>
@@ -293,7 +293,7 @@
                                     <label class="form-label">{{ __('products.attributes.images') }} <span class="tx-danger">*</span></label>
                                     <input type="file" name="images[]" class="dropify" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$product== null ? 'required' : ''}} multiple/>
                                     <span class="text-danger" style="font-size: 11px;">
-                                        {{trans(config('dimensions.products.message'), ['dimensions' => config('dimensions.products.dimensions')])}}
+                                        {{trans(config('media.dimensions.product.message'), ['dimensions' => config('media.dimensions.product.text')])}}
                                     </span>
                                 </div>
                             </div>

@@ -22,7 +22,7 @@ return [
         'updated' => 'The slider has been updated successfully',
         'deleted' => 'The slider has been deleted successfully',
         'retrieved' => 'The slider has been retrieved successfully',
-        'image_dimensions' => '* Image dimensions must be 1920x846 pixels',
+        'dimensions' => '* Image dimensions must be :dimensions pixels',
     ],
     'attributes' => [
         'id' => 'ID',

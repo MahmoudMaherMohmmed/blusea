@@ -26,7 +26,7 @@ class StoreCategoryRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('dimensions.categories.width') . ',height=' . config('dimensions.categories.height'),
+            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.category.width') . ',height=' . config('media.dimensions.category.height'),
             'status' => 'required',
         ];
     }

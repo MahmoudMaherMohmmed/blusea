@@ -105,7 +105,7 @@
                                     <label class="form-label">{{ __('categories.attributes.image') }} @if($category==null)<span class="tx-danger">*</span>@endif</label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$category?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$category== null ? 'required' : ''}} />
                                     <span class="text-danger" style="font-size: 11px;">
-                                        {{trans(config('dimensions.categories.message', ['dimensions' => config('dimensions.categories.dimensions')]))}}
+                                        {{trans(config('media.dimensions.category.message'), ['dimensions' => config('media.dimensions.category.text')])}}
                                     </span>
                                 </div>
                             </div>

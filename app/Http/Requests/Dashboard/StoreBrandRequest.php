@@ -26,7 +26,7 @@ class StoreBrandRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('dimensions.brands.width') . ',height=' . config('dimensions.brands.height'),
+            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.brand.width') . ',height=' . config('media.dimensions.brand.height'),
             'status' => 'required',
         ];
     }

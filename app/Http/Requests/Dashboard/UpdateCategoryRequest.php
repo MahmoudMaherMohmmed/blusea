@@ -26,7 +26,7 @@ class UpdateCategoryRequest extends FormRequest
             'title.*' => 'string',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('dimensions.categories.width') . ',height=' . config('dimensions.categories.height'),
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.category.width') . ',height=' . config('media.dimensions.category.height'),
             'status' => 'required',
         ];
     }
