@@ -36,7 +36,7 @@ class StoreSettingRequest extends FormRequest
             'twitter_url' => 'nullable|url',
             'linkedin_url' => 'nullable|url',
             'youtube_url' => 'nullable|url',
-            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=221,height=59',
+            'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.setting.width') . ',height=' . config('media.dimensions.setting.height'),
         ];
     }
 

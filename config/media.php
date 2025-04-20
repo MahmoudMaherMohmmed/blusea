@@ -48,5 +48,11 @@ return [
             'text' => '270x154',
             'message' => 'partners.messages.dimensions',
         ],
+        'setting' => [
+            'width' => 221,
+            'height' => 59,
+            'text' => '221x59',
+            'message' => 'settings.messages.dimensions',
+        ],
     ],
 ];

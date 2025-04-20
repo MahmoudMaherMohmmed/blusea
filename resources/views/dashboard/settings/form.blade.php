@@ -186,7 +186,9 @@
                                 <div class="form-group">
                                     <label class="form-label">{{ __('settings.attributes.image') }} @if($setting==null)<span class="tx-danger">*</span>@endif</label>
                                     <input type="file" name="image" class="dropify" data-default-file="{{$setting?->getImage()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="jpeg png jpg svg webp" {{$setting== null ? 'required' : ''}}/>
-                                    <span class="text-danger" style="font-size: 11px;">{{ __('settings.messages.image_dimensions') }}</span>
+                                    <span class="text-danger" style="font-size: 11px;">
+                                        {{trans(config('media.dimensions.setting.message'), ['dimensions' => config('media.dimensions.setting.text')])}}
+                                    </span>
                                 </div>
                             </div>
 

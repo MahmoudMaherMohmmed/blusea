@@ -36,7 +36,7 @@ class UpdateSettingRequest extends FormRequest
             'twitter_url' => 'nullable|url',
             'linkedin_url' => 'nullable|url',
             'youtube_url' => 'nullable|url',
-            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=221,height=59',
+            'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.setting.width') . ',height=' . config('media.dimensions.setting.height'),
         ];
     }
 
