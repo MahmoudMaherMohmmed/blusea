@@ -23,13 +23,12 @@ class StoreCollectionRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'products_ids' => 'required|array',
             'products_ids.*' => 'required|exists:products,id',
             'image' => 'required|mimes:jpeg,png,jpg,svg,webp',
-            'status' => 'required',
         ];
     }
 

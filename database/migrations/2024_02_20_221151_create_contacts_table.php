@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('subject')->nullable();
-            $table->text('message')->nullable();
+            $table->longText('message')->nullable();
             $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });

@@ -170,14 +170,14 @@
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.price') }} <span class="tx-danger">*</span></label>
-                                    <input class="form-control" name="price" placeholder="{{ __('products.attributes.price') }}" value="{{old('price', $product?->price)}}" required="" type="number">
+                                    <input class="form-control" name="price" placeholder="{{ __('products.attributes.price') }}" value="{{old('price', $product?->price)}}" type="number" min="0" oninput="checkNumber(this)" required="">
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="form-group">
                                     <label class="form-label">{{ __('products.attributes.price_after_discount') }}</label>
-                                    <input class="form-control" name="price_after_discount" placeholder="{{ __('products.attributes.price_after_discount') }}" value="{{old('price_after_discount', $product?->price_after_discount)}}" type="number">
+                                    <input class="form-control" name="price_after_discount" placeholder="{{ __('products.attributes.price_after_discount') }}" value="{{old('price_after_discount', $product?->price_after_discount)}}" type="number" min="0" oninput="checkNumber(this)">
                                 </div>
                             </div>
 
@@ -338,6 +338,12 @@
     <!-- Internal Input tags js-->
     <script src="{{URL::asset('dashboard/assets/plugins/inputtags/inputtags.js')}}"></script>
     <script>
+        function checkNumber(input) {
+            if (parseInt(input.value) < 0) {
+                input.value = null;
+            }
+        }
+
         $(function(){
             $("#add_new_tag").on('click', function(){
                 var ele = $(this).closest('#tag').clone(true).find("input").val("").end();

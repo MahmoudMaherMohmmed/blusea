@@ -48,7 +48,6 @@
                             <tr>
                                 <th class="wd-10p border-bottom-0">{{ __('collections.attributes.id') }}</th>
                                 <th class="wd-30p border-bottom-0">{{ __('collections.attributes.title') }}</th>
-                                <th class="wd-10p border-bottom-0">{{ __('collections.attributes.status') }}</th>
                                 <th class="wd-15p border-bottom-0">{{ __('collections.actions.plural') }}</th>
                             </tr>
                             </thead>
@@ -57,10 +56,6 @@
                                 <tr>
                                     <td>{{$collection->id}}</td>
                                     <td>{{$collection->title}}</td>
-                                    <td>
-                                        <span
-                                            class="badge {{$collection->status->color()}}">{{$collection->status->trans()}}</span>
-                                    </td>
                                     <td>
                                         @include('dashboard.collections.partials.actions.show')
                                         @include('dashboard.collections.partials.actions.edit')

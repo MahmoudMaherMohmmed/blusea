@@ -121,17 +121,6 @@
                                 </div>
                             </div>
 
-                            <div class="col-12">
-                                <div class="form-group">
-                                    <label class="form-label">{{ __('collections.attributes.status') }} <span class="tx-danger">*</span></label>
-                                    <select class="form-control select2-no-search" name="status" required="">
-                                        @foreach(App\Enums\CategoryStatusEnum::options() as $key=>$value)
-                                            <option value="{{$key}}" {{$collection!=null && $collection->status->value==$key ? 'selected' : ''}}> {{ $value }} </option>
-                                        @endforeach
-                                    </select>
-                                </div>
-                            </div>
-
                             <div class="col-12"><button class="btn btn-main-primary pd-x-20 mg-t-10" type="submit">{{ $collection!=null ? __('collections.actions.edit') : __('collections.actions.save') }}</button></div>
                         </div>
                     </form>

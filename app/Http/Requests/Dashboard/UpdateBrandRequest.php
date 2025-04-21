@@ -23,7 +23,7 @@ class UpdateBrandRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.brand.width') . ',height=' . config('media.dimensions.brand.height'),

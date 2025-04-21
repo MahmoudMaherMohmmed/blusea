@@ -91,7 +91,7 @@
                                                                      alt="{{$recent_blog->title}}">{{$recent_blog->title}}
                                                             </span>
                                                             </a>
-                                                            <p>{!! \Illuminate\Support\Str::words($recent_blog->description, 10 ) !!}</p>
+                                                            <p>{!! \Illuminate\Support\Str::words($recent_blog->description, 7 ) !!}</p>
                                                         </div>
                                                     </div>
                                                 </li>

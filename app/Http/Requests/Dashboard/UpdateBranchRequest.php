@@ -23,7 +23,7 @@ class UpdateBranchRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'address' => 'required|array',
             'address.*' => 'required|string',
             'google_map' => 'required|string',

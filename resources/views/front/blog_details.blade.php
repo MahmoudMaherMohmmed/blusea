@@ -76,11 +76,11 @@
                                                         <div class="description">
                                                             <a href="{{route('blog.details', $recent_blog->slug)}}">
                                                             <span class="titles">
-                                                                <img src="{{$blog->getImage()}}" width="40" height="40"
+                                                                <img src="{{$recent_blog->getImage()}}" width="40" height="40"
                                                                      alt="{{$recent_blog->title}}">{{$recent_blog->title}}
                                                             </span>
                                                             </a>
-                                                            <p>{{$blog->description}}</p>
+                                                            <p>{!! \Illuminate\Support\Str::words($recent_blog->description, 7 ) !!}</p>
                                                         </div>
                                                     </div>
                                                 </li>

@@ -23,7 +23,7 @@ class StoreCategoryRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'image' => 'required|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.category.width') . ',height=' . config('media.dimensions.category.height'),

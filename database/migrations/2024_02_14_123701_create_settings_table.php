@@ -14,8 +14,8 @@ return new class extends Migration {
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('short_description')->nullable();
-            $table->text('description')->nullable();
+            $table->longText('short_description')->nullable();
+            $table->longText('description')->nullable();
             $table->boolean('product_price_status')->default(ProductPriceStatusEnum::INACTIVE->value);
             $table->text('facebook_url')->nullable();
             $table->text('whatsapp_url')->nullable();

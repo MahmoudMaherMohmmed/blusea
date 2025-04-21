@@ -23,7 +23,7 @@ class UpdateProductRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'short_description' => 'required|array',
             'short_description.*' => 'string',
             'description' => 'required|array',
@@ -36,7 +36,7 @@ class UpdateProductRequest extends FormRequest
             'best_seller' => 'required',
             'tags' => 'required|array',
             'tags.*' => 'required|array',
-            'tags.*.*' => 'required|string',
+            'tags.*.*' => 'required|string|min:3|max:255',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg|dimensions:width=' . config('media.dimensions.product.width') . ',height=' . config('media.dimensions.product.height'),
             'images' => 'nullable|array',
             'images.*' => 'nullable|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.product.width') . ',height=' . config('media.dimensions.product.height'),

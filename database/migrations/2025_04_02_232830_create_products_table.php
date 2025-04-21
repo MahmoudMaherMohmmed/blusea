@@ -16,8 +16,8 @@ return new class extends Migration {
             $table->id();
             $table->text('slug');
             $table->text('title');
-            $table->text('short_description');
-            $table->text('description');
+            $table->longText('short_description');
+            $table->longText('description');
             $table->float('price');
             $table->float('price_after_discount')->nullable();
             $table->boolean('special')->default(ProductSpecialEnum::NO->value);

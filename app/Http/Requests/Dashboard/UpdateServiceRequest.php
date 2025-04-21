@@ -23,7 +23,7 @@ class UpdateServiceRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'icon' => 'required',

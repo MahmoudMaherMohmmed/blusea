@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->id();
             $table->text('slug');
             $table->text('title');
-            $table->text('description')->nullable();
+            $table->longText('description')->nullable();
             $table->boolean('status')->default(CollectionStatusEnum::ACTIVE->value);
             $table->timestamps();
             $table->softDeletes();

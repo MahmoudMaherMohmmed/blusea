@@ -23,7 +23,7 @@ class UpdateBlogRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'description' => 'required|array',
             'description.*' => 'string',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.blog.width') . ',height=' . config('media.dimensions.blog.height'),

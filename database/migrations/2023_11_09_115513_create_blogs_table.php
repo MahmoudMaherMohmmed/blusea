@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->id();
             $table->text('slug');
             $table->text('title');
-            $table->text('description');
+            $table->longText('description');
             $table->boolean('status')->default(BlogStatusEnum::ACTIVE->value);
             $table->timestamps();
         });

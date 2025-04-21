@@ -54,12 +54,6 @@
                                 </tr>
                             @endif
                             <tr>
-                                <th scope="row">{{ __('collections.attributes.status') }}</th>
-                                <td><span
-                                        class="badge {{$collection->status->color()}}">{{$collection->status->trans()}}</span>
-                                </td>
-                            </tr>
-                            <tr>
                                 <th scope="row">{{ __('collections.attributes.created_at') }}</th>
                                 <td>{{$collection->created_at->diffForHumans()}}</td>
                             </tr>

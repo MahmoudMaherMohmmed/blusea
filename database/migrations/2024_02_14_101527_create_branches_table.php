@@ -14,8 +14,8 @@ return new class extends Migration {
         Schema::create('branches', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('address');
-            $table->text('google_map')->nullable();
+            $table->longText('address');
+            $table->longText('google_map')->nullable();
             $table->string('phone_number_1');
             $table->string('phone_number_2')->nullable();
             $table->string('telephone_number');

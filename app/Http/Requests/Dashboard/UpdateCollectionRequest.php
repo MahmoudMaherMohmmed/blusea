@@ -23,13 +23,12 @@ class UpdateCollectionRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'description' => 'nullable|array',
             'description.*' => 'nullable|string',
             'products_ids' => 'required|array',
             'products_ids.*' => 'required|exists:products,id',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.collection.' . $this->collection->id . '.width') . ',height=' . config('media.dimensions.collection.' . $this->collection->id . '.height'),
-            'status' => 'required',
         ];
     }
 

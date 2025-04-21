@@ -15,7 +15,7 @@ return new class extends Migration {
         Schema::create('services', function (Blueprint $table) {
             $table->id();
             $table->text('title');
-            $table->text('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('icon');
             $table->boolean('status')->default(ServiceStatusEnum::ACTIVE->value);
             $table->timestamps();

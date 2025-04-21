@@ -23,7 +23,7 @@ class UpdateSettingRequest extends FormRequest
     {
         return [
             'title' => 'required|array',
-            'title.*' => 'string',
+            'title.*' => 'string|min:3|max:255',
             'short_description' => 'required|array',
             'short_description.*' => 'required|string',
             'description' => 'required|array',

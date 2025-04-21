@@ -42,14 +42,16 @@
                                     <img src="{{$product->getMainImage()}}" alt="{{$product->title}}">
                                 </a>
                             </div>
-                            <div id="wa-slide-image" class="owl-carousel  wa-slide-image carousel-style-1">
-                                @foreach($product->getImages() as $image)
-                                    <a href="{{$image->getFullUrl()}}" class="fancybox" data-fancybox-group="group"
-                                       title="{{$product->title}}">
-                                        <img src="{{$image->getFullUrl()}}" alt="{{$product->title}}">
-                                    </a>
-                                @endforeach
-                            </div>
+                            @if(count($product->getImages()) > 0)
+                                <div id="wa-slide-image" class="owl-carousel  wa-slide-image carousel-style-1">
+                                    @foreach($product->getImages() as $image)
+                                        <a href="{{$image->getFullUrl()}}" class="fancybox" data-fancybox-group="group"
+                                           title="{{$product->title}}">
+                                            <img src="{{$image->getFullUrl()}}" alt="{{$product->title}}">
+                                        </a>
+                                    @endforeach
+                                </div>
+                            @endif
                         </div>
                         <!--Content Column-->
                         <div class="content-column col-lg-6 col-md-6 col-sm-7 col-xs-12">
