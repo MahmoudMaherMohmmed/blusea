@@ -20,9 +20,10 @@
   <link rel="icon" href="{{ URL::asset('front/assets') }}/img/favicon.ico" type="image/x-icon">
 
   <!-- Fonts include -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+
 
   <!-- Plugins CSS -->
   <link href="{{ URL::asset('front/assets') }}/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
@@ -32,11 +33,19 @@
   <link href="{{ URL::asset('front/assets') }}/plugins/switcher/switcher.css" rel="stylesheet" />
 
   @if (LaravelLocalization::getCurrentLocaleDirection() == 'rtl')
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap"
+      rel="stylesheet">
+
     <link href="{{ URL::asset('front/assets') }}/css/bootstrap.rtl.min.css" rel="stylesheet" />
     <link href="{{ URL::asset('front/assets') }}/plugins/menu/css/hover-dropdown-menu.rtl.css" rel="stylesheet" />
     <link href="{{ URL::asset('front/assets') }}/css/style.rtl.css" rel="stylesheet" />
     <link href="{{ URL::asset('front/assets') }}/css/responsive.rtl.css" rel="stylesheet" />
   @else
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet" />
+
     <link href="{{ URL::asset('front/assets') }}/css/bootstrap.min.css" rel="stylesheet" />
     <link href="{{ URL::asset('front/assets') }}/plugins/menu/css/hover-dropdown-menu.css" rel="stylesheet" />
     <link href="{{ URL::asset('front/assets') }}/css/style.css" rel="stylesheet" />
@@ -119,7 +128,8 @@
               <div class="col-md-9 col-sm-9 col-xs-12">
                 <div class="navbar-header">
                   <!-- Button For Responsive toggle -->
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
