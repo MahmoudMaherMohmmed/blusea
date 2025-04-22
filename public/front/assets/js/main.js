@@ -5,17 +5,17 @@
  *   "use strict" mode on                            *
  *****************************************************
  */
-$(window).load(function(){  
-	
+$(window).load(function () {
+
     // ============================================
     // PreLoader On window Load
     // =============================================
 
-     $('.preloader').addClass('loaderout');
+    $('.preloader').addClass('loaderout');
 
     //========================================
-    // Accordion 
-    //======================================== 	
+    // Accordion
+    //========================================
 
     if ($('#faqs-accordion').length) {
         $('#faqs-accordion').accordion();
@@ -23,17 +23,17 @@ $(window).load(function(){
 
     //========================================
     // LightBox / Fancybox
-    //======================================== 	
+    //========================================
 
     if ($('.fancybox').length) {
         $('.fancybox').fancybox();
     }
 
     //========================================
-    // Sidebar List Toggle 
-    //======================================== 	
+    // Sidebar List Toggle
+    //========================================
 
-    $('.links-lists li').click(function(e) {
+    $('.links-lists li').click(function (e) {
 
         if ($(this).find('>ul').hasClass('active')) {
 
@@ -65,15 +65,15 @@ $(window).load(function(){
     //***************************************
     // Mini Cart Settings
     //****************************************
-	var cartOpen = $('#cartIcon, #whishlistIcon');
+    var cartOpen = $('#cartIcon, #whishlistIcon');
     if (cartOpen.length) {
 
-        $('.closeCart').click(function() {
+        $('.closeCart').click(function () {
             if ($(this).parent('.shopping-cart').hasClass('active')) {
                 $(this).parent('.shopping-cart').removeClass('active');
             }
         });
-        cartOpen.click(function() {
+        cartOpen.click(function () {
             if ($('.user-menu').hasClass('active')) {
                 $('.user-menu').removeClass('active');
             }
@@ -94,19 +94,19 @@ $(window).load(function(){
 
     if ($('#userIcon').length) {
 
-        $('.closeMenu').click(function() {
+        $('.closeMenu').click(function () {
             if ($(this).parent('.user-menu').hasClass('active')) {
                 $(this).parent('.user-menu').removeClass('active');
             }
         });
 
-        $('.user-menu li a').click(function() {
+        $('.user-menu li a').click(function () {
             if ($(this).parent('li').parent('.user-menu-items').parent('.user-menu').hasClass('active')) {
                 $(this).parent('li').parent('.user-menu-items').parent('.user-menu').removeClass('active');
             }
         });
 
-        $('#userIcon').click(function() {
+        $('#userIcon').click(function () {
             if ($('.shopping-cart').hasClass('active')) {
                 $('.shopping-cart').removeClass('active');
             }
@@ -130,12 +130,12 @@ $(window).load(function(){
     //****************************************
 
     if ($('#newsLetterPopup').length) {
-        setTimeout(function() {
+        setTimeout(function () {
             $('#newsLetterPopup').fadeIn();
             $('#newsLetterPopup').addClass('showpopup');
         }, 3000);
 
-        $('.close-news-letter').click( function(e) {
+        $('.close-news-letter').click(function (e) {
             e.preventDefault();
             $('#newsLetterPopup').removeClass('showpopup');
         });
@@ -147,13 +147,13 @@ $(window).load(function(){
 
     if ($('.quick-view-popup').length) {
 
-        $('.quickview-box-btn').click(function(e) {
+        $('.quickview-box-btn').click(function (e) {
             e.preventDefault();
             $('.quick-view-popup').addClass('showpopup');
 
         });
 
-        $('.close-quick-view').click(function(e) {
+        $('.close-quick-view').click(function (e) {
             e.preventDefault();
             $('.quick-view-popup').removeClass('showpopup');
         });
@@ -170,7 +170,7 @@ $(window).load(function(){
             min: 0,
             max: 500,
             values: [75, 300],
-            slide: function(event, ui) {
+            slide: function (event, ui) {
                 $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
             }
         });
@@ -206,18 +206,18 @@ $(window).load(function(){
 //****************************************
 
 function checkoutPageEffect() {
-   
-    $('.showlogin').click( function(e) {
+
+    $('.showlogin').click(function (e) {
         e.preventDefault();
         $('.login').slideToggle("slow");
     });
 
-    $('.showcoupon').click(function(e) {
+    $('.showcoupon').click(function (e) {
         e.preventDefault();
         $('.checkout_coupon').slideToggle("slow");
     });
 
-    $('#ship-to-different-address-checkbox').change(function() {
+    $('#ship-to-different-address-checkbox').change(function () {
         if (this.checked) {
             $('.shipping-fields').slideToggle('slow');
         } else {
@@ -225,7 +225,7 @@ function checkoutPageEffect() {
         }
     });
 
-    $('#createaccount').change(function() {
+    $('#createaccount').change(function () {
         if (this.checked) {
             $('.create-account').slideToggle('slow');
         } else {
@@ -238,10 +238,10 @@ function checkoutPageEffect() {
 
 //***************************************
 // Contact Page Map
-//****************************************  
+//****************************************
 
 function initMap() {
-    
+
 
     if ($('#gmap_canvas').length) {
         var myOptions = {
@@ -259,7 +259,7 @@ function initMap() {
         var infowindow = new google.maps.InfoWindow({
             content: '<strong>Envato</strong><br>Envato, King Street, Melbourne, Victoria<br>'
         });
-        google.maps.event.addListener(marker, 'click', function() {
+        google.maps.event.addListener(marker, 'click', function () {
             infowindow.open(map, marker);
         });
 
@@ -269,8 +269,8 @@ function initMap() {
 }
 
 //***************************************
-// All owl Carousels 
-//****************************************   
+// All owl Carousels
+//****************************************
 
 function owlCarouselInit() {
 
@@ -280,9 +280,9 @@ function owlCarouselInit() {
         $('#home1-main-slider').owlCarousel({
             autoPlay: true,
             items: 1,
-            singleItem: true,
-            navigation: true,
-            pagination: true,
+            nav: true,
+            navText: false,
+            dots: true,
 
         });
     }
@@ -291,10 +291,17 @@ function owlCarouselInit() {
         $('#best-seller').owlCarousel({
             autoPlay: false,
             items: 4,
-            navigation: true,
-            pagination: false,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [979, 3]
+            nav: true,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
 
         });
     }
@@ -303,10 +310,17 @@ function owlCarouselInit() {
         $("#home-blog-carousel").owlCarousel({
             autoPlay: false,
             items: 3,
-            navigation: true,
-            pagination: false,
-            itemsDesktop: [1199, 3],
-            itemsDesktopSmall: [979, 3]
+            nav: true,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
 
         });
     }
@@ -315,11 +329,18 @@ function owlCarouselInit() {
         $('.wa-partner-carousel').owlCarousel({
             autoPlay: true,
             items: 4,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [979, 3],
             margin: 5,
-            navigation: false,
-            pagination: false
+            nav: false,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
 
         });
     }
@@ -328,12 +349,18 @@ function owlCarouselInit() {
         $('#wa-slide-image').owlCarousel({
             autoPlay: true,
             items: 4,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [979, 3],
-            itemsMobile: [979, 3],
             margin: 5,
-            navigation: true,
-            pagination: false
+            nav: true,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
         });
     }
 

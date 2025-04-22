@@ -275,9 +275,9 @@ function owlCarouselInit() {
             rtl: true,
             autoPlay: true,
             items: 1,
-            singleItem: true,
-            navigation: true,
-            pagination: true,
+            nav: true,
+            navText: false,
+            dots: true,
         });
     }
 
@@ -286,10 +286,17 @@ function owlCarouselInit() {
             rtl: true,
             autoPlay: false,
             items: 4,
-            navigation: true,
-            pagination: false,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [979, 3]
+            nav: true,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
         });
     }
 
@@ -298,10 +305,17 @@ function owlCarouselInit() {
             rtl: true,
             autoPlay: false,
             items: 3,
-            navigation: true,
-            pagination: false,
-            itemsDesktop: [1199, 3],
-            itemsDesktopSmall: [979, 3]
+            nav: true,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
         });
     }
 
@@ -310,11 +324,18 @@ function owlCarouselInit() {
             rtl: true,
             autoPlay: true,
             items: 4,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [979, 3],
             margin: 5,
-            navigation: false,
-            pagination: false
+            nav: false,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
         });
     }
 
@@ -323,12 +344,18 @@ function owlCarouselInit() {
             rtl: true,
             autoPlay: true,
             items: 4,
-            itemsDesktop: [1199, 4],
-            itemsDesktopSmall: [979, 3],
-            itemsMobile: [979, 3],
             margin: 5,
-            navigation: true,
-            pagination: false
+            nav: true,
+            navText: false,
+            dots: false,
+            responsive: {
+                979: {
+                    items: 3
+                },
+                1199: {
+                    items: 4
+                }
+            }
         });
     }
 }
