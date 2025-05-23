@@ -19,7 +19,7 @@
                                     <h2><span>{{$slider->title}}</span></h2>
                                     <span>{{$slider->subtitle}}</span>
                                     <p>{{$slider->description}}</p>
-                                    <a href="{{route('products')}}" class="theme-button">Shop Now</a>
+                                    <a href="{{route('products')}}" class="theme-button">{{__('website.shop_now')}}</a>
                                 </div>
                             </figcaption>
                         </figure>
@@ -50,7 +50,7 @@
                                                 <h2>{{$collections[0]->title}}</h2>
                                                 <div class="clear"></div>
                                                 <a href="{{route('products', ['collection' => $collections[0]->slug])}}"
-                                                   class="theme-button marT10">view detail</a>
+                                                   class="theme-button marT10">{{__('website.view_details')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -76,7 +76,7 @@
                                                 <h2>{{$collections[1]->title}}</h2>
                                                 <div class="clear"></div>
                                                 <a href="{{route('products', ['collection' => $collections[1]->slug])}}"
-                                                   class="theme-button marT10">view detail</a>
+                                                   class="theme-button marT10">{{__('website.view_details')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -102,7 +102,7 @@
                                                 <h2>{{$collections[2]->title}}</h2>
                                                 <div class="clear"></div>
                                                 <a href="{{route('products', ['collection' => $collections[2]->slug])}}"
-                                                   class="theme-button marT10">view detail</a>
+                                                   class="theme-button marT10">{{__('website.view_details')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -128,7 +128,7 @@
                                                 <h2>{{$collections[3]->title}}</h2>
                                                 <div class="clear"></div>
                                                 <a href="{{route('products', ['collection' => $collections[3]->slug])}}"
-                                                   class="theme-button marT10">view detail</a>
+                                                   class="theme-button marT10">{{__('website.view_details')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -154,7 +154,7 @@
                                                 <h2>{{$collections[4]->title}}</h2>
                                                 <div class="clear"></div>
                                                 <a href="{{route('products', ['collection' => $collections[4]->slug])}}"
-                                                   class="theme-button marT10">view detail</a>
+                                                   class="theme-button marT10">{{__('website.view_details')}}</a>
                                             </div>
                                         </div>
                                     </div>
@@ -185,7 +185,7 @@
                 <div class="row" id="MixItUp1">
                     @foreach($special_products as $product)
                         <div
-                            class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 mix">
+                                class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 mix">
                             <div class="wa-products">
                                 <div class="wa-products-thumbnail wa-item">
                                     <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
@@ -240,7 +240,7 @@
                                                     <h3>{{$collections[5]->description}}</h3>
                                                     <div class="clear"></div>
                                                     <a href="{{route('products', ['collection' => $collections[5]->slug])}}"
-                                                       class="theme-button marT10">view detail</a>
+                                                       class="theme-button marT10">{{__('website.view_details')}}</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -264,7 +264,7 @@
                                                     <h3>{{$collections[6]->description}}</h3>
                                                     <div class="clear"></div>
                                                     <a href="{{route('products', ['collection' => $collections[6]->slug])}}"
-                                                       class="theme-button marT10">view detail</a>
+                                                       class="theme-button marT10">{{__('website.view_details')}}</a>
                                                 </div>
                                             </div>
                                         </div>

@@ -57,7 +57,8 @@
                                             </ul>
                                         </div>
                                         <p>{!! \Illuminate\Support\Str::words($blog->description, 20 ) !!}</p>
-                                        <a href="{{route('blog.details', $blog->slug)}}" class="read-more">read more</a>
+                                        <a href="{{route('blog.details', $blog->slug)}}"
+                                           class="read-more">{{__('website.read_more')}}</a>
                                     </div>
                                 </div>
                             </div>

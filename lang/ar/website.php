@@ -11,6 +11,7 @@ return [
     'contact' => 'تواصل معنا',
 
     //Home
+    'shop_now' => 'تسوق الآن',
     'special_products' => 'المنتجات المميزة',
     'special_products_subtitle' => 'مجموعتنا الحصرية: حيث يلتقي الابتكار بالأناقة.',
     'best_sellers' => 'الأكثر مبيعًا',
@@ -22,6 +23,7 @@ return [
     'subscribe' => 'اشترك في النشرة الإخبارية',
     'subscribe_subtitle' => 'لا تفوت شيئًا - اشترك للحصول على التحديثات التي تهمك.',
     'write_your_email' => 'اكتب بريدك الإلكتروني...',
+    'view_details' => 'عرض التفاصيل',
 
     //Products
     'latest_products' => 'أحدث المنتجات',

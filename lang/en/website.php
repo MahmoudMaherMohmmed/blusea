@@ -11,6 +11,7 @@ return [
     'contact' => 'Contact us',
 
     //Home
+    'shop_now' => 'Shop Now',
     'special_products' => 'Special Products',
     'special_products_subtitle' => 'Our exclusive collection: where innovation meets elegance.',
     'best_sellers' => 'Best Sellers',
@@ -22,6 +23,7 @@ return [
     'subscribe' => 'Sign Up For Newsletter',
     'subscribe_subtitle' => 'Don’t miss a thing—subscribe for updates that matter.',
     'write_your_email' => 'Write your email...',
+    'view_details' => 'View Details',
 
     //Products
     'latest_products' => 'Latest Products',
