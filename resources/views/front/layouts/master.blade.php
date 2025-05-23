@@ -277,15 +277,15 @@
                 <span class="rounded-icon"><i class="fa fa-map-marker"></i></span>{{ $main_branch->address }}
               </p>
               <p><span class="rounded-icon"><i class="fa fa-phone"></i></span>
-                {{ $main_branch->phone_number_1 }}
+                <a href="tel:{{ $main_branch->phone_number_1 }}" style="color: #b6b6b6">{{ $main_branch->phone_number_1 }}</a>
                 @if ($main_branch->phone_number_2)
-                  <br>{{ $main_branch->phone_number_2 }}
+                  <br><a href="tel:{{ $main_branch->phone_number_2 }}" style="color: #b6b6b6">{{ $main_branch->phone_number_2 }}</a>
                 @endif
               </p>
               <p><span class="rounded-icon"><i class="fa fa-envelope-o"></i></span>
-                {{ $main_branch->email_1 }}
+                <a href="mailto:{{ $main_branch->email_1 }}" style="color: #b6b6b6">{{ $main_branch->email_1 }}</a>
                 @if ($main_branch->email_2)
-                  <br>{{ $main_branch->email_2 }}
+                  <br><a href="mailto:{{ $main_branch->email_2 }}" style="color: #b6b6b6">{{ $main_branch->email_2 }}</a>
                 @endif
               </p>
             </div>
