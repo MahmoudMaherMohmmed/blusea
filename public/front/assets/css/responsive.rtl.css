@@ -1,16 +1,16 @@
 @media only screen and (min-width: 1400px) {
     .carousel-style-1 .owl-nav div.owl-prev {
-        left: -100px;
+        right: -100px;
     }
     .carousel-style-1 .owl-nav div.owl-next {
-        right: -100px;
+        left: -100px;
     }
 
     .wa-slide-image.carousel-style-1 .owl-nav div.owl-prev {
-        left: 10px;
+        right: 10px;
     }
     .wa-slide-image.carousel-style-1 .owl-nav div.owl-next {
-        right: 10px;
+        left: 10px;
     }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1199px) {
@@ -43,10 +43,10 @@
         display: inline-block;
     }
     .carousel-style-1 .owl-nav div.owl-prev {
-        left: -12px;
+        right: -12px;
     }
     .carousel-style-1 .owl-nav div.owl-next {
-        right: -12px;
+        left: -12px;
     }
     .social-style li a,
     .widget .social-style li a {
@@ -113,7 +113,7 @@
     }
     .navbar-default .navbar-brand {
         color: #000;
-        float: left;
+        float: right;
         width: 100%;
         padding: 10px 0px;
     }
@@ -141,7 +141,7 @@
     }
     .wa-collection-caption h2 {
         max-width: 70%;
-        margin-left: 15%;
+        margin-right: 15%;
         margin-bottom: 0px;
         font-size: 22px;
         letter-spacing: 2px;
@@ -163,7 +163,7 @@
         margin-bottom: 20px;
     }
     .wa_main_bn_wrap figcaption .theme-button {
-        margin-left: 40px;
+        margin-right: 40px;
     }
     .wa-banners-caption h2 {
         font-size: 26px;
@@ -204,10 +204,10 @@
     }
     #top-bar ul li:after {
         width: 0px;
-        margin-right: 0px;
+        margin-left: 0px;
     }
     #top-bar ul li a {
-        margin-right: 10px;
+        margin-left: 10px;
     }
     #main-footer .widget {
         margin-bottom: 30px;
@@ -217,31 +217,31 @@
     }
     .news-letter-popup .popup-content:after {
         width: 96%;
-        left: 2%;
+        right: 2%;
     }
 }
 @media only screen and (min-width: 992px) {
     #top-bar .pull-left ul {
-        text-align: left;
-    }
-    #top-bar .pull-right ul {
         text-align: right;
     }
+    #top-bar .pull-right ul {
+        text-align: left;
+    }
     #top-bar .pull-right ul li:last-child a {
-        margin-right: 0;
+        margin-left: 0;
     }
     .navbar-nav > li > a {
         padding: 36px 20px;
     }
     .navbar-nav > li:first-child > a {
-        padding-left: 0px;
+        padding-right: 0px;
     }
     .navbar > .container .navbar-brand,
     .navbar > .container-fluid .navbar-brand {
         padding: 15px 0px;
     }
     .rev-content .icon-list {
-        text-align: right;
+        text-align: left;
     }
     .order-table {
         display: table;
@@ -306,31 +306,31 @@
     }
     .shopping-cart {
         width: 300px;
-        left: 50%;
-        margin-left: -194px;
+        right: 50%;
+        margin-right: -194px;
     }
     .shopping-cart:after {
-        left: 192px;
+        right: 192px;
     }
     .top-ecommerce-icons li:first-child .shopping-cart {
         width: 300px;
-        left: 50%;
-        margin-left: -105px;
+        right: 50%;
+        margin-right: -105px;
     }
     .top-ecommerce-icons li:first-child .shopping-cart:after {
-        left: 104px;
+        right: 104px;
     }
     .user-menu {
-        left: 50%;
-        margin-left: -75px;
+        right: 50%;
+        margin-right: -75px;
     }
     .user-menu:after {
-        left: 72px;
+        right: 72px;
     }
     a.closeCart {
         font-size: 20px;
         top: -10px;
-        right: -131px;
+        left: -131px;
     }
     #top-bar .pull-right ul {
         padding: 5px 0 0;
@@ -340,7 +340,7 @@
     }
     .wa-collection-caption h2 {
         max-width: 80%;
-        margin-left: 10%;
+        margin-right: 10%;
         margin-bottom: 0px;
         font-size: 22px;
         letter-spacing: 2px;
@@ -383,7 +383,7 @@
         top: 104%;
         text-align: center;
         margin-top: 15px;
-        left: calc(50% - 60px);
+        right: calc(50% - 60px);
         width: 120px;
     }
     .order-text {
@@ -403,7 +403,7 @@
     .wa-slide-image.carousel-style-1 .owl-nav {
         top: 50%;
         width: 100%;
-        left: 0;
+        right: 0;
         margin-top: -25px;
         visibility: hidden;
     }
@@ -432,13 +432,13 @@
     }
     .news-letter-popup .popup-content:after {
         width: 96%;
-        left: 2%;
+        right: 2%;
     }
 }
 @media only screen and (max-width: 480px) {
     .news-letter-popup .popup-content:after {
         width: 94%;
-        left: 3%;
+        right: 3%;
     }
 }
 @media only screen and (max-width: 479px) {

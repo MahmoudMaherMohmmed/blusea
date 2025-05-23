@@ -1,7 +1,7 @@
 body,
 em,
 p {
-    font-family: Lato, sans-serif;
+    font-family: Cairo, sans-serif;
     line-height: 1.6em;
     font-size: 16px;
 }
@@ -84,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
 }
 
 h1,
@@ -144,7 +144,7 @@ textarea {
     position: relative;
     display: inline-block;
     line-height: 22px;
-    padding: 10px 20px;
+    padding: 5px 20px;
     width: 100%;
     min-height: 42px;
     color: #000;
@@ -949,7 +949,7 @@ ul.top-ecommerce-icons li {
 .dropdown-menu > li > a,
 .page-links div a {
     color: #000;
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
     font-size: 14px;
 }
 
@@ -1401,14 +1401,14 @@ ul.top-ecommerce-icons li a.closeMenu {
     margin-right: 60px;
 }
 
-.wa_main_bn_wrap .owl-buttons {
+.wa_main_bn_wrap .owl-nav {
     position: absolute;
     bottom: 50%;
     left: 0;
     width: 100%;
 }
 
-.wa_main_bn_wrap .owl-buttons div {
+.wa_main_bn_wrap .owl-carousel .owl-nav button {
     width: 50px;
     height: 50px;
     margin-left: 0;
@@ -1422,15 +1422,15 @@ ul.top-ecommerce-icons li a.closeMenu {
     transition: all 0.45s ease-in-out;
 }
 
-.wa_main_bn_wrap .owl-buttons div.owl-prev {
+.wa_main_bn_wrap .owl-carousel .owl-nav button.owl-prev {
     right: 0;
 }
 
-.wa_main_bn_wrap .owl-buttons div.owl-next {
+.wa_main_bn_wrap .owl-carousel .owl-nav button.owl-next {
     left: 0;
 }
 
-.wa_main_bn_wrap .owl-buttons div.owl-prev:before {
+.wa_main_bn_wrap .owl-carousel .owl-nav button.owl-prev:before {
     content: "\f105";
     font: normal normal normal 43px/1 FontAwesome;
     text-rendering: auto;
@@ -1445,7 +1445,7 @@ ul.top-ecommerce-icons li a.closeMenu {
     width: 100%;
 }
 
-.wa_main_bn_wrap .owl-buttons div.owl-next:before {
+.wa_main_bn_wrap .owl-carousel .owl-nav button.owl-next:before {
     content: "\f104";
     font: normal normal normal 43px/1 FontAwesome;
     text-rendering: auto;
@@ -1466,7 +1466,7 @@ ul.top-ecommerce-icons li a.closeMenu {
     text-transform: uppercase;
 }
 
-.wa_main_bn_wrap .owl-buttons div {
+.wa_main_bn_wrap .owl-carousel .owl-nav button {
     text-align: center;
     color: #fff;
     overflow: hidden;
@@ -2740,7 +2740,7 @@ ul.top-ecommerce-icons li a.closeMenu {
 }
 
 .breadcrumb-section h2 {
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
     font-weight: 700;
     letter-spacing: 0;
     text-transform: uppercase;
@@ -2868,7 +2868,7 @@ ul.payment_methods.methods li label {
 .order-data,
 .order-table-cell strong {
     font-weight: 600;
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
     text-transform: uppercase;
 }
 
@@ -3053,14 +3053,14 @@ ul.payment_methods.methods li label {
 }
 
 .ui-widget {
-    font-family: Lato, sans-serif;
+    font-family: Cairo, sans-serif;
 }
 
 .block-detail-head h4 span,
 .latest-twitts span,
 .rev-content h4,
 .sidebar .titles {
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
 }
 
 .faqs-accordion .ui-icon {
@@ -3376,7 +3376,7 @@ ul.page-lists li.active a {
     font-weight: 600;
     text-transform: uppercase;
     border-color: #eee;
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
 }
 
 .sidebar .widget p,
@@ -3525,7 +3525,7 @@ ul.page-lists li a i {
     transition: all 0.45s ease-in-out;
 }
 
-.carousel-style-1 .owl-buttons div:hover,
+.carousel-style-1 .owl-nav button:hover,
 .latest-twitts span:hover {
     -moz-transition: all 0.45s ease-in-out;
     -o-transition: all 0.45s ease-in-out;
@@ -3784,7 +3784,7 @@ iframe {
     }
 }
 
-.carousel-style-1 .owl-buttons {
+.carousel-style-1 .owl-nav {
     position: absolute;
     right: 0;
     width: 100%;
@@ -3794,14 +3794,14 @@ iframe {
     text-align: center;
 }
 
-.carousel-style-1 .owl-buttons div:hover {
+.carousel-style-1 .owl-nav button:hover {
     color: #fff;
     -webkit-transition: all 0.45s ease-in-out;
     transition: all 0.45s ease-in-out;
 }
 
-.carousel-style-1 .owl-buttons div.owl-next:before,
-.carousel-style-1 .owl-buttons div.owl-prev:before {
+.carousel-style-1 .owl-nav button.owl-next:before,
+.carousel-style-1 .owl-nav button.owl-prev:before {
     top: 0;
     -webkit-transition: all 0.45s ease-in-out;
     -moz-transition: all 0.45s ease-in-out;
@@ -3812,15 +3812,15 @@ iframe {
     left: 0;
 }
 
-.carousel-style-1 .owl-buttons div.owl-prev {
+.carousel-style-1 .owl-nav button.owl-prev {
     float: right;
 }
 
-.carousel-style-1 .owl-buttons div.owl-next {
+.carousel-style-1 .owl-nav button.owl-next {
     float: left;
 }
 
-.carousel-style-1 .owl-buttons div {
+.carousel-style-1 .owl-nav button {
     width: 50px;
     height: 50px;
     margin: 0;
@@ -3834,7 +3834,7 @@ iframe {
     font-size: 0;
 }
 
-.carousel-style-1 .owl-buttons div.owl-prev:before {
+.carousel-style-1 .owl-nav button.owl-prev:before {
     content: "\f105";
     font: normal normal normal 43px/1 FontAwesome;
     position: absolute;
@@ -3844,7 +3844,7 @@ iframe {
     transition: all 0.45s ease-in-out;
 }
 
-.carousel-style-1 .owl-buttons div.owl-next:before {
+.carousel-style-1 .owl-nav button.owl-next:before {
     content: "\f104";
     font: normal normal normal 43px/1 FontAwesome;
     position: absolute;
@@ -3854,26 +3854,26 @@ iframe {
     transition: all 0.45s ease-in-out;
 }
 
-.carousel-style-1 .owl-buttons div.owl-next:hover:before,
-.carousel-style-1 .owl-buttons div.owl-prev:hover:before {
+.carousel-style-1 .owl-nav button.owl-next:hover:before,
+.carousel-style-1 .owl-nav button.owl-prev:hover:before {
     color: #fff;
 }
 
-.carousel-style-1 .owl-buttons div.owl-prev {
+.carousel-style-1 .owl-nav button.owl-prev {
     margin-right: 5px;
     z-index: 99;
 }
 
-.carousel-style-1 .owl-buttons div.owl-next {
+.carousel-style-1 .owl-nav button.owl-next {
     margin-left: 5px;
     z-index: 99;
 }
 
-.carousel-style-1 .owl-buttons:before {
+.carousel-style-1 .owl-nav:before {
     height: 0;
 }
 
-.carousel-style-2 .owl-buttons {
+.carousel-style-2 .owl-nav {
     position: absolute;
     right: 0;
     width: 100%;
@@ -3883,7 +3883,7 @@ iframe {
     text-align: center;
 }
 
-.carousel-style-2 .owl-buttons div:hover {
+.carousel-style-2 .owl-nav button:hover {
     color: #fff;
     -webkit-transition: all 0.45s ease-in-out;
     -moz-transition: all 0.45s ease-in-out;
@@ -3892,15 +3892,15 @@ iframe {
     transition: all 0.45s ease-in-out;
 }
 
-.carousel-style-2 .owl-buttons div.owl-prev {
+.carousel-style-2 .owl-nav button.owl-prev {
     float: right;
 }
 
-.carousel-style-2 .owl-buttons div.owl-next {
+.carousel-style-2 .owl-nav button.owl-next {
     float: left;
 }
 
-.carousel-style-2 .owl-buttons div {
+.carousel-style-2 .owl-nav button {
     width: 50px;
     height: 50px;
     margin: 0;
@@ -3914,7 +3914,7 @@ iframe {
     font-size: 0;
 }
 
-.carousel-style-2 .owl-buttons div.owl-prev:before {
+.carousel-style-2 .owl-nav button.owl-prev:before {
     content: "\f105";
     font: normal normal normal 43px/1 FontAwesome;
     position: absolute;
@@ -3927,7 +3927,7 @@ iframe {
     width: 100%;
 }
 
-.carousel-style-2 .owl-buttons div.owl-next:before {
+.carousel-style-2 .owl-nav button.owl-next:before {
     content: "\f104";
     font: normal normal normal 43px/1 FontAwesome;
     position: absolute;
@@ -3953,17 +3953,17 @@ iframe {
     float: right;
 }
 
-.carousel-style-2 .owl-buttons div.owl-prev {
+.carousel-style-2 .owl-nav button.owl-prev {
     margin-right: 5px;
     z-index: 99;
 }
 
-.carousel-style-2 .owl-buttons div.owl-next {
+.carousel-style-2 .owl-nav button.owl-next {
     margin-left: 5px;
     z-index: 99;
 }
 
-.carousel-style-2 .owl-buttons:before {
+.carousel-style-2 .owl-nav:before {
     height: 0;
 }
 
@@ -4182,7 +4182,7 @@ iframe {
     float: right;
     width: 100%;
     position: relative;
-    font-family: Montserrat, sans-serif;
+    font-family: Cairo, sans-serif;
     text-transform: uppercase;
     font-size: 18px;
 }
