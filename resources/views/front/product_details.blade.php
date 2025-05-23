@@ -63,13 +63,13 @@
                                             <strong>{{__('website.availability')}}
                                                 :</strong><span>{{__('website.in_stock')}}</span>
                                         </p>
-                                        <ul class="ratings">
+                                        {{--<ul class="ratings">
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                                        </ul>
+                                        </ul>--}}
                                         @if($settings->product_price_status == App\Enums\ProductPriceStatusEnum::ACTIVE)
                                             <span class="price marB10">
                                                 {{$product->price}} {{__('website.currency')}}

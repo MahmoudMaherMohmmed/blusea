@@ -36,20 +36,21 @@
                             <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
                                 <div class="wa-products">
                                     <div class="wa-products-thumbnail wa-item">
-                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
+                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}"
+                                             height="350px">
                                     </div>
                                     <div class="wa-products-caption">
                                         <h2>
                                             <a href="{{route('product.details', $product->slug)}}">{{$product->title}}</a>
                                         </h2>
-                                        <div class="clear"></div>
+                                        {{--<div class="clear"></div>
                                         <ul class="ratings">
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
-                                        </ul>
+                                        </ul>--}}
                                         <div class="clear"></div>
                                         @if($settings->product_price_status == App\Enums\ProductPriceStatusEnum::ACTIVE)
                                             <span class="price">
