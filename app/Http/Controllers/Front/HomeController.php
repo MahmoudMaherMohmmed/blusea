@@ -61,7 +61,7 @@ class HomeController extends Controller
     {
         $products = Product::query()
             ->when(request('search'), function ($query) {
-                $query->where('name', 'like', '%' . request('search') . '%');
+                $query->where('title', 'like', '%' . request('search') . '%');
             })
             ->when(request('category'), function ($query) {
                 $query->whereHas('categories', function ($q) {

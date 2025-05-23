@@ -30,6 +30,7 @@ return [
     'product_description' => 'وصف المنتج',
     'availability' => 'التوافر',
     'in_stock' => 'متوفر',
+    'search' => 'بحث',
     'search_products' => 'ابحث عن المنتجات...',
 
     //Blog
