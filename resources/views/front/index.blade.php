@@ -188,10 +188,14 @@
                             class="col-lg-3 col-lg-offset-0 col-md-3 col-md-offset-0 col-sm-4 col-sm-offset-0 col-xs-12 col-xs-offset-0 mix">
                             <div class="wa-products">
                                 <div class="wa-products-thumbnail wa-item">
-                                    <img src="{{$product->getMainImage()}}" alt="{{$product->title}}" height="350px">
+                                    <a href="{{route('product.details', $product->slug)}}">
+                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}"
+                                             height="350px">
+                                    </a>
                                 </div>
                                 <div class="wa-products-caption">
-                                    <h2><a href="{{route('product.details', $product->slug)}}">{{$product->title}}</a>
+                                    <h2>
+                                        <a href="{{route('product.details', $product->slug)}}">{{$product->title}}</a>
                                     </h2>
                                     {{--<div class="clear"></div>
                                     <ul class="ratings">
@@ -299,8 +303,10 @@
                             <div class="col-md-12">
                                 <div class="wa-products">
                                     <div class="wa-products-thumbnail wa-item">
-                                        <img src="{{$product->getMainImage()}}" alt="{{$product->title}}"
-                                             height="350px">
+                                        <a href="{{route('product.details', $product->slug)}}">
+                                            <img src="{{$product->getMainImage()}}" alt="{{$product->title}}"
+                                                 height="350px">
+                                        </a>
                                     </div>
                                     <div class="wa-products-caption">
                                         <h2>
