@@ -21,7 +21,13 @@
 				<li class="">
 					<div class="dropdown  nav-itemd-none d-md-flex">
 						<a href="#" class="d-flex  nav-item nav-link pl-0 country-flag1" data-toggle="dropdown" aria-expanded="false">
-							<span class="avatar country-Flag mr-0 align-self-center bg-transparent"><img src="{{URL::asset('dashboard/assets/img/flags/us_flag.jpg')}}" alt="img"></span>
+							<span class="avatar country-Flag mr-0 align-self-center bg-transparent">
+                                @if(LaravelLocalization::getCurrentLocale() == 'ar')
+                                    <img src="{{URL::asset('dashboard/assets/img/flags/eg_flag.png')}}" alt="img">
+                                @else
+                                    <img src="{{URL::asset('dashboard/assets/img/flags/us_flag.jpg')}}" alt="img">
+                                @endif
+                            </span>
 							<div class="my-auto">
 								<strong class="mr-2 ml-2 my-auto">English</strong>
 							</div>
@@ -236,7 +242,7 @@
 						<!-- <a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
 						<a class="dropdown-item" href=""><i class="bx bx-cog"></i> Edit Profile</a> -->
 						<a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-							<i class="bx bx-log-out"></i> {{ __('Logout') }}
+							<i class="bx bx-log-out"></i> {{ __('dashboard.logout') }}
                         </a>
 						<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                              @csrf

@@ -7,4 +7,5 @@ return [
     'products' => 'Products',
     'application' => 'Website Settings',
     'sar' => 'SAR',
+    'logout' => 'Logout',
 ];
