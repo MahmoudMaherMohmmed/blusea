@@ -37,6 +37,7 @@ class UpdateSettingRequest extends FormRequest
             'linkedin_url' => 'nullable|url',
             'youtube_url' => 'nullable|url',
             'image' => 'sometimes|mimes:jpeg,png,jpg,svg,webp|dimensions:width=' . config('media.dimensions.setting.width') . ',height=' . config('media.dimensions.setting.height'),
+            'favicon' => 'sometimes|mimes:ico|dimensions:width=' . config('media.dimensions.favicon.width') . ',height=' . config('media.dimensions.favicon.height'),
         ];
     }
 

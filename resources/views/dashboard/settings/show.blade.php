@@ -87,6 +87,10 @@
                                     <td> <img class="brround" height="200px" width="200px" src="{{$setting->getImage()}}"> </td>
                                 </tr>
                                 <tr>
+                                    <th scope="row">{{ __('settings.attributes.favicon') }}</th>
+                                    <td> <img class="brround" height="32px" width="32px" src="{{$setting->getFavicon()}}"> </td>
+                                </tr>
+                                <tr>
                                     <th scope="row">{{ __('settings.actions.plural') }}</th>
                                     <td>
                                         @include('dashboard.settings.partials.actions.edit')

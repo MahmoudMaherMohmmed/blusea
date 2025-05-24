@@ -104,5 +104,11 @@ return [
             'text' => '221x59',
             'message' => 'settings.messages.dimensions',
         ],
+        'favicon' => [
+            'width' => 16,
+            'height' => 16,
+            'text' => '16x16',
+            'message' => 'settings.messages.favicon_dimensions',
+        ],
     ],
 ];

@@ -22,7 +22,8 @@ return [
         'updated' => 'The setting has been updated successfully',
         'deleted' => 'The setting has been deleted successfully',
         'retrieved' => 'The setting has been retrieved successfully',
-        'dimensions' => '* Image dimensions must be :dimensions pixels',
+        'dimensions' => '* Logo dimensions must be :dimensions pixels',
+        'favicon_dimensions' => '* Favicon dimensions must be :dimensions pixels',
     ],
     'attributes' => [
         'id' => 'ID',
@@ -37,7 +38,8 @@ return [
         'twitter_url' => 'Twitter URL',
         'linkedin_url' => 'Linkedin URL',
         'youtube_url' => 'Youtube URL',
-        'image' => 'Image',
+        'image' => 'Logo',
+        'favicon' => 'Favicon',
         'created_at' => 'Created at',
         'added_tax_value' => 'Added tax value'
     ],

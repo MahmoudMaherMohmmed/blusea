@@ -192,6 +192,16 @@
                                 </div>
                             </div>
 
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('settings.attributes.favicon') }} @if($setting==null)<span class="tx-danger">*</span>@endif</label>
+                                    <input type="file" name="image" class="dropify" data-default-file="{{$setting?->getFavicon()}}" data-height="200" data-errors-position="outside" data-allowed-file-extensions="ico" {{$setting== null ? 'required' : ''}}/>
+                                    <span class="text-danger" style="font-size: 11px;">
+                                        {{trans(config('media.dimensions.favicon.message'), ['dimensions' => config('media.dimensions.favicon.text')])}}
+                                    </span>
+                                </div>
+                            </div>
+
                             <div class="col-12"><button class="btn btn-main-primary pd-x-20 mg-t-10" type="submit">{{ $setting!=null ? __('settings.actions.edit') : __('settings.actions.save') }}</button></div>
                         </div>
                     </form>

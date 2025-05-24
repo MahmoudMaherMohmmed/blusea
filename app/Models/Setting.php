@@ -40,18 +40,30 @@ class Setting extends Model implements HasMedia
         'product_price_status' => ProductPriceStatusEnum::class,
     ];
 
-    public const MEDIA_COLLECTION_NAME = 'settings_image';
-    public const MEDIA_COLLECTION_URL = 'dashboard/images/settings.png';
+    public const MEDIA_COLLECTION_NAME = 'logo_image';
+    public const MEDIA_COLLECTION_URL = 'dashboard/images/logo.png';
+
+    public const FAVICON_COLLECTION_NAME = 'settings_favicon';
+    public const FAVICON_COLLECTION_URL = 'dashboard/images/favicon.ico';
 
     public function registerMediaCollections(): void
     {
         $this->addMediaCollection(self::MEDIA_COLLECTION_NAME)
             ->useFallbackUrl(asset(self::MEDIA_COLLECTION_URL))
             ->useFallbackPath(asset(self::MEDIA_COLLECTION_URL));
+
+        $this->addMediaCollection(self::FAVICON_COLLECTION_NAME)
+            ->useFallbackUrl(asset(self::FAVICON_COLLECTION_URL))
+            ->useFallbackPath(asset(self::FAVICON_COLLECTION_URL));
     }
 
     public function getImage()
     {
         return $this->getFirstMediaUrl(self::MEDIA_COLLECTION_NAME);
+    }
+
+    public function getFavicon()
+    {
+        return $this->getFirstMediaUrl(self::FAVICON_COLLECTION_NAME);
     }
 }

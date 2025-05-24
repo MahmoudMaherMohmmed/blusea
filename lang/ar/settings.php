@@ -22,7 +22,8 @@ return [
         'updated' => 'تم تعديل الإعدادات بنجاح',
         'deleted' => 'تم حذف الإعدادات بنجاح',
         'retrieved' => 'تم أسترجاع الإعدادات بنجاح',
-        'dimensions' => '* يجب أن تكون أبعاد الصورة :dimensions بكسل',
+        'dimensions' => '* يجب أن تكون أبعاد اللوجو :dimensions بكسل',
+        'favicon_dimensions' => '* يجب أن تكون أبعاد أيقونة التبويب :dimensions بكسل',
     ],
     'attributes' => [
         'id' => 'الرقم التسلسلي',
@@ -37,7 +38,8 @@ return [
         'twitter_url' => 'رابط حساب التويتر',
         'linkedin_url' => 'رابط حساب اللينكدان',
         'youtube_url' => 'رابط قناة اليوتيوب',
-        'image' => 'الصورة',
+        'image' => 'اللوجو',
+        'favicon' => 'أيقونة التبويب',
         'created_at' => 'تاريخ الإضافة',
         'added_tax_value' => 'قيمة الضريبة المضافة'
     ],

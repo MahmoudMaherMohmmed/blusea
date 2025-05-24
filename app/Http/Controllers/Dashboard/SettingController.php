@@ -47,6 +47,10 @@ class SettingController extends Controller
             $setting->addMediaFromRequest('image')
                 ->toMediaCollection(Setting::MEDIA_COLLECTION_NAME);
         }
+        if ($request->hasFile('favicon') && $request->file('favicon')->isValid()) {
+            $setting->addMediaFromRequest('favicon')
+                ->toMediaCollection(Setting::FAVICON_COLLECTION_NAME);
+        }
 
         return redirect()->route('admin.settings.show', $setting)->with('success', trans('settings.messages.created'));
     }
@@ -88,6 +92,11 @@ class SettingController extends Controller
             $setting->clearMediaCollection(Setting::MEDIA_COLLECTION_NAME);
             $setting->addMediaFromRequest('image')
                 ->toMediaCollection(Setting::MEDIA_COLLECTION_NAME);
+        }
+        if ($request->hasFile('favicon') && $request->file('favicon')->isValid()) {
+            $setting->clearMediaCollection(Setting::FAVICON_COLLECTION_NAME);
+            $setting->addMediaFromRequest('favicon')
+                ->toMediaCollection(Setting::FAVICON_COLLECTION_NAME);
         }
 
         return redirect()->route('admin.settings.show', $setting)->with('success', trans('settings.messages.updated'));
