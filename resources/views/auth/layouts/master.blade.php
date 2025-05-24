@@ -11,7 +11,7 @@
 		<title> @yield('title') </title>
 
 		<!-- Favicon -->
-		<link rel="icon" href="{{ $settings->getFavicon() }}" type="image/x-icon"/>
+		<link rel="icon" href="{{ $settings?->getFavicon() }}" type="image/x-icon"/>
 
 		@include('dashboard.layouts.head-styles')
 	</head>

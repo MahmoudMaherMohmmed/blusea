@@ -16,8 +16,8 @@
   <title>{{ $settings->title }} | @yield('title')</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ $settings->getFavicon() }}" type="image/x-icon">
-  <link rel="icon" href="{{ $settings->getFavicon() }}" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ $settings?->getFavicon() }}" type="image/x-icon">
+  <link rel="icon" href="{{ $settings?->getFavicon() }}" type="image/x-icon">
 
   <!-- Fonts include -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
