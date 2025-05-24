@@ -70,7 +70,7 @@
                                             <li><a href="#"><i class="fa fa-star"></i></a></li>
                                             <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
                                         </ul>--}}
-                                        @if($settings->product_price_status == App\Enums\ProductPriceStatusEnum::ACTIVE)
+                                        @if($layout_settings->product_price_status == App\Enums\ProductPriceStatusEnum::ACTIVE)
                                             <span class="price marB10">
                                                 {{$product->price}} {{__('website.currency')}}
                                                 @if($product->price_after_discount)

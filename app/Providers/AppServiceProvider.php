@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
     {
         if (Schema::hasTable('settings') && Schema::hasTable('branches')) {
             View::share([
-                'settings' => Setting::first(),
+                'layout_settings' => Setting::first(),
                 'main_branch' => Branch::first(),
                 'categories' => Category::active()->get(),
                 'brands' => Brand::active()->get(),

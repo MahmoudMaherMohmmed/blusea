@@ -30,8 +30,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h4 class="title">{{$settings->title}}</h4>
-                    {!! $settings->description !!}
+                    <h4 class="title">{{$layout_settings->title}}</h4>
+                    {!! $layout_settings->description !!}
                 </div>
             </div>
         </div>

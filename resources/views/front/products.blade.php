@@ -54,7 +54,7 @@
                                             <li><a href="#"><i class="fa fa-star-half-o"></i></a></li>
                                         </ul>--}}
                                         <div class="clear"></div>
-                                        @if($settings->product_price_status == App\Enums\ProductPriceStatusEnum::ACTIVE)
+                                        @if($layout_settings->product_price_status == App\Enums\ProductPriceStatusEnum::ACTIVE)
                                             <span class="price">
                                                 {{$product->price}} {{__('website.currency')}}
                                                 @if($product->price_after_discount)
