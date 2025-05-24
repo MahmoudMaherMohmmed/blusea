@@ -2,10 +2,10 @@
 		<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 		<aside class="app-sidebar sidebar-scroll">
 			<div class="main-sidebar-header active">
-				<a class="desktop-logo logo-light active" href="{{ route('admin.home') }}"><img src="{{URL::asset('front/assets')}}/img/logo.png" class="main-logo wd-100" alt="logo"></a>
-				<a class="desktop-logo logo-dark active" href="{{ route('admin.home') }}"><img src="{{URL::asset('front/assets')}}/img/logo.png" class="main-logo dark-theme wd-100" alt="logo"></a>
-				<a class="logo-icon mobile-logo icon-light active" href="{{ route('admin.home') }}"><img src="{{URL::asset('front/assets')}}/img/logo.png" class="logo-icon wd-100" alt="logo"></a>
-				<a class="logo-icon mobile-logo icon-dark active" href="{{ route('admin.home') }}"><img src="{{URL::asset('front/assets')}}/img/logo.png" class="logo-icon dark-theme wd-100" alt="logo"></a>
+				<a class="desktop-logo logo-light active" href="{{ route('admin.home') }}"><img src="{{ $settings->getImage() }}" class="main-logo wd-100" alt="logo"></a>
+				<a class="desktop-logo logo-dark active" href="{{ route('admin.home') }}"><img src="{{ $settings->getImage() }}" class="main-logo dark-theme wd-100" alt="logo"></a>
+				<a class="logo-icon mobile-logo icon-light active" href="{{ route('admin.home') }}"><img src="{{ $settings->getImage() }}" class="logo-icon wd-100" alt="logo"></a>
+				<a class="logo-icon mobile-logo icon-dark active" href="{{ route('admin.home') }}"><img src="{{ $settings->getImage() }}" class="logo-icon dark-theme wd-100" alt="logo"></a>
 			</div>
 			<div class="main-sidemenu">
 				<div class="app-sidebar__user clearfix">

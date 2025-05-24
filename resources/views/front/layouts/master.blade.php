@@ -16,8 +16,8 @@
   <title>{{ $settings->title }} | @yield('title')</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="{{ URL::asset('front/assets') }}/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="{{ URL::asset('front/assets') }}/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="{{ $settings->getFavicon() }}" type="image/x-icon">
+  <link rel="icon" href="{{ $settings->getFavicon() }}" type="image/x-icon">
 
   <!-- Fonts include -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -83,7 +83,7 @@
           <div class="col-md-3 col-sm-3 text-left">
             <!-- Logo Desktop-->
             <a class="logo hidden-xs" href="{{ route('index') }}">
-              <img class="site_logo" alt="Site Logo" src="{{ URL::asset('front/assets') }}/img/logo.png" />
+              <img class="site_logo" alt="Site Logo" src="{{ $settings->getImage() }}" />
             </a>
           </div>
           <div class="col-md-6 col-sm-4 col-xs-12">
