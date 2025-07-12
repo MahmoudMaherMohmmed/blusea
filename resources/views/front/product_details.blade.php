@@ -82,11 +82,26 @@
                                         {!! $product->short_description !!}
                                     </div>
                                     <div class="clear"></div>
+                                    @if(count($product->colors) > 0)
+                                        <div class="prod-options marB10">
+                                            <div class="clearfix">
+                                                <div class="form-group col-sm-12 padL0 quantity">
+                                                    <label><strong>{{__('website.product_colors')}}</strong></label>
+                                                    <div class="tag-list">
+                                                        @foreach($product->colors as $color)
+                                                            <a style="margin: 0 2px !important; width: 25px; height: 25px; background-color: {{$color}}; border-radius: 50% !important;"></a>
+                                                        @endforeach
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endif
+                                    <div class="clear"></div>
                                     @if($product->tags->isNotEmpty())
                                         <div class="prod-options marB10">
                                             <div class="clearfix">
                                                 <div class="form-group col-sm-12 padL0 quantity">
-                                                    <label><strong>Tags</strong></label>
+                                                    <label><strong>{{__('website.product_tags')}}</strong></label>
                                                     <div class="tag-list">
                                                         @foreach($product->tags as $tag)
                                                             <a class="btnlight" href="javascript:void(0);">

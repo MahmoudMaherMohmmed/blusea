@@ -30,6 +30,8 @@ return [
     'product_description' => 'وصف المنتج',
     'availability' => 'التوافر',
     'in_stock' => 'متوفر',
+    'product_colors' => 'الألوان',
+    'product_tags' => 'الوسوم',
     'search' => 'بحث',
     'search_products' => 'ابحث عن المنتجات...',
 

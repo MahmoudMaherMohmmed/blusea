@@ -30,6 +30,8 @@ return [
     'product_description' => 'Product description',
     'availability' => 'Availability',
     'in_stock' => 'In stock',
+    'product_colors' => 'Product colors',
+    'product_tags' => 'Product tags',
     'search' => 'Search',
     'search_products' => 'Search Products...',
 

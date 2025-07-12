@@ -47,6 +47,17 @@
                                 <th scope="row">{{ __('products.attributes.description') }}</th>
                                 <td>{!! $product->description !!}</td>
                             </tr>
+                            @if(count($product->colors) > 0)
+                                <tr>
+                                    <th scope="row">{{ __('products.attributes.colors') }}</th>
+                                    <td class="d-flex">
+                                        @foreach($product->colors as $color)
+                                            <span class="rounded-circle"
+                                                  style="margin:0 3px; width: 30px; height: 30px; background-color: {{$color}};"></span>
+                                        @endforeach
+                                    </td>
+                                </tr>
+                            @endif
                             <tr>
                                 <th scope="row">{{ __('categories.singular') }}</th>
                                 <td>{{$product->categories()->first()?->title}}</td>

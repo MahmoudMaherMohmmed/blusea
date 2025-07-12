@@ -29,6 +29,7 @@ return [
         'title' => 'الاسم',
         'short_description' => 'وصف قصير',
         'description' => 'الوصف',
+        'colors' => 'ألوان',
         'category_id' => 'القسم',
         'brand_id' => 'الماركة',
         'price' => 'السعر',

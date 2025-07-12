@@ -25,6 +25,7 @@ class Product extends Model implements HasMedia
         'title',
         'short_description',
         'description',
+        'colors',
         'price',
         'price_after_discount',
         'special',
@@ -40,6 +41,7 @@ class Product extends Model implements HasMedia
      * @var array<string, string>
      */
     protected $casts = [
+        'colors' => 'array',
         'special' => ProductSpecialEnum::class,
         'best_seller' => ProductSpecialEnum::class,
         'status' => ProductStatusEnum::class,

@@ -29,6 +29,7 @@ return [
         'title' => 'Title',
         'short_description' => 'Short description',
         'description' => 'Description',
+        'colors' => 'Colors',
         'category_id' => 'Category',
         'brand_id' => 'Brand',
         'price' => 'Price',

@@ -28,6 +28,8 @@ class StoreProductRequest extends FormRequest
             'short_description.*' => 'string',
             'description' => 'required|array',
             'description.*' => 'string',
+            'colors' => 'required|array',
+            'colors.*' => 'required|regex:/^#(?:[0-9a-fA-F]{3}){1,2}$/',
             'category_id' => 'required|exists:categories,id',
             'brand_id' => 'required|exists:brands,id',
             'price' => 'required|numeric',

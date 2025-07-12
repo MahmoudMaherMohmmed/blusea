@@ -18,6 +18,7 @@ return new class extends Migration {
             $table->text('title');
             $table->longText('short_description');
             $table->longText('description');
+            $table->json('colors');
             $table->float('price');
             $table->float('price_after_discount')->nullable();
             $table->boolean('special')->default(ProductSpecialEnum::NO->value);

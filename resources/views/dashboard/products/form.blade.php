@@ -145,6 +145,55 @@
 
                             <div class="col-12">
                                 <div class="form-group">
+                                    <label class="form-label">{{ __('products.attributes.colors') }} <span class="tx-danger">*</span></label>
+                                    <div class="example">
+                                        <div class="panel panel-primary tabs-style-1">
+                                            @if($product!=null && count($product->colors)>0)
+                                                @foreach($product->colors as $color)
+                                                    <div class="row" id="color">
+                                                        <div class="col-10">
+                                                            <div class="form-group">
+                                                                <label class="form-label">{{ __('products.attributes.colors') }} <span class="tx-danger">*</span></label>
+                                                                <input class="form-control" name="colors[]" placeholder="{{ __('products.attributes.colors') }}" value="{{$color}}" type="color" required="">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-2" id="color_action" style="margin-top: 1.70rem">
+                                                            @if($loop->last)
+                                                                <a href="javascript:void(0)" id="add_new_color" class="btn btn-primary">
+                                                                    <i class="mdi mdi-plus"></i>
+                                                                </a>
+                                                            @else
+                                                                <a href="javascript:void(0)" onclick="remove_color(this)" class="btn btn-danger">
+                                                                    <i class="mdi mdi-delete"></i>
+                                                                </a>
+                                                            @endif
+                                                        </div>
+                                                    </div>
+                                                @endforeach
+                                            @else
+                                                <div class="row" id="color">
+                                                    <div class="col-10">
+                                                        <div class="form-group">
+                                                            <label class="form-label">{{ __('products.attributes.colors') }} <span class="tx-danger">*</span></label>
+                                                            <input class="form-control" name="colors[]" placeholder="{{ __('products.attributes.colors') }}" type="color" required="">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-1" id="color_action" style="margin-top: 1.70rem">
+                                                        <a href="javascript:void(0)" id="add_new_color" class="btn btn-primary">
+                                                            <i class="mdi mdi-plus"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-group">
                                     <label class="form-label">{{ __('categories.singular') }} <span class="tx-danger">*</span></label>
                                     <select class="form-control" name="category_id" required="">
                                         <option selected disabled>{{__('categories.select')}}</option>
@@ -358,6 +407,23 @@
         });
 
         function remove_tag(ele){
+            $(ele).parent().parent().remove();
+        }
+
+        $(function(){
+            $("#add_new_color").on('click', function(){
+                var ele = $(this).closest('#color').clone(true).find("input").val("").end();
+                $(this).closest('#color').after(ele);
+
+                //add new delete button
+                $(this).closest('#color').find('#color_action').append('<a href="javascript:void(0)" onclick="remove_color(this)" class="btn btn-danger"><i class="mdi mdi-delete"></i></a>');
+
+                //remove the add new button
+                $(this).closest('#add_new_color').remove();
+            });
+        });
+
+        function remove_color(ele){
             $(ele).parent().parent().remove();
         }
 
