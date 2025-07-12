@@ -148,7 +148,7 @@
                                     <label class="form-label">{{ __('products.attributes.colors') }} <span class="tx-danger">*</span></label>
                                     <div class="example">
                                         <div class="panel panel-primary tabs-style-1">
-                                            @if($product!=null && count($product->colors)>0)
+                                            @if($product!=null && $product->colors && count($product->colors)>0)
                                                 @foreach($product->colors as $color)
                                                     <div class="row" id="color">
                                                         <div class="col-10">

@@ -47,7 +47,7 @@
                                 <th scope="row">{{ __('products.attributes.description') }}</th>
                                 <td>{!! $product->description !!}</td>
                             </tr>
-                            @if(count($product->colors) > 0)
+                            @if($product->colors && count($product->colors) > 0)
                                 <tr>
                                     <th scope="row">{{ __('products.attributes.colors') }}</th>
                                     <td class="d-flex">

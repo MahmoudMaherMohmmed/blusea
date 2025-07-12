@@ -82,7 +82,7 @@
                                         {!! $product->short_description !!}
                                     </div>
                                     <div class="clear"></div>
-                                    @if(count($product->colors) > 0)
+                                    @if($product->colors && count($product->colors) > 0)
                                         <div class="prod-options marB10">
                                             <div class="clearfix">
                                                 <div class="form-group col-sm-12 padL0 quantity">
